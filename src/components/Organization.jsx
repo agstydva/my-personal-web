@@ -176,18 +176,26 @@ const organizationData = [
 ];
 
 const OrganizationCard = ({ org }) => (
-    <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 transform hover:shadow-2xl transition duration-300 flex flex-col h-full">
-        <div className="h-40 w-full relative">
+    // CARD WRAPPER: Menambahkan 'group' agar child elements (img, button) bisa bereaksi saat card di-hover
+    <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-gray-300 flex flex-col h-full">
+        
+        {/* IMAGE CONTAINER */}
+        <div className="h-40 w-full relative overflow-hidden">
+            {/* GAMBAR BACKGROUND: Zoom in saat hover (scale-110) & Opacity jadi 100% */}
             <img 
-                className="w-full h-full object-cover opacity-80" 
+                className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-100" 
                 src={org.bgImage} 
                 alt={org.organization} 
                 onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/400x200/1F2937/FFFFFF?text=BG"}}
             />
+            {/* Overlay Gradient Tipis saat Hover agar teks tetap terbaca jika ada overlay */}
+            <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
 
         <div className="p-4 flex flex-col flex-grow">
-            <h3 className="text-lg font-bold text-gray-900 mb-4 line-clamp-2 min-h-[3.5rem]">{org.role}</h3> 
+            <h3 className="text-lg font-bold text-gray-900 mb-4 line-clamp-2 min-h-[3.5rem] group-hover:text-black transition-colors">
+                {org.role}
+            </h3> 
 
             <div className="flex items-start mb-4 space-x-3">
                 <div className="flex-shrink-0">
@@ -213,10 +221,11 @@ const OrganizationCard = ({ org }) => (
                 Click the button below to see the full details of my contribution and activities in this role.
             </p>
 
-            {/* --- TOMBOL HITAM KEREN --- */}
+            {/* --- TOMBOL DENGAN HOVER KEREN --- */}
+            {/* Base: Hitam. Hover: Abu-abu gelap, Scale up, Shadow menonjol */}
             <Link 
                 to={org.path} 
-                className="w-full mt-auto bg-black text-white font-semibold py-2 rounded shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-gray-900 transition-all duration-300 text-sm block text-center"
+                className="w-full mt-auto bg-black text-white font-semibold py-2 rounded shadow-md transition-all duration-300 hover:bg-gray-800 hover:shadow-xl hover:scale-105 hover:-translate-y-0.5 text-sm block text-center"
             >
                 View Activities
             </Link>
