@@ -1,39 +1,43 @@
-    import React, { useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-    const projectCategories = [
-      'All',
-      'Web Development',
-      'Data Science & Analyst',
-      'Project Manager', 
-      'UI/UX Design',
-      'Mobile App',
-      'Machine Learning'
-    ];
+const projectCategories = [
+  'All',
+  'Web Development',
+  'Data Science & Analyst',
+  'Project Manager', 
+  'UI/UX Design',
+  'Mobile App',
+  'Machine Learning'
+];
 
-    const projectsData = [
-        { 
+const projectsData = [
+    { 
         id: 1, 
         title: 'Dtastyum', 
         roles: 'Project Lead & Fullstack Web Developer', 
         date: 'Oktober 2024 - Desember 2024', 
         category: ['Web Development', 'All'],
-        image: '/images/website1.jpg' 
+        image: '/images/dtastyum.png',
+        path: '/project/dtastyum'
     },
-        { 
+    { 
         id: 2, 
         title: 'GreenBucks', 
         roles: 'Project Lead & Flutter Developer', 
         date: 'November 2024 - Desember 2024', 
         category: ['Mobile App', 'All'],
-        image: '/images/website2.jpg' 
+        image: '/images/GreenBucks.png',
+        path: '/project/greenbucks'
     },
-        { 
+    { 
         id: 3, 
         title: 'Sportware', 
         roles: 'Project Lead & Fullstack Web Developer', 
         date: 'April 2025 - Juli 2025', 
         category: ['Web Development', 'All'],
-        image: '/images/website3.jpg' 
+        image: '/images/sportware.png',
+        path: '/project/sportware'
     },
     { 
         id: 4, 
@@ -41,151 +45,177 @@
         roles: 'Project Lead & Entrepreneur', 
         date: 'September 2025 - Desember 2025', 
         category: ['Web Development', 'All', 'Project Manager'],
-        image: '/images/website4.jpg'
+        image: '/images/eatzy.png',
+        path: '/project/eatzy'
     },
     { 
         id: 5, 
         title: 'Simkes', 
-        roles: 'Project Lead & Fullstack Web Developer', 
+        roles: 'Project Lead & Web Developer', 
         date: 'Oktober 2025 - Desember 2025', 
         category: ['Web Development', 'All'],
-        image: '/images/website5.jpg'
+        image: '/images/simkes.png',
+        path: '/project/simkes'
     },
-        { 
-        id: 6, 
-        title: 'AgroCoop', 
-        roles: 'Project Lead & UI/UX Design', 
-        date: 'Oktober 2025 - Desember 2025', 
-        category: ['UI/UX Design', 'All', 'Project Manager'],
-        image: '/images/website6.jpg'
-    },
+    // { 
+    //     id: 6, 
+    //     title: 'AgroCoop', 
+    //     roles: 'Project Lead & UI/UX Design', 
+    //     date: 'Oktober 2025 - Desember 2025', 
+    //     category: ['UI/UX Design', 'All', 'Project Manager'],
+    //     image: '/images/website6.jpg',
+    //     path: '/project/agrocoop'
+    // },
     { 
         id: 7, 
-        title: 'Sentiment Analysis', 
-        roles: 'Project Lead & Entrepreneur', 
+        title: 'Credit Card Analysis Report', 
+        roles: 'Data Analyst', 
         date: 'September 2025 - Desember 2025', 
-        category: ['Data Analyst', 'All'],
-        image: '/images/website7.jpg'
+        category: ['Data Science & Analyst', 'All'],
+        image: '/images/data-analyst2.png',
+        path: '/project/creditCardAnalysis'
     },
-        { 
+    { 
         id: 8, 
-        title: 'User Retention Analysis', 
-        roles: 'Project Lead & Fullstack Web Developer', 
+        title: 'Retail Sales Transaction Analysis Dashboard', 
+        roles: 'Data Analyst', 
         date: 'Oktober 2025 - Desember 2025', 
-        category: ['Data Analyst', 'All'],
-        image: '/images/website8.jpg'
+        category: ['Data Science & Analyst', 'All'],
+        image: '/images/data-analyst1.png',
+        path: '/project/userRetention'
     },
- { 
+    { 
         id: 9, 
-        title: 'Market Basket Analysis ', 
-        roles: 'Project Lead & UI/UX Design', 
+        title: 'NobaRek', 
+        roles: 'Mobile App', 
         date: 'Oktober 2025 - Desember 2025', 
-        category: ['Data Analyst', 'All'],
-        image: '/images/website9.jpg'
+        category: ['Mobile App', 'All'],
+        image: '/images/NobaRek.png',
+        path: '/project/NobaRek'
     },
-    { 
-        id: 10, 
-        title: 'Prediction Model', 
-        roles: 'Project Lead & Entrepreneur', 
-        date: 'September 2025 - Desember 2025', 
-        category: ['Data Analyst', 'All'],
-        image: '/images/website10.jpg'
-    },
-    { 
-        id: 11, 
-        title: 'Clustering Model', 
-        roles: 'Project Lead & Fullstack Web Developer', 
-        date: 'Oktober 2025 - Desember 2025', 
-        category: ['Data Analyst', 'All'],
-        image: '/images/website11.jpg'
-    },
-    { 
-        id: 12, 
-        title: 'Tokoku', 
-        roles: 'Project Lead & UI/UX Design', 
-        date: 'Oktober 2025 - Desember 2025', 
-        category: ['Data Analyst', 'All'],
-        image: '/images/website13.jpg'
-    },
-    ];
+    // { 
+    //     id: 10, 
+    //     title: 'Prediction Model', 
+    //     roles: 'Project Lead & Entrepreneur', 
+    //     date: 'September 2025 - Desember 2025', 
+    //     category: ['Data Analyst', 'All'],
+    //     image: '/images/website10.jpg',
+    //     path: '/project/predictionModel'
+    // },
+    // { 
+    //     id: 11, 
+    //     title: 'Clustering Model', 
+    //     roles: 'Project Lead & Fullstack Web Developer', 
+    //     date: 'Oktober 2025 - Desember 2025', 
+    //     category: ['Data Analyst', 'All'],
+    //     image: '/images/website11.jpg',
+    //     path: '/project/clusteringModel'
+    // },
+    // { 
+    //     id: 12, 
+    //     title: 'Tokoku', 
+    //     roles: 'Project Lead & UI/UX Design', 
+    //     date: 'Oktober 2025 - Desember 2025', 
+    //     category: ['Data Analyst', 'All'],
+    //     image: '/images/website13.jpg',
+    //     path: '/project/tokoku'
+    // },
+];
 
+const ProjectCard = ({ project }) => (
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 transform hover:shadow-xl transition duration-300 flex flex-col h-full">
+        {/* Gambar Proyek */}
+        <div className="h-56 w-full bg-gray-200 flex items-center justify-center relative overflow-hidden group">
+            <img 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                src={project.image} 
+                alt={project.title} 
+                onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/400x300?text=No+Image"}}
+            />
+            {/* Overlay Title */}
+            <div className='absolute top-2 left-2 text-white font-bold text-xs bg-black/60 px-2 py-1 rounded backdrop-blur-sm'>
+                {project.title}
+            </div>
+        </div>
 
-    const ProjectCard = ({ project }) => (
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 transform hover:shadow-xl transition duration-300">
-            {/* Gambar Proyek */}
-            <div className="h-48 w-full bg-gray-200 flex items-center justify-center relative">
-                 <img 
-                    className="w-full h-full object-cover" 
-                    src={project.image} 
-                    alt={project.title} 
-                />
-                {/* Teks judul gambar */}
-                <div className='absolute top-2 left-2 text-white font-bold text-xs bg-black bg-opacity-40 p-1 rounded'>{project.title}</div>
-            </div>
+        <div className="p-5 flex flex-col flex-grow">
+            <h3 className="text-xl font-bold text-gray-900 mb-1 line-clamp-1">{project.title}</h3>
+            <p className="text-sm font-semibold text-indigo-600 mb-1 line-clamp-1">{project.roles}</p>
+            <p className="text-xs text-gray-500 mb-3">{project.date}</p>
+            
+            <p className="text-sm text-gray-600 mb-4 line-clamp-3 flex-grow">
+                {project.title} was developed to fulfill university course requirements and continuously upgrade technical skills, demonstrating practical expertise in its specific domain.
+            </p>
 
-            <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">{project.title}</h3>
-                <p className="text-sm font-semibold text-gray-700 mb-1">{project.roles}</p>
-                <p className="text-xs text-gray-500 mb-4">{project.date}</p>
-                
-                <p className="text-sm text-gray-600 mb-4">
-                    {project.title} is a final project developed as a full-commerce platform with features such as product categorization, favorites, cart management, and seamless communication.
-                </p>
+            <Link 
+                to={project.path}
+                className="w-full mt-auto bg-black text-white font-semibold py-2.5 rounded shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] hover:bg-gray-900 transition-all duration-300 text-sm block text-center"
+            >
+                View Project
+            </Link>
+        </div>
+    </div>
+);
 
-                <button className="w-full bg-indigo-600 text-white font-semibold py-2 rounded hover:bg-indigo-700 transition duration-300 text-sm">
-                    View Project
-                </button>
-            </div>
-        </div>
-    );
+const ProjectExperience = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
+  
+  const filteredProjects = activeCategory === 'All' 
+    ? projectsData 
+    : projectsData.filter(p => p.category.includes(activeCategory));
 
+  return (
+    <section id="projects" className="py-16 bg-gray-50">
+      <div className="max-w-[88%] mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            Project Experience
+          </h2>
 
-    const ProjectExperience = () => {
-      const [activeCategory, setActiveCategory] = useState('All');
-      
-      const filteredProjects = activeCategory === 'All' 
-        ? projectsData 
-        : projectsData.filter(p => p.category.includes(activeCategory));
+          {/* --- MINI NAVBAR KEREN & MODERN --- */}
+          <div className="flex justify-center mb-12">
+            {/* Container: Hitam Elegan dengan Efek Glassmorphism */}
+            <div className="inline-flex overflow-x-auto gap-2 p-2 bg-zinc-900/95 backdrop-blur-md rounded-full border border-gray-800 shadow-2xl max-w-full no-scrollbar ring-1 ring-white/5">
+                {projectCategories.map(category => (
+                  <button
+                    key={category}
+                    onClick={() => setActiveCategory(category)}
+                    className={`
+                      px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 whitespace-nowrap
+                      ${
+                        activeCategory === category
+                          ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/30 transform scale-105' 
+                          // ^ AKTIF: Gradient Indah + Shadow Glowing
+                          
+                          : 'text-gray-400 hover:text-white hover:bg-white/10' 
+                          // ^ TIDAK AKTIF: Abu-abu -> Putih Bersih saat Hover
+                      }
+                    `}
+                  >
+                    {category}
+                  </button>
+                ))}
+            </div>
+          </div>
 
-      return (
-        <section id="project-experience" className="py-10">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Project Experience</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 xl:gap-8">
+            {filteredProjects.map(project => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+            
+            {filteredProjects.length === 0 && (
+                <div className="col-span-full flex flex-col items-center justify-center py-12 text-gray-500">
+                    <svg className="w-16 h-16 mb-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p className="text-lg font-medium">Belum ada proyek di kategori "{activeCategory}"</p>
+                </div>
+            )}
+          </div>
 
+      </div>
+    </section>
+  );
+};
 
-          {/* Mini-Navbar Filter */}
-          <div className="flex flex-wrap justify-center gap-2 p-2 bg-black rounded-xl shadow-inner max-w-6xl mx-auto mb-12 border border-gray-200">
-            {projectCategories.map(category => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`
-                  px-4 py-2 my-1 rounded-lg font-semibold transition-colors duration-300 text-sm whitespace-nowrap
-                  ${
-                    activeCategory === category
-                      ? 'bg-black text-white shadow-md' 
-                      : 'text-white hover:bg-gray-200'
-                  }
-                `}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-
-          {/* Daftar Proyek (Grid 3 Kolom) */}
-          <div className="px-30 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {filteredProjects.map(project => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-            
-            {/* Tambahkan pesan jika tidak ada proyek */}
-            {filteredProjects.length === 0 && (
-                <p className="text-center text-gray-500 col-span-full">Tidak ada proyek"{activeCategory}" wkwk.</p>
-            )}
-          </div>
-        </section>
-      );
-    };
-
-    export default ProjectExperience;
+export default ProjectExperience;

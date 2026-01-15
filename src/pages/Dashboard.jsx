@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+// IMPORT Link dari react-router-dom
+import { Link } from 'react-router-dom';
+
+// IMPORT Komponen Lain
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProjectExperience from '../components/ProjectExperience';
+import Organization from '../components/Organization';
 
 const skillData = [
     { name: 'HTML', image: '/images/html.png' },
@@ -20,7 +25,7 @@ const skillData = [
     { name: 'Flutter', image: '/images/flutter.jpeg' },
     { name: 'Android Studio', image: '/images/androidstudio.png' },
     { name: 'Figma', image: '/images/figma.png' },
-    { name: 'Vue Js', image: '/images/vuejs.png' },
+    { name: 'Looker Studio', image: '/images/looker-studio-logo.png' },
     { name: 'Laravel', image: '/images/laravel.png' },
     { name: 'Next Js', image: '/images/nextjs.png' },
     { name: 'Dart', image: '/images/dart.png' },
@@ -56,243 +61,22 @@ const EducationCard = ({ institution, degree, imageSrc }) => (
     </div>
 );
 
-const organizationData = [
-    { 
-        id: 1, 
-        role: 'Expert Staff Departement Computer Academic & Science', 
-        organization: 'BEMP Ilmu Komputer UNJ', 
-        period: 'Oktober 2024 - Desember 2024',
-        logo: '/images/bempilkom.png', 
-        bgImage: '/images/bempilkom2025.jpeg' 
-    },
-    { 
-        id: 7, 
-        role: 'Event Division Staff PKKMB FMIPA UNJ 2025', 
-        organization: 'PKKMB FMIPA UNJ 2025', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/pkkmb-fmipa-logo.jpg', 
-        bgImage: '/images/acarapkkmbfmipa.jpg' 
-    },
-    { 
-        id: 8, 
-        role: 'Moderator of PKKMB FMIPA 2025', 
-        organization: 'PKKMB FMIPA UNJ 2025', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/pkkmb-fmipa-logo.jpg', 
-        bgImage: '/images/moderatorpkkmb.jpg' 
-    },
-    { 
-        id: 7, 
-        role: 'Steering Committee Event Division PKKMB Ilmu Komputer 2025', 
-        organization: 'PKKMB FMIPA UNJ 2025', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/unjlogo.png', 
-        bgImage: '/images/scpkkmb.jpg' 
-    },
-    { 
-        id: 12, 
-        role: 'Benchmarking BEMP Ilmu Komputer UNJ x HIMA Informatika Itera', 
-        organization: 'HIMA Informatika ITERA', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/himainformatikaitera.png', 
-        bgImage: '/images/stubanitera.JPG' 
-    },
-    { 
-        id: 8, 
-        role: 'Steering Committee Event Division Compare 2025', 
-        organization: 'Workshop COMPARE 2025', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/comparelogo.png', 
-        bgImage: '/images/comparesc.png' 
-    },
-    { 
-        id: 12, 
-        role: 'MIPA Preneur 2025', 
-        organization: 'BEM FMIPA UNJ', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/bemffmipa.jpg', 
-        bgImage: '/images/mipapreneur.jpg' 
-    },
-    { 
-        id: 11, 
-        role: 'Benchmarking BEMP Ilmu Komputer UNJ x BEM Teknik Elektro UNJ', 
-        organization: 'BEM Teknik Elektro UNJ', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/bempelektrounj.png', 
-        bgImage: '/images/stubanelektro.jpg' 
-    },
-    { 
-        id: 2, 
-        role: 'Deputy Coordinator Event DIvision PKKMB Ilmu Komputer 2024', 
-        organization: 'PKKMB Ilmu Komputer UNJ 2024', 
-        period: 'Oktober 2024 - Desember 2024',
-        logo: '/images/radiant.png',
-        bgImage: '/images/wakoor.png'
-    },
-    { 
-        id: 3, 
-        role: 'Delegates of AIESEC Future Leaders 2024', 
-        organization: 'AIESEC in UNJ', 
-        period: 'Oktober 2024 - Desember 2024',
-        logo: '/images/aiesec.jpg',
-        bgImage: '/images/aflaiesec.jpg'
-    },
-    { 
-        id: 9, 
-        role: 'Sponsorship Division Staff Decode 2024', 
-        organization: 'PKKMB FMIPA 2025', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/unjlogo.png', 
-        bgImage: '/images/decode.png' 
-    },
-    { 
-        id: 5, 
-        role: 'Master of Ceremonies PKKMB Ilmu Komputer 2024 Day 2', 
-        organization: 'PKKMB Ilmu Komputer UNJ 2024', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/unjlogo.png', 
-        bgImage: '/images/mcpkkmb.jpg' 
-    },
-    { 
-        id: 4, 
-        role: 'Master of Ceremonies PKKMB Ilmu Komputer 2024 Day 1', 
-        organization: 'PKKMB Ilmu Komputer UNJ 2024', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/unjlogo.png', 
-        bgImage: '/images/mcday1.jpg' 
-    },
-    { 
-        id: 10, 
-        role: 'Publication & Design Division Staff Kabasta x Kabar Ilkomp 2024', 
-        organization: 'BEMP Ilmu Komputer', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/logo-bempstat.png', 
-        bgImage: '/images/kabasta.png' 
-    },
-    { 
-        id: 10, 
-        role: 'MIPA EXPO 2024', 
-        organization: 'BEMP Ilmu Komputer', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/bemffmipa.jpg', 
-        bgImage: '/images/mipaexpo.jpg' 
-    },
-    { 
-        id: 11, 
-        role: 'Event Division Staff Compare 2024', 
-        organization: 'PKKMB Ilmu Komputer 2025', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/comparelogo.png', 
-        bgImage: '/images/compare.png' 
-    },
-    { 
-        id: 12, 
-        role: 'Sponsorship Division Staff Decode', 
-        organization: 'PKKMB FMIPA 2025', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/uiuxlogo.png', 
-        bgImage: '/images/uiux.png' 
-    },
-    { 
-        id: 10, 
-        role: 'Staff Departement Computer Academic & Science', 
-        organization: 'BEMP Ilmu Komputer', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/bempilkom.png', 
-        bgImage: '/images/compasstaff.png' 
-    },
-    { 
-        id: 10, 
-        role: 'Vocational High School Teacher Volunteer', 
-        organization: 'BEMP Ilmu Komputer', 
-        period: 'Oktober 2024 - Desember 2024', 
-        logo: '/images/logo-bempstat.png', 
-        bgImage: '/images/teacher.jpeg' 
-    },
-    // { 
-    //     id: 10, 
-    //     role: 'Staff Departement Computer Academic & Science', 
-    //     organization: 'BEMP Ilmu Komputer', 
-    //     period: 'Oktober 2024 - Desember 2024', 
-    //     logo: '/images/bempilkom.png', 
-    //     bgImage: '/images/compasstaff.png' 
-    // },
-
-];
-
 const workingExperienceData = [
     {
         id: 1,
         company: 'PT. Yuju Indonesia',
         role: 'Assembly Engineer & Quality Control',
         period: 'Juli 2020 - Januari 2021',
-        description: 'Ditastylum is a food e-commerce platform developed as the final project (UAS) for the Web Programming course. This website offers a seamless shopping experience with features such as product categorization, favorites, cart management, order tracking, and direct communication between users and admins.',
-        imageSrc: '/images/ptyuju.jpg', // Gambar besar horizontal
-        logoSrc: '/images/logo_ptyuju.png' // Logo perusahaan
+        description: 'Interned at PT Yuju Indonesia, a plastic injection molding company in Cikarang, within the Assembly and Quality Control Department during 10th-11th grade of Vocational High School. Gained hands on experience in production processes, quality assurance, and operational efficiency.',
+        imageSrc: '/images/ptyuju.jpg', 
+        logoSrc: '/images/logo_ptyuju.png',
+        path: '/work/ptyuju' 
     }
-    // Tambahkan pengalaman kerja lainnya di sini jika ada
 ];
 
-// KOMPONEN ORGANIZACION CARD (SUDAH DIPERBAIKI TATA LETAK DAN PENGGUNAAN IMAGE LOKAL)
-const OrganizationCard = ({ org }) => (
-    <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 transform hover:shadow-2xl transition duration-300">
-        <div className="h-40 w-full relative">
-            <img 
-                className="w-full h-full object-cover opacity-80" 
-                src={org.bgImage} 
-                alt={org.organization} 
-                onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/400x200/1F2937/FFFFFF?text=BG"}}
-            />
-        </div>
-
-        <div className="p-4">
-            {/* Judul Role (Di atas) */}
-            <h3 className="text-lg font-bold text-gray-900 mb-4">{org.role}</h3> 
-
-            {/* KONTENER FLEX: Logo (Kiri) | Teks 2 Tingkat (Kanan) */}
-            <div className="flex items-start mb-4 space-x-3">
-                
-                {/* 1. Logo Organisasi (Kiri) */}
-                <div className="flex-shrink-0">
-                    <img 
-                        src={org.logo} 
-                        alt={`${org.organization} Logo`} 
-                        className="w-10 h-10 object-contain"
-                        onError={(e) => {e.target.style.display = 'none';}}
-                    />
-                </div>
-                
-                {/* 2. Detail Organisasi (Kanan) - Kontainer Teks Vertikal */}
-                <div className="flex-grow">
-                    {/* Tingkat 1: Nama Organisasi */}
-                    <p className="text-sm font-semibold text-gray-700 leading-tight">
-                        {org.organization}
-                    </p>
-                    {/* Tingkat 2: Periode */}
-                    <p className="text-xs text-gray-500">
-                        {org.period}
-                    </p>
-                </div>
-            </div>
-            
-            <p className="text-sm text-gray-600 mb-4">
-                Ditastylum is a food e-commerce platform developed as the final project (UAS) for the Web Programming course. This website offers a seamless shopping experience...
-            </p>
-
-            <button className="w-full bg-indigo-600 text-white font-semibold py-2 rounded hover:bg-indigo-700 transition duration-300 text-sm">
-                View Activities
-            </button>
-        </div>
-    </div>
-);
-
-
-
-// --- Komponen Kartu Working Experience BARU ---
 const WorkingExperienceCard = ({ exp }) => (
     <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 w-full max-w-5xl mx-auto">
         <div className="flex flex-col lg:flex-row">
-            {/* Bagian Kiri (Gambar Kerja) */}
             <div className="w-full lg:w-1/2 flex-shrink-0">
                 <img 
                     src={exp.imageSrc} 
@@ -302,7 +86,6 @@ const WorkingExperienceCard = ({ exp }) => (
                 />
             </div>
             
-            {/* Bagian Kanan (Detail Teks) */}
             <div className="w-full lg:w-1/2 p-6 flex flex-col justify-between">
                 <div>
                     <div className="flex items-center space-x-3 mb-2">
@@ -323,22 +106,18 @@ const WorkingExperienceCard = ({ exp }) => (
                     </p>
                 </div>
 
-                <button className="mt-6 self-start bg-orange-500 text-white font-semibold py-2 px-6 rounded hover:bg-orange-600 transition duration-300 text-sm shadow-md">
+                <Link 
+                    to={exp.path}
+                    className="mt-6 self-start inline-flex items-center justify-center bg-black text-white font-semibold py-2.5 px-8 rounded shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-1"
+                >
                     View Working Experience
-                </button>
+                </Link>
             </div>
         </div>
     </div>
 );
-// ----------------------------------------
-
-
-
 
 const Dashboard = () => {
-    const [activeCategory, setActiveCategory] = useState('Active Development');
-
-    // URL Sosial Media
     const socialLinks = [
         { 
             name: 'LinkedIn', 
@@ -376,63 +155,53 @@ const Dashboard = () => {
 
             <main className="mx-auto px-4 py-10 sm:px-6 lg:px-8">
 
-                {/* ================= HEADER / HERO SECTION ================= */}
-                <section
-                    id="home"
-                    className="flex flex-col items-center justify-between px-50 py-16 md:flex-row"
-                >
-                    {/* Left Content */}
+                {/* HERO SECTION */}
+                <section id="home" className="flex flex-col items-center justify-between px-50 py-16 md:flex-row">
                     <div className="md:w-3/5">
-                        <h1 className="mb-4 text-5xl font-extrabold text-gray-900">
-                            <span className="text-indigo-600">Hi There!</span>
-                            <br />
-                            I'm Dava,
-                            <br />
-                            <span className="text-indigo-600">
-                                Computer Science Student
-                            </span>
+                        <h1 className="mb-4 text-5xl font-extrabold text-gray-900 animate-fade-in-down">
+                            <span className="text-indigo-600">Hi There!</span><br />I'm Dava,<br /><span className="text-indigo-600">Computer Science Student</span>
                         </h1>
-
                         <p className="mb-6 text-lg leading-relaxed text-gray-600">
-                            A fifth-semester Computer Science student at Universitas Negeri
-                            Jakarta with a strong interest in Data Analysis, Web Development,
-                            Data Science, and Machine Learning. Dedicated to expanding
-                            technical expertise and soft skills, and volunteer activities that
-                            enhance leadership and collaboration skills.
+                            A sixth semester Computer Science student at Universitas Negeri Jakarta, with a strong interest in Data Analysis, Web Development, and Project Management, and motivated to apply technical skills, analytical thinking, and collaborative problem solving in real world projects.
                         </p>
-
-                        {/* Social Links DENGAN GAMBAR LOKAL (Filter Invert Dihapus) */}
-                        <div className="mt-6 flex space-x-4">
+                        
+                        {/* --- SOCIAL MEDIA ICONS: KEREN & MODERN --- */}
+                        <div className="mt-6 flex space-x-5">
                             {socialLinks.map((link, index) => (
                                 <a 
-                                    key={index}
+                                    key={index} 
                                     href={link.url} 
                                     target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className={`flex h-15 w-15 cursor-pointer items-center justify-center rounded-full ${link.bgColor} text-xl text-white transition hover:opacity-80 p-2`} 
+                                    rel="noopener noreferrer" 
+                                    className={`
+                                        group flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg border border-gray-100
+                                        transition-all duration-300 ease-out
+                                        hover:-translate-y-2 hover:scale-110 hover:shadow-indigo-500/30 hover:border-indigo-100
+                                    `}
                                 >
                                     <img 
                                         src={link.image} 
                                         alt={link.altText} 
-                                        className="w-full h-full object-contain" // 'filter invert' dihapus di sini
-                                        onError={(e) => {e.target.onerror = null; e.target.parentElement.innerHTML = link.name.substring(0, 2);}} 
+                                        className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-110" 
                                     />
                                 </a>
                             ))}
                         </div>
                     </div>
 
-                    {/* Avatar Section */}
+                    {/* --- FOTO PROFIL: ANIMASI ZOOM & GLOW --- */}
                     <div className="relative mt-10 flex justify-center md:mt-0 md:w-2/5">
-                        <div className="relative">
-                            {/* Decorative Circles */}
-                            <div className="absolute right-0 top-5 h-25 w-25 -translate-y-1/2 translate-x-1/2 rounded-full bg-indigo-200"></div>
-                            <div className="absolute bottom-5 left-0 h-10 w-10 -translate-x-1/2 translate-y-1/2 rounded-full bg-indigo-200"></div>
-
-                            <img
-                                src="/images/me.jpeg"
-                                alt="Profile Avatar"
-                                className="relative z-10 h-85 w-85 rounded-full border-4 border-white object-cover shadow-2xl"
+                        <div className="relative group cursor-pointer">
+                            {/* Dekorasi Bulatan Belakang (Ikut bergerak sedikit saat hover) */}
+                            <div className="absolute right-0 top-5 h-25 w-25 -translate-y-1/2 translate-x-1/2 rounded-full bg-indigo-200 transition-transform duration-500 group-hover:translate-x-3 group-hover:-translate-y-3"></div>
+                            <div className="absolute bottom-5 left-0 h-10 w-10 -translate-x-1/2 translate-y-1/2 rounded-full bg-indigo-200 transition-transform duration-500 group-hover:-translate-x-3 group-hover:translate-y-3"></div>
+                            
+                            {/* Foto Utama */}
+                            <img 
+                                src="/images/me.jpeg" 
+                                alt="Profile" 
+                                className="relative z-10 h-85 w-85 rounded-full border-4 border-white object-cover shadow-2xl transition-all duration-500 ease-out 
+                                           group-hover:scale-105 group-hover:rotate-2 group-hover:shadow-[0_20px_50px_rgba(79,70,229,0.4)] group-hover:border-indigo-50" 
                             />
                         </div>
                     </div>
@@ -440,31 +209,22 @@ const Dashboard = () => {
 
                 <hr className="my-10 border-gray-200" />
 
-
-
-                {/* ================= SKILLS SECTION (UPDATED) ================= */}
+                {/* SKILLS SECTION - UPDATED STYLE */}
                 <section id="skills" className="py-10 px-40">
-                    <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">
-                        Skills
-                    </h2>
-
-                    {/* Grid 10 Kolom (xl) dan ukuran ikon lebih kecil */}
-                    <div className="grid grid-cols-3 justify-items-center gap-4 px-4 sm:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10">
+                    <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">Skills</h2>
+                    <div className="grid grid-cols-3 justify-items-center gap-6 px-4 sm:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10">
                         {skillData.map((skill, index) => (
-                            <div
-                                key={index}
-                                className="flex flex-col items-center p-2 transition-transform duration-300 hover:scale-105"
-                            >
-                                <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-lg bg-white shadow-md p-3">
+                            <div key={index} className="group flex flex-col items-center cursor-pointer">
+                                <div className="mb-3 flex h-20 w-20 items-center justify-center rounded-2xl bg-white border border-transparent shadow-md transition-all duration-300 ease-out 
+                                                group-hover:-translate-y-2 group-hover:shadow-[0_8px_30px_rgb(79,70,229,0.2)] group-hover:border-indigo-200 group-hover:bg-indigo-50/30">
                                     <img 
                                         src={skill.image} 
-                                        alt={skill.name}
-                                        className="h-full w-full object-contain"
-                                        onError={(e) => {e.target.style.display='none'; e.target.parentElement.style.backgroundColor='#e5e7eb'}} 
+                                        alt={skill.name} 
+                                        className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110" 
+                                        onError={(e) => {e.target.style.display='none'}} 
                                     />
                                 </div>
-                                
-                                <span className="text-sm font-medium text-gray-700 text-center">
+                                <span className="text-sm font-medium text-gray-600 transition-colors duration-300 group-hover:text-indigo-600 group-hover:font-semibold">
                                     {skill.name}
                                 </span>
                             </div>
@@ -474,85 +234,44 @@ const Dashboard = () => {
 
                 <hr className="my-10 border-gray-200" />
 
-
-                {/* ================= 6. WORKING EXPERIENCE (BARU) ================= */}
+                {/* WORKING EXPERIENCE */}
                 <section id="working-experience" className="py-10">
                     <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Working Experience</h2>
-                    
                     {workingExperienceData.map(exp => (
                         <WorkingExperienceCard key={exp.id} exp={exp} />
                     ))}
                 </section>
 
-
                 <hr className="my-10 border-gray-200" />
 
-
-
-                {/* ================= PROJECT EXPERIENCE ================= */}
+                {/* PROJECT EXPERIENCE */}
                 <ProjectExperience />
-
-
-                
-
-
-
-
 
             </main>
 
-
-
-
-            {/* ================= 3. EDUCATION SECTION ================= */}
+            {/* EDUCATION */}
             <section id="education" className="px-60 py-10 relative overflow-hidden">
-                {/* Background container hitam dengan lingkaran dekoratif, sesuai screenshot */}
                 <div className="px-40 bg-black absolute inset-0 rounded-xl shadow-2xl">
-                    {/* Lingkaran Dekoratif Kiri Atas */}
                     <div className="absolute w-16 h-16 bg-white/10 rounded-full top-30 left-30"></div>
-                    {/* Lingkaran Dekoratif Kanan Bawah */}
                     <div className="absolute w-20 h-20 bg-white/10 rounded-full bottom-20 right-30"></div>
-                    {/* Lingkaran Dekoratif Kanan Kecil */}
                     <div className="absolute w-8 h-8 bg-white/10 rounded-full bottom-40 right-55"></div>
                 </div>
-
                 <div className="relative z-10 p-12">
                     <h2 className="text-4xl font-bold text-white mb-18 text-center">Education</h2>
-                    
                     <div className='flex flex-col items-center'>
                         {educationData.map((edu, index) => (
-                            <EducationCard 
-                                key={index}
-                                institution={edu.institution} 
-                                degree={edu.degree} 
-                                imageSrc={edu.imageSrc}
-                            />
+                            <EducationCard key={index} institution={edu.institution} degree={edu.degree} imageSrc={edu.imageSrc} />
                         ))}
                     </div>
                 </div>
             </section>
 
-
-
-
             <hr className="my-10 border-gray-200" />
 
-            {/* ================= 4. ORGANIZATION, COMMITTEE, & VOLUNTEER EXPERIENCE ================= */}
-            <section id="organization" className="px-40 py-10">
-                <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Organization, Committee, & Volunteer Experience</h2>
-                
-                {/* Grid 4 kolom di layar besar (lg) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {organizationData.map(org => (
-                        <OrganizationCard key={org.id} org={org} />
-                    ))}
-                </div>
-            </section>
+            {/* ORGANIZATION */}
+            <Organization />
 
             <hr className="my-10 border-gray-200" />
-
-            
-            
             <Footer />
         </div>
     );
