@@ -131,7 +131,7 @@ const Dashboard = () => {
         "こんにちは!",     
         "Bonjour!",       
         "Hola!",          
-        "Anyoung!",       
+        "Annyeong 안녕!",       
         "你好!",          
         "Guten Morgen!"   
     ];
