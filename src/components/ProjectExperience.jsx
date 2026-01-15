@@ -57,15 +57,6 @@ const projectsData = [
         image: '/images/simkes.png',
         path: '/project/simkes'
     },
-    // { 
-    //     id: 6, 
-    //     title: 'AgroCoop', 
-    //     roles: 'Project Lead & UI/UX Design', 
-    //     date: 'Oktober 2025 - Desember 2025', 
-    //     category: ['UI/UX Design', 'All', 'Project Manager'],
-    //     image: '/images/website6.jpg',
-    //     path: '/project/agrocoop'
-    // },
     { 
         id: 7, 
         title: 'Credit Card Analysis Report', 
@@ -93,53 +84,29 @@ const projectsData = [
         image: '/images/NobaRek.png',
         path: '/project/NobaRek'
     },
-    // { 
-    //     id: 10, 
-    //     title: 'Prediction Model', 
-    //     roles: 'Project Lead & Entrepreneur', 
-    //     date: 'September 2025 - Desember 2025', 
-    //     category: ['Data Analyst', 'All'],
-    //     image: '/images/website10.jpg',
-    //     path: '/project/predictionModel'
-    // },
-    // { 
-    //     id: 11, 
-    //     title: 'Clustering Model', 
-    //     roles: 'Project Lead & Fullstack Web Developer', 
-    //     date: 'Oktober 2025 - Desember 2025', 
-    //     category: ['Data Analyst', 'All'],
-    //     image: '/images/website11.jpg',
-    //     path: '/project/clusteringModel'
-    // },
-    // { 
-    //     id: 12, 
-    //     title: 'Tokoku', 
-    //     roles: 'Project Lead & UI/UX Design', 
-    //     date: 'Oktober 2025 - Desember 2025', 
-    //     category: ['Data Analyst', 'All'],
-    //     image: '/images/website13.jpg',
-    //     path: '/project/tokoku'
-    // },
 ];
 
 const ProjectCard = ({ project }) => (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 transform hover:shadow-xl transition duration-300 flex flex-col h-full">
+    /* Menambahkan hover:-translate-y-2 dan hover:ring untuk efek angkat */
+    <div className="group bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 transform hover:-translate-y-2 hover:shadow-2xl hover:ring-1 hover:ring-indigo-500/20 transition-all duration-300 flex flex-col h-full">
         {/* Gambar Proyek */}
-        <div className="h-56 w-full bg-gray-200 flex items-center justify-center relative overflow-hidden group">
+        <div className="h-56 w-full bg-gray-200 flex items-center justify-center relative overflow-hidden">
             <img 
+                /* Zoom halus pada gambar saat card di-hover */
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                 src={project.image} 
                 alt={project.title} 
                 onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/400x300?text=No+Image"}}
             />
-            {/* Overlay Title */}
+            {/* Overlay Title - Tetap di posisi asli kamu */}
             <div className='absolute top-2 left-2 text-white font-bold text-xs bg-black/60 px-2 py-1 rounded backdrop-blur-sm'>
                 {project.title}
             </div>
         </div>
 
         <div className="p-5 flex flex-col flex-grow">
-            <h3 className="text-xl font-bold text-gray-900 mb-1 line-clamp-1">{project.title}</h3>
+            {/* Judul akan berubah warna saat di-hover */}
+            <h3 className="text-xl font-bold text-gray-900 mb-1 line-clamp-1 group-hover:text-indigo-600 transition-colors duration-300">{project.title}</h3>
             <p className="text-sm font-semibold text-indigo-600 mb-1 line-clamp-1">{project.roles}</p>
             <p className="text-xs text-gray-500 mb-3">{project.date}</p>
             
@@ -149,7 +116,8 @@ const ProjectCard = ({ project }) => (
 
             <Link 
                 to={project.path}
-                className="w-full mt-auto bg-black text-white font-semibold py-2.5 rounded shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] hover:bg-gray-900 transition-all duration-300 text-sm block text-center"
+                /* Button dengan efek hover warna dan sedikit terangkat */
+                className="w-full mt-auto bg-black text-white font-semibold py-2.5 rounded shadow-md hover:bg-indigo-800 hover:shadow-indigo-200 hover:-translate-y-1 transition-all duration-300 text-sm block text-center"
             >
                 View Project
             </Link>
@@ -172,9 +140,7 @@ const ProjectExperience = () => {
             Project Experience
           </h2>
 
-          {/* --- MINI NAVBAR KEREN & MODERN --- */}
           <div className="flex justify-center mb-12">
-            {/* Container: Hitam Elegan dengan Efek Glassmorphism */}
             <div className="inline-flex overflow-x-auto gap-2 p-2 bg-zinc-900/95 backdrop-blur-md rounded-full border border-gray-800 shadow-2xl max-w-full no-scrollbar ring-1 ring-white/5">
                 {projectCategories.map(category => (
                   <button
@@ -185,10 +151,7 @@ const ProjectExperience = () => {
                       ${
                         activeCategory === category
                           ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/30 transform scale-105' 
-                          // ^ AKTIF: Gradient Indah + Shadow Glowing
-                          
                           : 'text-gray-400 hover:text-white hover:bg-white/10' 
-                          // ^ TIDAK AKTIF: Abu-abu -> Putih Bersih saat Hover
                       }
                     `}
                   >
@@ -212,7 +175,6 @@ const ProjectExperience = () => {
                 </div>
             )}
           </div>
-
       </div>
     </section>
   );
