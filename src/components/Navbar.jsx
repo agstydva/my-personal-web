@@ -4,6 +4,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Daftar Menu Navigasi (Nama Tampilan & Tujuan ID)
+  const navLinks = [
+    { name: 'Home', href: '#home' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Work', href: '#working-experience' }, // Bagian Work
+    { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },     // Bagian Education
+    { name: 'Organization', href: '#organization' }, 
+  ];
+
   // Efek scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +28,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-black/80 backdrop-blur-md shadow-lg border-b border-white/10'
-          : 'bg-transparent py-4' // Sedikit padding ekstra saat belum di-scroll agar elegan
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,27 +41,27 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* --- DESKTOP MENU (Hidden di HP, Muncul di Layar Medium ke atas) --- */}
+          {/* --- DESKTOP MENU --- */}
           <div className="hidden md:flex space-x-8">
-            {['Home', 'Skills', 'Projects', 'Contact'].map((item) => (
+            {navLinks.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.name}
+                href={item.href}
                 className="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative group"
               >
-                {item}
+                {item.name}
+                {/* Garis bawah animasi saat hover */}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
 
-          {/* --- MOBILE TOGGLE BUTTON (Muncul di HP, Hidden di Desktop) --- */}
+          {/* --- MOBILE TOGGLE BUTTON --- */}
           <div className="md:hidden flex items-center z-50">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white focus:outline-none transition-transform duration-300"
             >
-              {/* SVG dengan animasi transisi sederhana */}
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -65,7 +75,6 @@ const Navbar = () => {
       </div>
 
       {/* --- MOBILE MENU DROPDOWN --- */}
-      {/* Menggunakan absolute dan translate agar animasinya smooth dari atas */}
       <div
         className={`md:hidden absolute top-full left-0 w-full bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all duration-300 ease-in-out origin-top ${
           isOpen 
@@ -74,14 +83,14 @@ const Navbar = () => {
         }`}
       >
         <div className="px-4 py-6 space-y-4 flex flex-col items-center">
-          {['Home', 'Skills', 'Projects', 'Contact'].map((item) => (
+          {navLinks.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              onClick={() => setIsOpen(false)} // Menu menutup otomatis setelah diklik
+              key={item.name}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
               className="block w-full text-center px-3 py-3 rounded-lg text-lg font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all active:scale-95"
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </div>
