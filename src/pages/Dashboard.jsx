@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-// IMPORT Link dari react-router-dom
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // IMPORT Komponen Lain
@@ -44,12 +43,8 @@ const educationData = [
     },
 ];
 
-// --- EDUCATION CARD DENGAN EFEK GLOW DARK MODE ---
 const EducationCard = ({ institution, degree, imageSrc }) => (
-    // Container: Grouping untuk hover, transisi background glass, border menyala
     <div className="group flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 mb-12 w-full p-6 rounded-2xl transition-all duration-500 hover:bg-white/5 border border-transparent hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)]">
-        
-        {/* Image Container: Zoom effect */}
         <div className="flex-shrink-0 w-full md:w-64 h-36 rounded-lg overflow-hidden shadow-2xl relative">
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
             <img 
@@ -59,10 +54,7 @@ const EducationCard = ({ institution, degree, imageSrc }) => (
                 onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/400x150/1F2937/FFFFFF?text=No+Image"}}
             />
         </div>
-        
-        {/* Text Container */}
         <div className="flex-grow text-white text-center md:text-left pt-2">
-            {/* Title: Berubah warna jadi Indigo saat hover */}
             <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-indigo-400">
                 {institution}
             </h3>
@@ -86,12 +78,9 @@ const workingExperienceData = [
     }
 ];
 
-// --- WORKING EXPERIENCE CARD DENGAN EFEK LIFT UP ---
 const WorkingExperienceCard = ({ exp }) => (
-    // Container: Lift up (-translate-y), Shadow besar, Border berubah
     <div className="group bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 w-full max-w-5xl mx-auto transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-300">
         <div className="flex flex-col lg:flex-row">
-            {/* Image Section: Zoom Effect */}
             <div className="w-full lg:w-1/2 flex-shrink-0 overflow-hidden relative">
                 <img 
                     src={exp.imageSrc} 
@@ -99,7 +88,6 @@ const WorkingExperienceCard = ({ exp }) => (
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/600x400/F3F4F6/6B7280?text=Workplace+Image"}}
                 />
-                {/* Overlay gradient tipis */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             
@@ -137,6 +125,26 @@ const WorkingExperienceCard = ({ exp }) => (
 );
 
 const Dashboard = () => {
+    const greetings = [
+        "Hi There!", 
+        "Halo!",          
+        "こんにちは!",     
+        "Bonjour!",       
+        "Hola!",          
+        "Anyoung!",       
+        "你好!",          
+        "Guten Morgen!"   
+    ];
+    const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentGreetingIndex((prevIndex) => (prevIndex + 1) % greetings.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     const socialLinks = [
         { 
             name: 'LinkedIn', 
@@ -170,6 +178,36 @@ const Dashboard = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 font-sans text-gray-800">
+            {/* CSS ANIMASI CUSTOM (Pop Text & Orbit/Breathe) */}
+            <style>{`
+                @keyframes popBlur {
+                    0% { opacity: 0; transform: translateY(20px) scale(0.9); filter: blur(10px); }
+                    50% { opacity: 1; filter: blur(0px); }
+                    100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0px); }
+                }
+                .animate-pop-text { animation: popBlur 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+
+                /* Animasi Bernapas untuk Blobs Latar Belakang */
+                @keyframes breathe {
+                    0%, 100% { transform: scale(1); opacity: 0.7; }
+                    50% { transform: scale(1.1); opacity: 0.9; }
+                }
+                .animate-breathe { animation: breathe 6s ease-in-out infinite; }
+                .animate-breathe-delayed { animation: breathe 6s ease-in-out 3s infinite; }
+
+                /* Animasi Orbit untuk Satelit */
+                @keyframes spin-slow {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+                @keyframes spin-slower-reverse {
+                    from { transform: rotate(360deg); }
+                    to { transform: rotate(0deg); }
+                }
+                .animate-orbit-cw { animation: spin-slow 15s linear infinite; }
+                .animate-orbit-ccw { animation: spin-slower-reverse 20s linear infinite; }
+            `}</style>
+
             <Navbar />
 
             <main className="mx-auto px-4 py-10 sm:px-6 lg:px-8">
@@ -177,48 +215,60 @@ const Dashboard = () => {
                 {/* HERO SECTION */}
                 <section id="home" className="flex flex-col items-center justify-between px-50 py-16 md:flex-row">
                     <div className="md:w-3/5">
-                        <h1 className="mb-4 text-5xl font-extrabold text-gray-900 animate-fade-in-down">
-                            <span className="text-indigo-600">Hi There!</span><br />I'm Dava,<br /><span className="text-indigo-600">Computer Science Student</span>
+                        <h1 className="mb-4 text-5xl font-extrabold text-gray-900 leading-tight">
+                            <div className="h-24 flex items-center mb-2 overflow-visible"> 
+                                <span 
+                                    key={currentGreetingIndex} 
+                                    className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 animate-pop-text block text-6xl pb-4"
+                                >
+                                    {greetings[currentGreetingIndex]}
+                                </span>
+                            </div>
+                            <span className="block text-gray-900 mt-2">I'm Dava,</span>
+                            <span className="block text-indigo-600 mt-2">Computer Science Student</span>
                         </h1>
-                        <p className="mb-6 text-lg leading-relaxed text-gray-600">
+                        
+                        <p className="mb-6 text-lg leading-relaxed text-gray-600 mt-6">
                             A sixth semester Computer Science student at Universitas Negeri Jakarta, with a strong interest in Data Analysis, Web Development, and Project Management, and motivated to apply technical skills, analytical thinking, and collaborative problem solving in real world projects.
                         </p>
                         
-                        {/* --- SOCIAL MEDIA ICONS --- */}
-                        <div className="mt-6 flex space-x-5">
+                        <div className="mt-8 flex space-x-5">
                             {socialLinks.map((link, index) => (
-                                <a 
-                                    key={index} 
-                                    href={link.url} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className={`
-                                        group flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg border border-gray-100
-                                        transition-all duration-300 ease-out
-                                        hover:-translate-y-2 hover:scale-110 hover:shadow-indigo-500/30 hover:border-indigo-100
-                                    `}
-                                >
-                                    <img 
-                                        src={link.image} 
-                                        alt={link.altText} 
-                                        className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-110" 
-                                    />
+                                <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="group flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg border border-gray-100 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-110 hover:shadow-indigo-500/30 hover:border-indigo-100">
+                                    <img src={link.image} alt={link.altText} className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-110" />
                                 </a>
                             ))}
                         </div>
                     </div>
 
-                    {/* --- FOTO PROFIL --- */}
+                    {/* --- FOTO PROFIL DENGAN ANIMASI HIDUP --- */}
                     <div className="relative mt-10 flex justify-center md:mt-0 md:w-2/5">
-                        <div className="relative group cursor-pointer">
-                            <div className="absolute right-0 top-5 h-25 w-25 -translate-y-1/2 translate-x-1/2 rounded-full bg-indigo-200 transition-transform duration-500 group-hover:translate-x-3 group-hover:-translate-y-3"></div>
-                            <div className="absolute bottom-5 left-0 h-10 w-10 -translate-x-1/2 translate-y-1/2 rounded-full bg-indigo-200 transition-transform duration-500 group-hover:-translate-x-3 group-hover:translate-y-3"></div>
+                        {/* Container utama foto */}
+                        <div className="relative group cursor-pointer z-10">
+                            {/* Blob Latar Belakang 1 (Bernapas) */}
+                            <div className="absolute right-0 top-5 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full bg-indigo-200/80 animate-breathe transition-transform duration-500 group-hover:translate-x-3 group-hover:-translate-y-3"></div>
+                            {/* Blob Latar Belakang 2 (Bernapas delay) */}
+                            <div className="absolute bottom-5 left-0 h-24 w-24 -translate-x-1/2 translate-y-1/2 rounded-full bg-purple-200/80 animate-breathe-delayed transition-transform duration-500 group-hover:-translate-x-3 group-hover:translate-y-3"></div>
+                            
+                            {/* Foto Utama */}
                             <img 
                                 src="/images/me.jpeg" 
                                 alt="Profile" 
-                                className="relative z-10 h-85 w-85 rounded-full border-4 border-white object-cover shadow-2xl transition-all duration-500 ease-out 
+                                className="relative z-20 h-85 w-85 rounded-full border-4 border-white object-cover shadow-2xl transition-all duration-500 ease-out 
                                            group-hover:scale-105 group-hover:rotate-2 group-hover:shadow-[0_20px_50px_rgba(79,70,229,0.4)] group-hover:border-indigo-50" 
                             />
+                        </div>
+
+                        {/* --- ORBITING SATELLITES (Elemen yang mengelilingi) --- */}
+                        {/* Container absolut yang berputar (Orbit 1 - Searah jarum jam) */}
+                        <div className="absolute inset-0 z-0 animate-orbit-cw flex items-center justify-center pointer-events-none">
+                            {/* Satelit 1 (Titik Indigo di atas) */}
+                            <div className="h-4 w-4 bg-indigo-500 rounded-full blur-[1px] shadow-lg shadow-indigo-500/50 absolute -top-16"></div>
+                        </div>
+                         {/* Container absolut yang berputar (Orbit 2 - Berlawanan jarum jam, lebih lambat) */}
+                        <div className="absolute inset-0 z-0 animate-orbit-ccw flex items-center justify-center pointer-events-none">
+                            {/* Satelit 2 (Titik Purple di bawah kanan) */}
+                             <div className="h-3 w-3 bg-purple-500 rounded-full blur-[1px] shadow-lg shadow-purple-500/50 absolute -bottom-12 right-12"></div>
                         </div>
                     </div>
                 </section>
