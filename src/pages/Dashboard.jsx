@@ -128,21 +128,21 @@ const Dashboard = () => {
         },
         { 
             name: 'email', 
-            url: 'mailto:dava@example.com', 
+            url: 'mailto:agastyadava01@gmail.com', 
             image: '/images/gmail.webp', 
             bgColor: 'bg-white', 
             altText: 'Email Logo' 
         },
         { 
             name: 'Instagram', 
-            url: 'https://www.instagram.com/dava.stwn/', 
+            url: 'https://www.instagram.com/agstydva/', 
             image: '/images/instagram.webp', 
             bgColor: 'bg-white', 
             altText: 'Instagram Logo' 
         },
         { 
             name: 'GitHub', 
-            url: 'https://github.com/dava', 
+            url: 'https://github.com/agstydva', 
             image: '/images/github.webp', 
             bgColor: 'bg-white', 
             altText: 'GitHub Logo' 
