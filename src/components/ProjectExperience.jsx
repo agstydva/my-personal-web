@@ -17,7 +17,7 @@ const projectsData = [
         title: 'Dtastyum', 
         roles: 'Project Lead & Fullstack Web Developer', 
         date: 'Oktober 2024 - Desember 2024', 
-        category: ['Web Development', 'All'],
+        category: ['Web Development', 'All', 'Project Manager'],
         image: '/images/dtastyum.png',
         path: '/project/dtastyum'
     },
@@ -26,7 +26,7 @@ const projectsData = [
         title: 'GreenBucks', 
         roles: 'Project Lead & Flutter Developer', 
         date: 'November 2024 - Desember 2024', 
-        category: ['Mobile App', 'All'],
+        category: ['Mobile App', 'All', 'Project Manager'],
         image: '/images/GreenBucks.png',
         path: '/project/greenbucks'
     },
@@ -35,7 +35,7 @@ const projectsData = [
         title: 'Sportware', 
         roles: 'Project Lead & Fullstack Web Developer', 
         date: 'April 2025 - Juli 2025', 
-        category: ['Web Development', 'All'],
+        category: ['Web Development', 'All', 'Project Manager'],
         image: '/images/sportware.png',
         path: '/project/sportware'
     },
@@ -89,7 +89,7 @@ const projectsData = [
         title: 'NobaRek', 
         roles: 'Mobile App', 
         date: 'Oktober 2025 - Desember 2025', 
-        category: ['Mobile App', 'All'],
+        category: ['Mobile App', 'All', 'Project Manager'],
         image: '/images/NobaRek.png',
         path: '/project/NobaRek'
     },

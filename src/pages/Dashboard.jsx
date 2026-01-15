@@ -44,19 +44,31 @@ const educationData = [
     },
 ];
 
+// --- EDUCATION CARD DENGAN EFEK GLOW DARK MODE ---
 const EducationCard = ({ institution, degree, imageSrc }) => (
-    <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 mb-20 w-full">
-        <div className="flex-shrink-0 w-full md:w-64 h-36 rounded-lg overflow-hidden shadow-2xl">
+    // Container: Grouping untuk hover, transisi background glass, border menyala
+    <div className="group flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 mb-12 w-full p-6 rounded-2xl transition-all duration-500 hover:bg-white/5 border border-transparent hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)]">
+        
+        {/* Image Container: Zoom effect */}
+        <div className="flex-shrink-0 w-full md:w-64 h-36 rounded-lg overflow-hidden shadow-2xl relative">
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
             <img 
-                className="w-full h-full object-cover opacity-90" 
+                className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-100" 
                 src={imageSrc} 
                 alt={institution} 
                 onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/400x150/1F2937/FFFFFF?text=No+Image"}}
             />
         </div>
-        <div className="flex-grow text-white text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-1">{institution}</h3>
-            <p className="text-gray-400">{degree}</p>
+        
+        {/* Text Container */}
+        <div className="flex-grow text-white text-center md:text-left pt-2">
+            {/* Title: Berubah warna jadi Indigo saat hover */}
+            <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-indigo-400">
+                {institution}
+            </h3>
+            <p className="text-gray-400 group-hover:text-gray-200 transition-colors duration-300">
+                {degree}
+            </p>
         </div>
     </div>
 );
@@ -74,28 +86,35 @@ const workingExperienceData = [
     }
 ];
 
+// --- WORKING EXPERIENCE CARD DENGAN EFEK LIFT UP ---
 const WorkingExperienceCard = ({ exp }) => (
-    <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 w-full max-w-5xl mx-auto">
+    // Container: Lift up (-translate-y), Shadow besar, Border berubah
+    <div className="group bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 w-full max-w-5xl mx-auto transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-300">
         <div className="flex flex-col lg:flex-row">
-            <div className="w-full lg:w-1/2 flex-shrink-0">
+            {/* Image Section: Zoom Effect */}
+            <div className="w-full lg:w-1/2 flex-shrink-0 overflow-hidden relative">
                 <img 
                     src={exp.imageSrc} 
                     alt={exp.company} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/600x400/F3F4F6/6B7280?text=Workplace+Image"}}
                 />
+                {/* Overlay gradient tipis */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             
-            <div className="w-full lg:w-1/2 p-6 flex flex-col justify-between">
+            <div className="w-full lg:w-1/2 p-6 flex flex-col justify-between relative">
                 <div>
                     <div className="flex items-center space-x-3 mb-2">
                         <img 
                             src={exp.logoSrc} 
                             alt={`${exp.company} Logo`} 
-                            className="w-8 h-8 object-contain"
+                            className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110"
                             onError={(e) => {e.target.style.display = 'none';}}
                         />
-                        <h3 className="text-xl font-bold text-gray-900">{exp.company}</h3>
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-indigo-700 transition-colors">
+                            {exp.company}
+                        </h3>
                     </div>
                     
                     <p className="text-lg font-semibold text-gray-700 mb-1">{exp.role}</p>
@@ -108,7 +127,7 @@ const WorkingExperienceCard = ({ exp }) => (
 
                 <Link 
                     to={exp.path}
-                    className="mt-6 self-start inline-flex items-center justify-center bg-black text-white font-semibold py-2.5 px-8 rounded shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-gray-900 hover:-translate-y-1"
+                    className="mt-6 self-start inline-flex items-center justify-center bg-black text-white font-semibold py-2.5 px-8 rounded shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-indigo-600 hover:-translate-y-1"
                 >
                     View Working Experience
                 </Link>
@@ -165,7 +184,7 @@ const Dashboard = () => {
                             A sixth semester Computer Science student at Universitas Negeri Jakarta, with a strong interest in Data Analysis, Web Development, and Project Management, and motivated to apply technical skills, analytical thinking, and collaborative problem solving in real world projects.
                         </p>
                         
-                        {/* --- SOCIAL MEDIA ICONS: KEREN & MODERN --- */}
+                        {/* --- SOCIAL MEDIA ICONS --- */}
                         <div className="mt-6 flex space-x-5">
                             {socialLinks.map((link, index) => (
                                 <a 
@@ -189,14 +208,11 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    {/* --- FOTO PROFIL: ANIMASI ZOOM & GLOW --- */}
+                    {/* --- FOTO PROFIL --- */}
                     <div className="relative mt-10 flex justify-center md:mt-0 md:w-2/5">
                         <div className="relative group cursor-pointer">
-                            {/* Dekorasi Bulatan Belakang (Ikut bergerak sedikit saat hover) */}
                             <div className="absolute right-0 top-5 h-25 w-25 -translate-y-1/2 translate-x-1/2 rounded-full bg-indigo-200 transition-transform duration-500 group-hover:translate-x-3 group-hover:-translate-y-3"></div>
                             <div className="absolute bottom-5 left-0 h-10 w-10 -translate-x-1/2 translate-y-1/2 rounded-full bg-indigo-200 transition-transform duration-500 group-hover:-translate-x-3 group-hover:translate-y-3"></div>
-                            
-                            {/* Foto Utama */}
                             <img 
                                 src="/images/me.jpeg" 
                                 alt="Profile" 
@@ -209,7 +225,7 @@ const Dashboard = () => {
 
                 <hr className="my-10 border-gray-200" />
 
-                {/* SKILLS SECTION - UPDATED STYLE */}
+                {/* SKILLS SECTION */}
                 <section id="skills" className="py-10 px-40">
                     <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">Skills</h2>
                     <div className="grid grid-cols-3 justify-items-center gap-6 px-4 sm:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10">
