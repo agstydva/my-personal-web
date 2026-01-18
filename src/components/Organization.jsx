@@ -32,7 +32,7 @@ const organizationData = [
     { 
         id: 4, 
         role: 'Steering Committee Event Division PKKMB Ilmu Komputer 2025', 
-        organization: 'PKKMB FMIPA UNJ 2025', 
+        organization: 'PKKMB Ilmu Komputer UNJ 2025', 
         period: 'Juni 2025 - September 2025', 
         logo: '/images/unjlogo.png', 
         bgImage: '/images/scpkkmb.jpg',
@@ -76,7 +76,7 @@ const organizationData = [
     },
     { 
         id: 9, 
-        role: 'Deputy Coordinator Event DIvision PKKMB Ilmu Komputer 2024', 
+        role: 'Vice Coordinator Event DIvision PKKMB Ilmu Komputer 2024', 
         organization: 'PKKMB Ilmu Komputer UNJ 2024', 
         period: 'Juni 2024 - September 2024',
         logo: '/images/radiant.png',
@@ -95,7 +95,7 @@ const organizationData = [
     { 
         id: 11, 
         role: 'Sponsorship Division Staff Decode 2024', 
-        organization: 'PKKMB FMIPA 2025', 
+        organization: 'Universitas Negeri Jakarta', 
         period: 'Agustus 2024 - September 2024', 
         logo: '/images/unjlogo.png', 
         bgImage: '/images/decode.png',
@@ -122,7 +122,7 @@ const organizationData = [
     { 
         id: 14, 
         role: 'Publication & Design Division Staff Kabasta x Kabar Ilkomp 2024', 
-        organization: 'BEMP Ilmu Komputer', 
+        organization: 'BEMP Statistika UNJ', 
         period: 'September 2024 - Oktober 2024', 
         logo: '/images/logo-bempstat.png', 
         bgImage: '/images/kabasta.png',
@@ -131,7 +131,7 @@ const organizationData = [
     { 
         id: 15, 
         role: 'MIPA EXPO 2024', 
-        organization: 'BEMP Ilmu Komputer', 
+        organization: 'BEMP FMIPA UNJ', 
         period: 'Juli 2024', 
         logo: '/images/bemffmipa.jpg', 
         bgImage: '/images/mipaexpo.jpg',
@@ -166,29 +166,27 @@ const organizationData = [
     },
     { 
         id: 19, 
-        role: 'Vocational High School Teacher Volunteer', 
-        organization: 'BEMP Ilmu Komputer', 
+        role: 'Vocational High School Teacher', 
+        organization: 'SMKN 44 JAKARTA', 
         period: 'Oktober 2024', 
-        logo: '/images/logo-bempstat.png', 
+        logo: '/images/smk44jakarta.png', 
         bgImage: '/images/teacher.jpeg',
         path: '/volunteer/teacher'
     },
 ];
 
 const OrganizationCard = ({ org }) => (
-    // CARD WRAPPER: Menambahkan 'group' agar child elements (img, button) bisa bereaksi saat card di-hover
     <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-gray-300 flex flex-col h-full">
         
         {/* IMAGE CONTAINER */}
         <div className="h-40 w-full relative overflow-hidden">
-            {/* GAMBAR BACKGROUND: Zoom in saat hover (scale-110) & Opacity jadi 100% */}
+            {/* GAMBAR BACKGROUND */}
             <img 
                 className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-100" 
                 src={org.bgImage} 
                 alt={org.organization} 
                 onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/400x200/1F2937/FFFFFF?text=BG"}}
             />
-            {/* Overlay Gradient Tipis saat Hover agar teks tetap terbaca jika ada overlay */}
             <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
 
@@ -235,10 +233,18 @@ const OrganizationCard = ({ org }) => (
 
 const Organization = () => {
   return (
-    <section id="organization" className="px-40 py-10">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Organization, Committee, & Volunteer Experience</h2>
+    <section id="organization" className="px-6 sm:px-12 lg:px-24 xl:px-40 py-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
+            Organization, Committee, & Volunteer Experience
+        </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* PERBAIKAN GRID:
+            - grid-cols-1: 1 kolom di HP.
+            - sm:grid-cols-2: 2 kolom di Tablet/iPad agar tidak terlalu sempit.
+            - lg:grid-cols-3: 3 kolom di Laptop.
+            - xl:grid-cols-4: 4 kolom di layar besar (sesuai kode awal Anda).
+        */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
             {organizationData.map(org => (
                 <OrganizationCard key={org.id} org={org} />
             ))}

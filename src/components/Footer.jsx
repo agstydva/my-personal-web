@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-gray-100 border-t border-gray-200 py-6 mt-10">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <p className="text-sm text-gray-600">
-          &copy; {currentYear} Dava Ganteng Se-UNJ. Built Porto with Love & Hearts.
+          &copy; {currentYear} Dava Ganteng Se-UNJ. Built Porto with Love & Heart, Muachhh.
         </p>
       </div>
     </footer>

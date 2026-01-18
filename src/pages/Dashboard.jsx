@@ -28,6 +28,12 @@ const skillData = [
     { name: 'Laravel', image: '/images/laravel.png' },
     { name: 'Next Js', image: '/images/nextjs.png' },
     { name: 'Dart', image: '/images/dart.png' },
+    { name: 'Colab', image: '/images/google-colab-icon.webp' },
+    { name: 'Power Bi', image: '/images/power-bi.png' },
+    // { name: 'Pandas', image: '/images/pandas-icon-logo.png' },
+    // { name: 'Office', image: '/images/office.png' },
+    { name: 'Jetpack Compose', image: '/images/jetpack compose icon_RGB.png' },
+    { name: 'Notion', image: '/images/notion.png' },
 ];
 
 const educationData = [
@@ -129,7 +135,8 @@ const Dashboard = () => {
         "Hi There!", 
         "Halo!",          
         "こんにちは!",     
-        "Bonjour!",       
+        "Bonjour!",
+        "Привет",       
         "Hola!",          
         "Annyeong 안녕!",       
         "你好!",          
@@ -148,7 +155,7 @@ const Dashboard = () => {
     const socialLinks = [
         { 
             name: 'LinkedIn', 
-            url: 'https://www.linkedin.com/in/agastya-dava-nurrahmann/', 
+            url: 'https://www.linkedin.com/in/agastya-dava-nurrahman?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKtJa0Sj3R4ajMT9cXdkFBA%3D%3D', 
             image: '/images/linkedin3.png', 
             bgColor: 'bg-white', 
             altText: 'LinkedIn Logo' 
@@ -178,7 +185,6 @@ const Dashboard = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 font-sans text-gray-800">
-            {/* CSS ANIMASI CUSTOM (Pop Text & Orbit/Breathe) */}
             <style>{`
                 @keyframes popBlur {
                     0% { opacity: 0; transform: translateY(20px) scale(0.9); filter: blur(10px); }
@@ -187,7 +193,6 @@ const Dashboard = () => {
                 }
                 .animate-pop-text { animation: popBlur 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
 
-                /* Animasi Bernapas untuk Blobs Latar Belakang */
                 @keyframes breathe {
                     0%, 100% { transform: scale(1); opacity: 0.7; }
                     50% { transform: scale(1.1); opacity: 0.9; }
@@ -195,7 +200,6 @@ const Dashboard = () => {
                 .animate-breathe { animation: breathe 6s ease-in-out infinite; }
                 .animate-breathe-delayed { animation: breathe 6s ease-in-out 3s infinite; }
 
-                /* Animasi Orbit untuk Satelit */
                 @keyframes spin-slow {
                     from { transform: rotate(0deg); }
                     to { transform: rotate(360deg); }
@@ -206,32 +210,91 @@ const Dashboard = () => {
                 }
                 .animate-orbit-cw { animation: spin-slow 15s linear infinite; }
                 .animate-orbit-ccw { animation: spin-slower-reverse 20s linear infinite; }
+
+                /* ANIMASI MENGETIK BARU */
+                /* Update bagian ini di dalam tag <style> Anda */
+
+                @keyframes typing {
+                0% { width: 0 }
+                70% { width: 100% } /* Selesai mengetik di 70% durasi */
+                100% { width: 100% } /* Diam (tetap full) dari 70% sampai 100% */
+                }
+
+                @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: #4f46e5; }
+                }
+
+                .animate-typing {
+                display: inline-block;
+                overflow: hidden;
+                white-space: nowrap;
+                border-right: 3px solid #4f46e5;
+                /* Durasi saya naikkan ke 4s agar jedanya terasa lebih pas */
+                animation: 
+                    typing 4s steps(25, end) infinite alternate,
+                    blink-caret .75s step-end infinite;
+                }
             `}</style>
 
             <Navbar />
 
-            <main className="mx-auto px-4 py-10 sm:px-6 lg:px-8">
+            <main className="mx-auto px-4 py-15 sm:px-6 lg:px-8">
 
                 {/* HERO SECTION */}
-                <section id="home" className="flex flex-col items-center justify-between px-50 py-16 md:flex-row">
+                <section id="home" className="flex flex-col items-center justify-between px-47 py-16 md:flex-row">
                     <div className="md:w-3/5">
-                        <h1 className="mb-4 text-5xl font-extrabold text-gray-900 leading-tight">
-                            <div className="h-24 flex items-center mb-2 overflow-visible"> 
-                                <span 
-                                    key={currentGreetingIndex} 
-                                    className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 animate-pop-text block text-6xl pb-4"
-                                >
-                                    {greetings[currentGreetingIndex]}
-                                </span>
-                            </div>
-                            <span className="block text-gray-900 mt-2">I'm Dava,</span>
-                            <span className="block text-indigo-600 mt-2">Computer Science Student</span>
-                        </h1>
+                                    <h1 className="mb-4 font-extrabold text-gray-900 leading-tight"> {/* Hapus text-5xl di sini */}
+                        <div className="h-15 flex items-center mb-2 overflow-visible"> 
+                            <span 
+                                key={currentGreetingIndex} 
+                                className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 animate-pop-text block text-6xl pb-4"
+                            >
+                                {greetings[currentGreetingIndex]}
+                            </span>
+                        </div>
+                        {/*  text-4xl */}
+                        <span className="block text-gray-900 mt-4 text-5xl">I'm Dava,</span>
+                        
+                        {/* ANIMASI MENGETIK */}
+                        <div className="inline-block">
+                            {/* text-4xl */}
+                            <span className="block text-indigo-600 mt-4 animate-typing text-4xl">
+                                Computer Science Student 
+                            </span>
+                        </div>
+                    </h1>
                         
                         <p className="mb-6 text-lg leading-relaxed text-gray-600 mt-6">
-                            A sixth semester Computer Science student at Universitas Negeri Jakarta, with a strong interest in Data Analysis, Web Development, and Project Management, and motivated to apply technical skills, analytical thinking, and collaborative problem solving in real world projects.
+                            A Computer Science student at <b>Universitas Negeri Jakarta</b> with strong interests in Data Analysis, Web Development, and Project Management, driven by a high motivation for continuous learning and self improvement, and passionate about applying technical, analytical, and collaborative problem solving skills to deliver impactful real world solutions.
                         </p>
                         
+                        {/* --- DOWNLOAD RESUME & PORTFOLIO BUTTONS --- */}
+                        <div className="mt-10 flex flex-wrap gap-4">
+                            <a 
+                                href="/CV_For_Web_Agastya_Dava_Nurrahman.pdf" 
+                                download="CV_For_Web_Agastya_Dava_Nurrahman.pdf"
+                                className="flex items-center gap-2 bg-white text-gray-900 border border-gray-200 px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:border-indigo-500 hover:text-indigo-600 hover:-translate-y-1 transition-all duration-300"
+                            >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Download Resume
+                            </a>
+
+                            <a 
+                                href="/Portfolio_Agastya_Dava.pdf" 
+                                download="Portfolio_Agastya_Dava.pdf"
+                                className="flex items-center gap-2 bg-white text-gray-900 border border-gray-200 px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:border-indigo-500 hover:text-indigo-600 hover:-translate-y-1 transition-all duration-300"
+                            >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                                Download Portfolio
+                            </a>
+                        </div>
+
+                        {/* SOCIAL MEDIA LINKS */}
                         <div className="mt-8 flex space-x-5">
                             {socialLinks.map((link, index) => (
                                 <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="group flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg border border-gray-100 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-110 hover:shadow-indigo-500/30 hover:border-indigo-100">
@@ -241,16 +304,12 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    {/* --- FOTO PROFIL DENGAN ANIMASI HIDUP --- */}
+                    {/* FOTO PROFIL SECTION */}
                     <div className="relative mt-10 flex justify-center md:mt-0 md:w-2/5">
-                        {/* Container utama foto */}
                         <div className="relative group cursor-pointer z-10">
-                            {/* Blob Latar Belakang 1 (Bernapas) */}
                             <div className="absolute right-0 top-5 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full bg-indigo-200/80 animate-breathe transition-transform duration-500 group-hover:translate-x-3 group-hover:-translate-y-3"></div>
-                            {/* Blob Latar Belakang 2 (Bernapas delay) */}
                             <div className="absolute bottom-5 left-0 h-24 w-24 -translate-x-1/2 translate-y-1/2 rounded-full bg-purple-200/80 animate-breathe-delayed transition-transform duration-500 group-hover:-translate-x-3 group-hover:translate-y-3"></div>
                             
-                            {/* Foto Utama */}
                             <img 
                                 src="/images/me.jpeg" 
                                 alt="Profile" 
@@ -259,15 +318,10 @@ const Dashboard = () => {
                             />
                         </div>
 
-                        {/* --- ORBITING SATELLITES (Elemen yang mengelilingi) --- */}
-                        {/* Container absolut yang berputar (Orbit 1 - Searah jarum jam) */}
                         <div className="absolute inset-0 z-0 animate-orbit-cw flex items-center justify-center pointer-events-none">
-                            {/* Satelit 1 (Titik Indigo di atas) */}
                             <div className="h-4 w-4 bg-indigo-500 rounded-full blur-[1px] shadow-lg shadow-indigo-500/50 absolute -top-16"></div>
                         </div>
-                         {/* Container absolut yang berputar (Orbit 2 - Berlawanan jarum jam, lebih lambat) */}
                         <div className="absolute inset-0 z-0 animate-orbit-ccw flex items-center justify-center pointer-events-none">
-                            {/* Satelit 2 (Titik Purple di bawah kanan) */}
                              <div className="h-3 w-3 bg-purple-500 rounded-full blur-[1px] shadow-lg shadow-purple-500/50 absolute -bottom-12 right-12"></div>
                         </div>
                     </div>
@@ -276,25 +330,50 @@ const Dashboard = () => {
                 <hr className="my-10 border-gray-200" />
 
                 {/* SKILLS SECTION */}
-                <section id="skills" className="py-10 px-40">
+                {/* SKILLS SECTION */}
+                <section id="skills" className="py-10 px-4 md:px-10 lg:px-20 xl:px-40">
                     <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">Skills</h2>
-                    <div className="grid grid-cols-3 justify-items-center gap-6 px-4 sm:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10">
-                        {skillData.map((skill, index) => (
-                            <div key={index} className="group flex flex-col items-center cursor-pointer">
-                                <div className="mb-3 flex h-20 w-20 items-center justify-center rounded-2xl bg-white border border-transparent shadow-md transition-all duration-300 ease-out 
-                                                group-hover:-translate-y-2 group-hover:shadow-[0_8px_30px_rgb(79,70,229,0.2)] group-hover:border-indigo-200 group-hover:bg-indigo-50/30">
-                                    <img 
-                                        src={skill.image} 
-                                        alt={skill.name} 
-                                        className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110" 
-                                        onError={(e) => {e.target.style.display='none'}} 
-                                    />
-                                </div>
-                                <span className="text-sm font-medium text-gray-600 transition-colors duration-300 group-hover:text-indigo-600 group-hover:font-semibold">
-                                    {skill.name}
-                                </span>
-                            </div>
-                        ))}
+                    
+                    <div className="flex justify-center">
+                        {/* Gunakan grid-cols yang dinamis:
+                        - 2 ikon di HP (grid-cols-2)
+                        - 4 ikon di Tablet (sm:grid-cols-4)
+                        - 6 ikon di Laptop (lg:grid-cols-6)
+                        - 10 ikon di Layar Besar (xl:grid-cols-10)
+                        */}
+                        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-10 gap-x-4 gap-y-8 justify-items-center w-full max-w-7xl">
+                            {skillData.map((skill, index) => {
+                                // Menghitung apakah item ini berada di baris terakhir
+                                const totalItems = skillData.length;
+                                const itemsPerRow = 10; // Untuk layar xl
+                                const lastRowItems = totalItems % itemsPerRow;
+                                const isLastRow = index >= totalItems - lastRowItems;
+
+                                return (
+                                    <div 
+                                        key={index} 
+                                        className="group flex flex-col items-center cursor-pointer transition-all duration-300"
+                                        /* Style ini hanya aktif di layar XL untuk membuat baris terakhir (6 item) berada di tengah */
+                                        style={isLastRow && window.innerWidth >= 1280 ? { 
+                                            gridColumnStart: index === totalItems - lastRowItems ? (itemsPerRow - lastRowItems) / 2 + 1 : 'auto' 
+                                        } : {}}
+                                    >
+                                        <div className="mb-3 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-white border border-transparent shadow-md transition-all duration-300 ease-out 
+                                                        group-hover:-translate-y-2 group-hover:shadow-[0_8px_30px_rgb(79,70,229,0.2)] group-hover:border-indigo-200 group-hover:bg-indigo-50/30">
+                                            <img 
+                                                src={skill.image} 
+                                                alt={skill.name} 
+                                                className="h-8 w-8 sm:h-10 sm:w-10 object-contain transition-transform duration-300 group-hover:scale-110" 
+                                                onError={(e) => {e.target.style.display='none'}} 
+                                            />
+                                        </div>
+                                        <span className="text-xs sm:text-sm font-medium text-gray-600 transition-colors duration-300 group-hover:text-indigo-600 group-hover:font-semibold text-center px-1">
+                                            {skill.name}
+                                        </span>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </section>
 

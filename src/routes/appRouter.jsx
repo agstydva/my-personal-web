@@ -1,10 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
-
-// --- TAMBAHKAN BARIS INI (PENTING!) ---
 import UnderConstruction from '../pages/UnderConstruction'; 
-// ---------------------------------------
 
 const AppRouter = () => {
   return (
@@ -31,7 +28,6 @@ const AppRouter = () => {
       <Route path="/volunteer/sponsorUIUX" element={<UnderConstruction />} />
       <Route path="/volunteer/staffCompas" element={<UnderConstruction />} />
       <Route path="/volunteer/teacher" element={<UnderConstruction />} />
-
 
 
       {/* Route untuk Project Experience */}

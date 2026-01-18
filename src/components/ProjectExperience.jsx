@@ -43,7 +43,7 @@ const projectsData = [
         id: 4, 
         title: 'Eatzy', 
         roles: 'Project Lead & Entrepreneur', 
-        date: 'September 2025 - Desember 2025', 
+        date: 'September 2025 - Present', 
         category: ['Web Development', 'All', 'Project Manager'],
         image: '/images/eatzy.png',
         path: '/project/eatzy'
@@ -58,54 +58,70 @@ const projectsData = [
         path: '/project/simkes'
     },
     { 
-        id: 7, 
+        id: 6, 
         title: 'Credit Card Analysis Report', 
         roles: 'Data Analyst', 
-        date: 'September 2025 - Desember 2025', 
+        date: 'Februari 2025 - Maret 2025', 
         category: ['Data Science & Analyst', 'All'],
         image: '/images/data-analyst2.png',
         path: '/project/creditCardAnalysis'
     },
     { 
-        id: 8, 
+        id: 7, 
         title: 'Retail Sales Transaction Analysis Dashboard', 
         roles: 'Data Analyst', 
-        date: 'Oktober 2025 - Desember 2025', 
+        date: 'Januari 2025 - Februari 2025', 
         category: ['Data Science & Analyst', 'All'],
         image: '/images/data-analyst1.png',
         path: '/project/userRetention'
     },
     { 
-        id: 9, 
+        id: 8, 
         title: 'NobaRek', 
-        roles: 'Mobile App', 
-        date: 'Oktober 2025 - Desember 2025', 
+        roles: 'Project Lead & Mobile App', 
+        date: 'Desember 2025 - Januari 2026', 
         category: ['Mobile App', 'All', 'Project Manager'],
         image: '/images/NobaRek.png',
         path: '/project/NobaRek'
     },
+    { 
+        id: 9, 
+        title: 'Cheaper', 
+        roles: 'UI/UX Design', 
+        date: 'November 2023', 
+        category: ['UI/UX Design', 'All'],
+        image: '/images/cheaper.png',
+        path: '/project/cheaper'
+    },
+    { 
+        id: 11, 
+        title: 'Panen Fresh', 
+        roles: 'UI/UX Design', 
+        date: 'Oktober 2024 - November 2024', 
+        category: ['UI/UX Design', 'All'],
+        image: '/images/panenfresh.png',
+        path: '/project/panenfresh'
+    },
 ];
 
 const ProjectCard = ({ project }) => (
-    /* Menambahkan hover:-translate-y-2 dan hover:ring untuk efek angkat */
     <div className="group bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 transform hover:-translate-y-2 hover:shadow-2xl hover:ring-1 hover:ring-indigo-500/20 transition-all duration-300 flex flex-col h-full">
         {/* Gambar Proyek */}
         <div className="h-56 w-full bg-gray-200 flex items-center justify-center relative overflow-hidden">
             <img 
-                /* Zoom halus pada gambar saat card di-hover */
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                 src={project.image} 
                 alt={project.title} 
                 onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/400x300?text=No+Image"}}
             />
-            {/* Overlay Title - Tetap di posisi asli kamu */}
+            {/* Overlay Title */}
             <div className='absolute top-2 left-2 text-white font-bold text-xs bg-black/60 px-2 py-1 rounded backdrop-blur-sm'>
                 {project.title}
             </div>
         </div>
 
         <div className="p-5 flex flex-col flex-grow">
-            {/* Judul akan berubah warna saat di-hover */}
+            {/* Judul */}
             <h3 className="text-xl font-bold text-gray-900 mb-1 line-clamp-1 group-hover:text-indigo-600 transition-colors duration-300">{project.title}</h3>
             <p className="text-sm font-semibold text-indigo-600 mb-1 line-clamp-1">{project.roles}</p>
             <p className="text-xs text-gray-500 mb-3">{project.date}</p>
@@ -116,7 +132,7 @@ const ProjectCard = ({ project }) => (
 
             <Link 
                 to={project.path}
-                /* Button dengan efek hover warna dan sedikit terangkat */
+                /* hover button */
                 className="w-full mt-auto bg-black text-white font-semibold py-2.5 rounded shadow-md hover:bg-indigo-800 hover:shadow-indigo-200 hover:-translate-y-1 transition-all duration-300 text-sm block text-center"
             >
                 View Project
