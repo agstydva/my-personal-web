@@ -140,7 +140,7 @@ const organizationData = [
     { 
         id: 16, 
         role: 'Event Division Staff Compare 2024', 
-        organization: 'PKKMB Ilmu Komputer 2025', 
+        organization: 'Workshop COMPARE 2024', 
         period: 'Mei 2024 - Juni 2024', 
         logo: '/images/comparelogo.png', 
         bgImage: '/images/compare.png',
@@ -149,7 +149,7 @@ const organizationData = [
     { 
         id: 17, 
         role: 'Sponsorship Division Staff Decode (UI/UX)', 
-        organization: 'PKKMB FMIPA 2025', 
+        organization: 'Workshop UI/UX Design 2024', 
         period: 'Juni 2024 - Juli 2024', 
         logo: '/images/uiuxlogo.png', 
         bgImage: '/images/uiux.png',
@@ -168,7 +168,7 @@ const organizationData = [
         id: 19, 
         role: 'Vocational High School Teacher Volunteer', 
         organization: 'SMKN 44 JAKARTA', 
-        period: 'Oktober 2023', 
+        period: 'November 2023', 
         logo: '/images/smk44jakarta.png', 
         bgImage: '/images/teacher.jpeg',
         path: '/volunteer/teacher'
