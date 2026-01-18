@@ -166,7 +166,7 @@ const organizationData = [
     },
     { 
         id: 19, 
-        role: 'Vocational High School Teacher', 
+        role: 'Vocational High School Teacher Volunteer', 
         organization: 'SMKN 44 JAKARTA', 
         period: 'Oktober 2024', 
         logo: '/images/smk44jakarta.png', 
