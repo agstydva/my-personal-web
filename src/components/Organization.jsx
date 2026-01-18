@@ -131,7 +131,7 @@ const organizationData = [
     { 
         id: 15, 
         role: 'MIPA EXPO 2024', 
-        organization: 'BEMP FMIPA UNJ', 
+        organization: 'BEM FMIPA UNJ', 
         period: 'Juli 2024', 
         logo: '/images/bemffmipa.jpg', 
         bgImage: '/images/mipaexpo.jpg',
