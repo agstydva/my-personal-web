@@ -148,7 +148,7 @@ const organizationData = [
     },
     { 
         id: 17, 
-        role: 'Sponsorship Division Staff Decode (UI/UX)', 
+        role: 'Sponsorship Division Staff Workshop UI/UX Design 2024', 
         organization: 'Workshop UI/UX Design 2024', 
         period: 'Juni 2024 - Juli 2024', 
         logo: '/images/uiuxlogo.png', 
