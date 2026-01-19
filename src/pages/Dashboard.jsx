@@ -40,33 +40,58 @@ const educationData = [
     { 
         institution: 'Universitas Negeri Jakarta', 
         degree: "Bachelor's degree, Computer Science", 
+        address: 'Jl. Rawamangun Muka, RT.11/RW.14, Rawamangun, Kec. Pulo Gadung, Kota Jakarta Timur',
+        websiteUrl: 'https://unj.ac.id/',
         imageSrc: '/images/unj.jpeg' 
     },
     { 
         institution: 'SMK Mitra Industri MM2100', 
         degree: 'Vocational High School Student, Industrial Electrical Engineering', 
+        address: 'Kawasan Industri MM2100, Jl. Kalimantan Blok DD 1-1, Cikarang Barat, Bekasi',
+        websiteUrl: 'https://smkind-mm2100.sch.id/',
         imageSrc: '/images/mitraindustri.jpeg' 
     },
 ];
 
-const EducationCard = ({ institution, degree, imageSrc }) => (
-    <div className="group flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 mb-12 w-full p-6 rounded-2xl transition-all duration-500 hover:bg-white/5 border border-transparent hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)]">
-        <div className="flex-shrink-0 w-full md:w-64 h-36 rounded-lg overflow-hidden shadow-2xl relative">
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+const EducationCard = ({ institution, degree, address, websiteUrl, imageSrc }) => (
+    <div className="group flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 mb-16 w-full max-w-5xl p-8 rounded-3xl transition-all duration-500 hover:bg-white/[0.03] border border-transparent hover:border-indigo-500/20">
+        {/* IMAGE SECTION */}
+        <div className="flex-shrink-0 w-full md:w-72 h-44 rounded-2xl overflow-hidden shadow-2xl relative">
             <img 
-                className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-100" 
+                className="w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-100" 
                 src={imageSrc} 
                 alt={institution} 
-                onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/400x150/1F2937/FFFFFF?text=No+Image"}}
+                onError={(e) => {e.target.src="https://via.placeholder.com/400x200/1F2937/FFFFFF?text=Education"}}
             />
         </div>
-        <div className="flex-grow text-white text-center md:text-left pt-2">
-            <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-indigo-400">
+
+        {/* CONTENT SECTION */}
+        <div className="flex-grow text-white text-center md:text-left">
+            <h3 className="text-2xl md:text-3xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">
                 {institution}
             </h3>
-            <p className="text-gray-400 group-hover:text-gray-200 transition-colors duration-300">
+            <p className="text-indigo-400 font-semibold mb-4 text-lg">
                 {degree}
             </p>
+            
+            <div className="flex items-start justify-center md:justify-start gap-3 mb-6 text-gray-400">
+                <svg className="w-5 h-5 text-indigo-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                </svg>
+                <p className="text-sm leading-relaxed max-w-md">{address}</p>
+            </div>
+
+            <a 
+                href={websiteUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-black hover:bg-indigo-500 hover:text-white rounded-full text-sm font-bold transition-all duration-300"
+            >
+                Visit Institution
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
         </div>
     </div>
 );
@@ -394,18 +419,19 @@ const Dashboard = () => {
 
             </main>
 
-            {/* EDUCATION */}
-            <section id="education" className="px-60 py-10 relative overflow-hidden">
-                <div className="px-40 bg-black absolute inset-0 rounded-xl shadow-2xl">
-                    <div className="absolute w-16 h-16 bg-white/10 rounded-full top-30 left-30"></div>
-                    <div className="absolute w-20 h-20 bg-white/10 rounded-full bottom-20 right-30"></div>
-                    <div className="absolute w-8 h-8 bg-white/10 rounded-full bottom-40 right-55"></div>
+            {/* EDUCATION SECTION */}
+            {/* EDUCATION SECTION (NEW STYLE) */}
+            <section id="education" className="w-full py-24 bg-[#0a0a0a] relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                    <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-indigo-600/10 rounded-full blur-[120px]"></div>
+                    <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-purple-600/10 rounded-full blur-[120px]"></div>
                 </div>
-                <div className="relative z-10 p-12">
-                    <h2 className="text-4xl font-bold text-white mb-18 text-center">Education</h2>
+
+                <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
+                    <h2 className="text-4xl font-bold text-white mb-16 text-center">Education</h2>
                     <div className='flex flex-col items-center'>
                         {educationData.map((edu, index) => (
-                            <EducationCard key={index} institution={edu.institution} degree={edu.degree} imageSrc={edu.imageSrc} />
+                            <EducationCard key={index} institution={edu.institution} degree={edu.degree} address={edu.address} websiteUrl={edu.websiteUrl} imageSrc={edu.imageSrc} />
                         ))}
                     </div>
                 </div>
