@@ -58,7 +58,7 @@ const organizationData = [
     },
     { 
         id: 7, 
-        role: 'MIPA Preneur 2025', 
+        role: 'MIPA Preneur Expo 2025', 
         organization: 'BEM FMIPA UNJ', 
         period: 'September 2025', 
         logo: '/images/bemffmipa.jpg', 
