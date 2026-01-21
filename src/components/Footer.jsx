@@ -13,13 +13,11 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-[#0a0a0a] text-white pt-20 pb-10 relative overflow-hidden">
-      {/* Glow Effect agar senada dengan section Education */}
       <div className="absolute top-0 right-0 w-[30%] h-[50%] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16">
           
-          {/* Brand Column */}
           <div className="md:col-span-5">
             <h2 className="text-2xl font-black tracking-tighter mb-6">
               Agastya Dava
@@ -47,7 +45,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation Section */}
           <div className="md:col-span-3">
             <h3 className="text-xs font-bold uppercase tracking-[0.3em] mb-8">
               Navigation
@@ -67,7 +64,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Column */}
+          {/* Contact */}
           <div className="md:col-span-4">
             <h3 className="text-xs font-bold uppercase tracking-[0.3em] mb-8">
               Connect With Me
@@ -102,7 +99,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* --- UPDATE BAGIAN BOTTOM BAR --- */}
         <div className="mt-12 flex justify-center border-t border-white/5 pt-8 text-center">
           <p className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.3em]">
             &copy; {currentYear} Agastya Dava Nurrahman
