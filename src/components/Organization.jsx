@@ -76,7 +76,7 @@ const organizationData = [
     },
     { 
         id: 9, 
-        role: 'Vice Coordinator Event DIvision PKKMB Ilmu Komputer 2024', 
+        role: 'Vice Coordinator Event Division PKKMB Ilmu Komputer 2024', 
         organization: 'PKKMB Ilmu Komputer UNJ 2024', 
         period: 'Juni 2024 - September 2024',
         logo: '/images/radiant.png',
@@ -95,7 +95,7 @@ const organizationData = [
     { 
         id: 11, 
         role: 'Sponsorship Division Staff Decode 2024', 
-        organization: 'Universitas Negeri Jakarta', 
+        organization: 'Workshop Decode 2024', 
         period: 'Agustus 2024 - September 2024', 
         logo: '/images/unjlogo.png', 
         bgImage: '/images/decode.png',

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// IMPORT Komponen Lain
+// IMPORT Komponen
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProjectExperience from '../components/ProjectExperience';
@@ -355,7 +355,6 @@ const Dashboard = () => {
                 <hr className="my-10 border-gray-200" />
 
                 {/* SKILLS SECTION */}
-                {/* SKILLS SECTION */}
                 <section id="skills" className="py-10 px-4 md:px-10 lg:px-20 xl:px-40">
                     <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">Skills</h2>
                     
@@ -417,10 +416,10 @@ const Dashboard = () => {
                 {/* PROJECT EXPERIENCE */}
                 <ProjectExperience />
 
+
             </main>
 
             {/* EDUCATION SECTION */}
-            {/* EDUCATION SECTION (NEW STYLE) */}
             <section id="education" className="w-full py-24 bg-[#0a0a0a] relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                     <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-indigo-600/10 rounded-full blur-[120px]"></div>
