@@ -94,6 +94,15 @@ const projectsData = [
         path: '/project/cheaper'
     },
     { 
+        id: 10, 
+        title: 'Supermarket Sales Analysis Dashboard', 
+        roles: 'Data Analyst', 
+        date: 'Desember 2025 - Januari 2026', 
+        category: ['Data Science & Analyst', 'All'],
+        image: '/images/data-analyst3.png',
+        path: '/project/supermarketSales'
+    },
+    { 
         id: 11, 
         title: 'Panen Fresh', 
         roles: 'UI/UX Design', 
