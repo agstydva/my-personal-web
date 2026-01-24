@@ -23,6 +23,15 @@ const projectsData = [
     },
     { 
         id: 2, 
+        title: 'Credit Card Analysis Report', 
+        roles: 'Data Analyst', 
+        date: 'Februari 2025 - Maret 2025', 
+        category: ['Data Science & Analyst', 'All'],
+        image: '/images/data-analyst2.png',
+        path: '/project/creditCardAnalysis'
+    },
+    { 
+        id: 3, 
         title: 'GreenBucks', 
         roles: 'Project Lead & Flutter Developer', 
         date: 'November 2024 - Desember 2024', 
@@ -31,22 +40,13 @@ const projectsData = [
         path: '/project/greenbucks'
     },
     { 
-        id: 3, 
-        title: 'Sportware', 
-        roles: 'Project Lead & Fullstack Web Developer', 
-        date: 'April 2025 - Juli 2025', 
-        category: ['Web Development', 'All', 'Project Manager'],
-        image: '/images/sportware.png',
-        path: '/project/sportware'
-    },
-    { 
         id: 4, 
-        title: 'Eatzy', 
-        roles: 'Project Lead & Entrepreneur', 
-        date: 'September 2025 - Present', 
-        category: ['Web Development', 'All', 'Project Manager'],
-        image: '/images/eatzy.png',
-        path: '/project/eatzy'
+        title: 'Market Basket Analysis', 
+        roles: 'Data Analyst', 
+        date: 'Desember 2025 - Januari 2026', 
+        category: ['Data Science & Analyst', 'All'],
+        image: '/images/market-basket-analysis.png',
+        path: '/project/marketBasketAnalysis'
     },
     { 
         id: 5, 
@@ -59,12 +59,12 @@ const projectsData = [
     },
     { 
         id: 6, 
-        title: 'Credit Card Analysis Report', 
+        title: 'User Retention Analysis', 
         roles: 'Data Analyst', 
-        date: 'Februari 2025 - Maret 2025', 
+        date: 'November 2025 - Desember 2025', 
         category: ['Data Science & Analyst', 'All'],
-        image: '/images/data-analyst2.png',
-        path: '/project/creditCardAnalysis'
+        image: '/images/user-retention-analysis.png',
+        path: '/project/userRetentionAnalysis'
     },
     { 
         id: 7, 
@@ -104,6 +104,15 @@ const projectsData = [
     },
     { 
         id: 11, 
+        title: 'Eatzy', 
+        roles: 'Project Lead & Entrepreneur', 
+        date: 'September 2025 - Present', 
+        category: ['All', 'Project Manager', 'Data Science & Analyst'],
+        image: '/images/eatzy.png',
+        path: '/project/eatzy'
+    },
+    { 
+        id: 12, 
         title: 'Panen Fresh', 
         roles: 'UI/UX Design', 
         date: 'Oktober 2024 - November 2024', 
@@ -111,6 +120,17 @@ const projectsData = [
         image: '/images/panenfresh.png',
         path: '/project/panenfresh'
     },
+    { 
+        id: 13, 
+        title: 'Sportware', 
+        roles: 'Project Lead & Fullstack Web Developer', 
+        date: 'April 2025 - Juli 2025', 
+        category: ['Web Development', 'All', 'Project Manager'],
+        image: '/images/sportware.png',
+        path: '/project/sportware'
+    },
+    
+    
 ];
 
 const ProjectCard = ({ project }) => (
