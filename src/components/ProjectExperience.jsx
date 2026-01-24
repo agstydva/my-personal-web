@@ -25,7 +25,7 @@ const projectsData = [
         id: 2, 
         title: 'Credit Card Analysis Report', 
         roles: 'Data Analyst', 
-        date: 'Februari 2025 - Maret 2025', 
+        date: 'November 2025 - Desember 2025', 
         category: ['Data Science & Analyst', 'All'],
         image: '/images/data-analyst2.png',
         path: '/project/creditCardAnalysis'
@@ -70,7 +70,7 @@ const projectsData = [
         id: 7, 
         title: 'Retail Sales Transaction Analysis Dashboard', 
         roles: 'Data Analyst', 
-        date: 'Januari 2025 - Februari 2025', 
+        date: 'Oktober 2025 - November 2025', 
         category: ['Data Science & Analyst', 'All'],
         image: '/images/data-analyst1.png',
         path: '/project/userRetention'
@@ -97,7 +97,7 @@ const projectsData = [
         id: 10, 
         title: 'Supermarket Sales Analysis Dashboard', 
         roles: 'Data Analyst', 
-        date: 'Desember 2025 - Januari 2026', 
+        date: 'Juli 2025 - Agustus 2025', 
         category: ['Data Science & Analyst', 'All'],
         image: '/images/data-analyst3.png',
         path: '/project/supermarketSales'
