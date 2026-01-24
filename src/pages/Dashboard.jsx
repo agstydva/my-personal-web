@@ -291,7 +291,7 @@ const Dashboard = () => {
                     </h1>
                         
                         <p className="mb-6 text-lg leading-relaxed text-gray-600 mt-6">
-                            A Computer Science student at <b>Universitas Negeri Jakarta</b> with strong interests in Data Analysis, Web Development, and Project Management, driven by a high motivation for continuous learning and self improvement, and passionate about applying technical, analytical, and collaborative problem solving skills to deliver impactful real world solutions.
+                            A Computer Science student at <b>Universitas Negeri Jakarta</b> with strong interests in Data Analysis, Business Analysis, and Web Development, driven by a high motivation for continuous learning and self improvement, and passionate about applying technical, analytical, and collaborative problem solving skills to deliver impactful real world solutions.
                         </p>
                         
                         {/* --- DOWNLOAD RESUME & PORTFOLIO BUTTONS --- */}
