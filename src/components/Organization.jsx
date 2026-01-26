@@ -219,8 +219,6 @@ const OrganizationCard = ({ org }) => (
                 Click the button below to see the full details of my contribution and activities in this role.
             </p>
 
-            {/* --- TOMBOL DENGAN HOVER KEREN --- */}
-            {/* Base: Hitam. Hover: Abu-abu gelap, Scale up, Shadow menonjol */}
             <Link 
                 to={org.path} 
                 className="w-full mt-auto bg-black text-white font-semibold py-2 rounded shadow-md transition-all duration-300 hover:bg-gray-800 hover:shadow-xl hover:scale-105 hover:-translate-y-0.5 text-sm block text-center"

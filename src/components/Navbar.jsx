@@ -4,17 +4,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Daftar Menu Navigasi (Nama Tampilan & Tujuan ID)
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Work', href: '#working-experience' }, // Bagian Work
+    { name: 'Work', href: '#working-experience' }, 
     { name: 'Projects', href: '#projects' },
-    { name: 'Education', href: '#education' },     // Bagian Education
+    { name: 'Education', href: '#education' },     
     { name: 'Organization', href: '#organization' }, 
   ];
 
-  // Efek scroll
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -50,7 +48,6 @@ const Navbar = () => {
                 className="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative group"
               >
                 {item.name}
-                {/* Garis bawah animasi saat hover */}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}

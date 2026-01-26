@@ -2,12 +2,16 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
 import UnderConstruction from '../pages/UnderConstruction'; 
+import PtYujuDetail from '../pages/project/ptyuju';
 
 const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
       
+      {/* Route untuk Work */}
+      <Route path="/work/ptyuju" element={<PtYujuDetail />} />
+
       {/* Route untuk Volunteer */}
       <Route path="/volunteer/staffAhliCompas" element={<UnderConstruction />} />
       <Route path="/volunteer/acaraFakul" element={<UnderConstruction />} />

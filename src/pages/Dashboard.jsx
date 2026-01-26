@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-// IMPORT Komponen
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProjectExperience from '../components/ProjectExperience';
@@ -30,8 +28,6 @@ const skillData = [
     { name: 'Dart', image: '/images/dart.png' },
     { name: 'Colab', image: '/images/google-colab-icon.webp' },
     { name: 'Power Bi', image: '/images/power-bi.png' },
-    // { name: 'Pandas', image: '/images/pandas-icon-logo.png' },
-    // { name: 'Office', image: '/images/office.png' },
     { name: 'Jetpack Compose', image: '/images/jetpack compose icon_RGB.png' },
     { name: 'Notion', image: '/images/notion.png' },
 ];
@@ -54,9 +50,10 @@ const educationData = [
 ];
 
 const EducationCard = ({ institution, degree, address, websiteUrl, imageSrc }) => (
-    <div className="group flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 mb-16 w-full max-w-5xl p-8 rounded-3xl transition-all duration-500 hover:bg-white/[0.03] border border-transparent hover:border-indigo-500/20">
-        {/* IMAGE SECTION */}
-        <div className="flex-shrink-0 w-full md:w-72 h-44 rounded-2xl overflow-hidden shadow-2xl relative">
+
+    <div className="group flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-10 mb-10 md:mb-16 w-full max-w-5xl p-5 md:p-8 rounded-3xl transition-all duration-500 hover:bg-white/[0.03] border border-transparent hover:border-indigo-500/20">
+        
+        <div className="flex-shrink-0 w-full md:w-72 h-36 md:h-44 rounded-2xl overflow-hidden shadow-2xl relative">
             <img 
                 className="w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-100" 
                 src={imageSrc} 
@@ -65,30 +62,31 @@ const EducationCard = ({ institution, degree, address, websiteUrl, imageSrc }) =
             />
         </div>
 
-        {/* CONTENT SECTION */}
         <div className="flex-grow text-white text-center md:text-left">
-            <h3 className="text-2xl md:text-3xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">
+            
+            <h3 className="text-xl md:text-3xl font-bold mb-1 md:mb-2 group-hover:text-indigo-400 transition-colors">
                 {institution}
             </h3>
-            <p className="text-indigo-400 font-semibold mb-4 text-lg">
+            
+            <p className="text-indigo-400 font-semibold mb-3 md:mb-4 text-sm md:text-lg">
                 {degree}
             </p>
             
-            <div className="flex items-start justify-center md:justify-start gap-3 mb-6 text-gray-400">
-                <svg className="w-5 h-5 text-indigo-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-start justify-center md:justify-start gap-2 md:gap-3 mb-5 md:mb-6 text-gray-400">
+                <svg className="w-4 h-4 md:w-5 md:h-5 text-indigo-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 </svg>
-                <p className="text-sm leading-relaxed max-w-md">{address}</p>
+                <p className="text-xs md:text-sm leading-relaxed max-w-md">{address}</p>
             </div>
 
             <a 
                 href={websiteUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-black hover:bg-indigo-500 hover:text-white rounded-full text-sm font-bold transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 py-2 md:px-6 md:py-2.5 bg-white text-black hover:bg-indigo-500 hover:text-white rounded-full text-xs md:text-sm font-bold transition-all duration-300"
             >
                 Visit Institution
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
             </a>
@@ -112,7 +110,9 @@ const workingExperienceData = [
 const WorkingExperienceCard = ({ exp }) => (
     <div className="group bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 w-full max-w-5xl mx-auto transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-300">
         <div className="flex flex-col lg:flex-row">
-            <div className="w-full lg:w-1/2 flex-shrink-0 overflow-hidden relative">
+
+            {/* Image Section */}
+            <div className="w-full lg:w-1/2 h-48 lg:h-auto flex-shrink-0 overflow-hidden relative">
                 <img 
                     src={exp.imageSrc} 
                     alt={exp.company} 
@@ -122,31 +122,34 @@ const WorkingExperienceCard = ({ exp }) => (
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             
-            <div className="w-full lg:w-1/2 p-6 flex flex-col justify-between relative">
+            {/* Content Section */}
+            <div className="w-full lg:w-1/2 p-5 md:p-6 flex flex-col justify-between relative">
                 <div>
                     <div className="flex items-center space-x-3 mb-2">
                         <img 
                             src={exp.logoSrc} 
                             alt={`${exp.company} Logo`} 
-                            className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110"
+                            className="w-6 h-6 md:w-8 md:h-8 object-contain transition-transform duration-300 group-hover:scale-110"
                             onError={(e) => {e.target.style.display = 'none';}}
                         />
-                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-indigo-700 transition-colors">
+                        <h3 className="text-lg md:text-xl font-bold text-gray-900 group-hover:text-indigo-700 transition-colors">
                             {exp.company}
                         </h3>
                     </div>
                     
-                    <p className="text-lg font-semibold text-gray-700 mb-1">{exp.role}</p>
-                    <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
+                    <p className="text-md md:text-lg font-semibold text-gray-700 mb-1">{exp.role}</p>
+                    <p className="text-xs md:text-sm text-gray-500 mb-3 md:mb-4">{exp.period}</p>
                     
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                         {exp.description}
                     </p>
                 </div>
 
                 <Link 
                     to={exp.path}
-                    className="mt-6 self-start inline-flex items-center justify-center bg-black text-white font-semibold py-2.5 px-8 rounded shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-indigo-600 hover:-translate-y-1"
+                    className="mt-6 self-start inline-flex items-center justify-center bg-black text-white font-semibold py-2.5 px-8 rounded shadow-md transition-all duration-300 
+                               w-full md:w-auto 
+                               md:hover:scale-105 md:hover:shadow-xl md:hover:bg-indigo-600 md:hover:-translate-y-1"
                 >
                     View Working Experience
                 </Link>
@@ -209,7 +212,7 @@ const Dashboard = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50 font-sans text-gray-800">
+        <div className="min-h-screen bg-gray-50 font-sans text-gray-800 overflow-x-hidden">
             <style>{`
                 @keyframes popBlur {
                     0% { opacity: 0; transform: translateY(20px) scale(0.9); filter: blur(10px); }
@@ -236,29 +239,25 @@ const Dashboard = () => {
                 .animate-orbit-cw { animation: spin-slow 15s linear infinite; }
                 .animate-orbit-ccw { animation: spin-slower-reverse 20s linear infinite; }
 
-                /* ANIMASI MENGETIK BARU */
-                /* Update bagian ini di dalam tag <style> Anda */
-
                 @keyframes typing {
-                0% { width: 0 }
-                70% { width: 100% } /* Selesai mengetik di 70% durasi */
-                100% { width: 100% } /* Diam (tetap full) dari 70% sampai 100% */
+                    0% { width: 0 }
+                    70% { width: 100% } 
+                    100% { width: 100% } 
                 }
 
                 @keyframes blink-caret {
-                from, to { border-color: transparent }
-                50% { border-color: #4f46e5; }
+                    from, to { border-color: transparent }
+                    50% { border-color: #4f46e5; }
                 }
 
                 .animate-typing {
-                display: inline-block;
-                overflow: hidden;
-                white-space: nowrap;
-                border-right: 3px solid #4f46e5;
-                /* Durasi saya naikkan ke 4s agar jedanya terasa lebih pas */
-                animation: 
-                    typing 4s steps(25, end) infinite alternate,
-                    blink-caret .75s step-end infinite;
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    border-right: 3px solid #4f46e5;
+                    animation: 
+                        typing 4s steps(25, end) infinite alternate,
+                        blink-caret .75s step-end infinite;
                 }
             `}</style>
 
@@ -267,60 +266,51 @@ const Dashboard = () => {
             <main className="mx-auto px-4 py-15 sm:px-6 lg:px-8">
 
                 {/* HERO SECTION */}
-                <section id="home" className="flex flex-col items-center justify-between px-47 py-16 md:flex-row">
-                    <div className="md:w-3/5">
-                                    <h1 className="mb-4 font-extrabold text-gray-900 leading-tight"> {/* Hapus text-5xl di sini */}
-                        <div className="h-15 flex items-center mb-2 overflow-visible"> 
-                            <span 
-                                key={currentGreetingIndex} 
-                                className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 animate-pop-text block text-6xl pb-4"
-                            >
-                                {greetings[currentGreetingIndex]}
-                            </span>
-                        </div>
-                        {/*  text-4xl */}
-                        <span className="block text-gray-900 mt-4 text-5xl">I'm Dava,</span>
-                        
-                        {/* ANIMASI MENGETIK */}
-                        <div className="inline-block">
-                            {/* text-4xl */}
-                            <span className="block text-indigo-600 mt-4 animate-typing text-4xl">
-                                Computer Science Student 
-                            </span>
-                        </div>
-                    </h1>
+                <section id="home" className="flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 lg:px-10 py-16 gap-12 max-w-7xl mx-auto">
+                    <div className="w-full md:w-3/5 text-center md:text-left order-2 md:order-1">
+                        <h1 className="mb-4 font-extrabold text-gray-900 leading-tight"> 
+                            <div className="h-15 flex items-center mb-2 overflow-visible justify-center md:justify-start"> 
+                                <span 
+                                    key={currentGreetingIndex} 
+                                    className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 animate-pop-text block text-4xl md:text-6xl pb-4"
+                                >
+                                    {greetings[currentGreetingIndex]}
+                                </span>
+                            </div>
+                            <span className="block text-gray-900 mt-4 text-3xl md:text-5xl">I'm Dava,</span>
+                            
+                            <div className="inline-block">
+                                <span className="block text-indigo-600 mt-4 animate-typing text-2xl md:text-4xl">
+                                    Computer Science Student 
+                                </span>
+                            </div>
+                        </h1>
                         
                         <p className="mb-6 text-lg leading-relaxed text-gray-600 mt-6">
                             A Computer Science student at <b>Universitas Negeri Jakarta</b> with strong interests in Data Analysis, Business Analysis, and Web Development, driven by a high motivation for continuous learning and self improvement, and passionate about applying technical, analytical, and collaborative problem solving skills to deliver impactful real world solutions.
                         </p>
                         
-                        {/* --- DOWNLOAD RESUME & PORTFOLIO BUTTONS --- */}
-                        <div className="mt-10 flex flex-wrap gap-4">
+                        <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
                             <a 
                                 href="/CV_For_Web_Agastya_Dava_Nurrahman.pdf" 
-                                download="CV_For_Web_Agastya_Dava_Nurrahman.pdf"
+                                download 
                                 className="flex items-center gap-2 bg-white text-gray-900 border border-gray-200 px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:border-indigo-500 hover:text-indigo-600 hover:-translate-y-1 transition-all duration-300"
                             >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                </svg>
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                                 Download Resume
                             </a>
 
                             <a 
                                 href="/Portfolio_Agastya_Dava_Nurrahman.pdf" 
-                                download="Portfolio_Agastya_Dava_Nurrahman.pdf"
+                                download 
                                 className="flex items-center gap-2 bg-white text-gray-900 border border-gray-200 px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:border-indigo-500 hover:text-indigo-600 hover:-translate-y-1 transition-all duration-300"
                             >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
                                 Download Portfolio
                             </a>
                         </div>
 
-                        {/* SOCIAL MEDIA LINKS */}
-                        <div className="mt-8 flex space-x-5">
+                        <div className="mt-8 flex justify-center md:justify-start space-x-5">
                             {socialLinks.map((link, index) => (
                                 <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="group flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg border border-gray-100 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-110 hover:shadow-indigo-500/30 hover:border-indigo-100">
                                     <img src={link.image} alt={link.altText} className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-110" />
@@ -330,24 +320,26 @@ const Dashboard = () => {
                     </div>
 
                     {/* FOTO PROFIL SECTION */}
-                    <div className="relative mt-10 flex justify-center md:mt-0 md:w-2/5">
+                    <div className="w-full md:w-2/5 flex justify-center order-1 md:order-2 mb-10 md:mb-0 relative">
                         <div className="relative group cursor-pointer z-10">
+                            {/* Breathe shapes */}
                             <div className="absolute right-0 top-5 h-32 w-32 -translate-y-1/2 translate-x-1/2 rounded-full bg-indigo-200/80 animate-breathe transition-transform duration-500 group-hover:translate-x-3 group-hover:-translate-y-3"></div>
                             <div className="absolute bottom-5 left-0 h-24 w-24 -translate-x-1/2 translate-y-1/2 rounded-full bg-purple-200/80 animate-breathe-delayed transition-transform duration-500 group-hover:-translate-x-3 group-hover:translate-y-3"></div>
                             
                             <img 
                                 src="/images/me.jpeg" 
                                 alt="Profile" 
-                                className="relative z-20 h-85 w-85 rounded-full border-4 border-white object-cover shadow-2xl transition-all duration-500 ease-out 
-                                           group-hover:scale-105 group-hover:rotate-2 group-hover:shadow-[0_20px_50px_rgba(79,70,229,0.4)] group-hover:border-indigo-50" 
+                                className="relative z-20 h-64 w-64 md:h-85 md:w-85 rounded-full border-4 border-white object-cover shadow-2xl transition-all duration-500 ease-out 
+                                        group-hover:scale-105 group-hover:rotate-2 group-hover:shadow-[0_20px_50px_rgba(79,70,229,0.4)] group-hover:border-indigo-50" 
                             />
-                        </div>
 
-                        <div className="absolute inset-0 z-0 animate-orbit-cw flex items-center justify-center pointer-events-none">
-                            <div className="h-4 w-4 bg-indigo-500 rounded-full blur-[1px] shadow-lg shadow-indigo-500/50 absolute -top-16"></div>
-                        </div>
-                        <div className="absolute inset-0 z-0 animate-orbit-ccw flex items-center justify-center pointer-events-none">
-                             <div className="h-3 w-3 bg-purple-500 rounded-full blur-[1px] shadow-lg shadow-purple-500/50 absolute -bottom-12 right-12"></div>
+                            {/* Orbit dots */}
+                            <div className="absolute inset-0 z-0 animate-orbit-cw flex items-center justify-center pointer-events-none">
+                                <div className="h-4 w-4 bg-indigo-500 rounded-full blur-[1px] shadow-lg shadow-indigo-500/50 absolute -top-15"></div>
+                            </div>
+                            <div className="absolute inset-0 z-0 animate-orbit-ccw flex items-center justify-center pointer-events-none">
+                                 <div className="h-3 w-3 bg-purple-500 rounded-full blur-[1px] shadow-lg shadow-purple-500/50 absolute -bottom-15 right-12"></div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -359,17 +351,10 @@ const Dashboard = () => {
                     <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">Skills</h2>
                     
                     <div className="flex justify-center">
-                        {/* Gunakan grid-cols yang dinamis:
-                        - 2 ikon di HP (grid-cols-2)
-                        - 4 ikon di Tablet (sm:grid-cols-4)
-                        - 6 ikon di Laptop (lg:grid-cols-6)
-                        - 10 ikon di Layar Besar (xl:grid-cols-10)
-                        */}
                         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-10 gap-x-4 gap-y-8 justify-items-center w-full max-w-7xl">
                             {skillData.map((skill, index) => {
-                                // Menghitung apakah item ini berada di baris terakhir
                                 const totalItems = skillData.length;
-                                const itemsPerRow = 10; // Untuk layar xl
+                                const itemsPerRow = 10; 
                                 const lastRowItems = totalItems % itemsPerRow;
                                 const isLastRow = index >= totalItems - lastRowItems;
 
@@ -377,7 +362,6 @@ const Dashboard = () => {
                                     <div 
                                         key={index} 
                                         className="group flex flex-col items-center cursor-pointer transition-all duration-300"
-                                        /* Style ini hanya aktif di layar XL untuk membuat baris terakhir (6 item) berada di tengah */
                                         style={isLastRow && window.innerWidth >= 1280 ? { 
                                             gridColumnStart: index === totalItems - lastRowItems ? (itemsPerRow - lastRowItems) / 2 + 1 : 'auto' 
                                         } : {}}
@@ -403,7 +387,6 @@ const Dashboard = () => {
 
                 <hr className="my-10 border-gray-200" />
 
-                {/* WORKING EXPERIENCE */}
                 <section id="working-experience" className="py-10">
                     <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Working Experience</h2>
                     {workingExperienceData.map(exp => (
@@ -412,35 +395,25 @@ const Dashboard = () => {
                 </section>
 
                 <hr className="my-10 border-gray-200" />
-
-                {/* PROJECT EXPERIENCE */}
                 <ProjectExperience />
-
-
             </main>
 
-            {/* EDUCATION SECTION */}
             <section id="education" className="w-full py-24 bg-[#0a0a0a] relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                     <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-indigo-600/10 rounded-full blur-[120px]"></div>
                     <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-purple-600/10 rounded-full blur-[120px]"></div>
                 </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
+                <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 flex flex-col items-center">
                     <h2 className="text-4xl font-bold text-white mb-16 text-center">Education</h2>
-                    <div className='flex flex-col items-center'>
-                        {educationData.map((edu, index) => (
-                            <EducationCard key={index} institution={edu.institution} degree={edu.degree} address={edu.address} websiteUrl={edu.websiteUrl} imageSrc={edu.imageSrc} />
-                        ))}
-                    </div>
+                    {educationData.map((edu, index) => (
+                        <EducationCard key={index} institution={edu.institution} degree={edu.degree} address={edu.address} websiteUrl={edu.websiteUrl} imageSrc={edu.imageSrc} />
+                    ))}
                 </div>
             </section>
 
             <hr className="my-10 border-gray-200" />
-
-            {/* ORGANIZATION */}
             <Organization />
-
             <hr className="my-10 border-gray-200" />
             <Footer />
         </div>

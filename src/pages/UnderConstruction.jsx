@@ -23,7 +23,7 @@ const UnderConstruction = () => {
           Mohon maaf, halaman ini masih dalam tahap pengembangan oleh <strong>Agastya Dava</strong>. Silakan kembali lagi nanti atau jika ingin melihat bisa di Linkedin!
         </p>
 
-        {/* Tombol Back To Dashboard */}
+        {/* Tombol Back */}
         <Link 
           to="/" 
           className="inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
