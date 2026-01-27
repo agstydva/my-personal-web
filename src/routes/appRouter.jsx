@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
 import UnderConstruction from '../pages/UnderConstruction'; 
 import PtYujuDetail from '../pages/project/ptyuju';
+import Aflaiesec from '../pages/volunteer/aflaiesec';
 
 const AppRouter = () => {
   return (
@@ -22,7 +23,7 @@ const AppRouter = () => {
       <Route path="/volunteer/mipaPreneur" element={<UnderConstruction />} />
       <Route path="/volunteer/stubanElektro" element={<UnderConstruction />} />
       <Route path="/volunteer/wakoorAcara" element={<UnderConstruction />} />
-      <Route path="/volunteer/aflaiesec" element={<UnderConstruction />} />
+      <Route path="/volunteer/aflaiesec" element={<Aflaiesec />} />
       <Route path="/volunteer/sponsorDecode" element={<UnderConstruction />} />
       <Route path="/volunteer/mcDay2" element={<UnderConstruction />} />
       <Route path="/volunteer/mcDay1" element={<UnderConstruction />} />

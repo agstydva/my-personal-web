@@ -139,12 +139,12 @@ const organizationData = [
     },
     { 
         id: 16, 
-        role: 'Event Division Staff Compare 2024', 
-        organization: 'Workshop COMPARE 2024', 
-        period: 'Mei 2024 - Juni 2024', 
-        logo: '/images/comparelogo.png', 
-        bgImage: '/images/compare.png',
-        path: '/volunteer/acaraCompare'
+        role: 'Staff Departement Computer Academic & Science', 
+        organization: 'BEMP Ilmu Komputer', 
+        period: 'Maret 2024 - Maret 2025', 
+        logo: '/images/bempilkom.png', 
+        bgImage: '/images/compasstaff.png',
+        path: '/volunteer/staffCompas'
     },
     { 
         id: 17, 
@@ -157,12 +157,12 @@ const organizationData = [
     },
     { 
         id: 18, 
-        role: 'Staff Departement Computer Academic & Science', 
-        organization: 'BEMP Ilmu Komputer', 
-        period: 'Maret 2024 - Maret 2025', 
-        logo: '/images/bempilkom.png', 
-        bgImage: '/images/compasstaff.png',
-        path: '/volunteer/staffCompas'
+        role: 'Event Division Staff Compare 2024', 
+        organization: 'Workshop COMPARE 2024', 
+        period: 'Mei 2024 - Juni 2024', 
+        logo: '/images/comparelogo.png', 
+        bgImage: '/images/compare.png',
+        path: '/volunteer/acaraCompare'
     },
     { 
         id: 19, 

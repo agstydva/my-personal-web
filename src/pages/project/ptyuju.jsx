@@ -19,12 +19,12 @@ const Ptyuju = () => {
         location: "Newton Techno Park, Lippo Cikarang",
         role: "Assembly Engineer & Quality Control",
         period: "Juli 2020 – Januari 2021",
-        description: "PT Yuju Indonesia merupakan perusahaan manufaktur plastic injection molding yang berlokasi di Cikarang. Selama masa magang di kelas 10-11 SMK, saya ditempatkan pada departemen Assembly dan Quality Control untuk memastikan standar kualitas produk tetap terjaga.",
+        description: "PT Yuju Indonesia is a plastic injection molding manufacturing company located in Cikarang. During my internship in Grade 10–11 of vocational high school (SMK), I was assigned to the Assembly and Quality Control departments, where I supported the assembly process and conducted product inspections to ensure that production outputs met established quality standards and operational requirements.",
         jobdesk: [
-            "Melakukan perakitan komponen presisi sesuai dengan instruksi kerja (SOP).",
-            "Melakukan inspeksi kualitas (Quality Control) untuk meminimalisir defect produk.",
-            "Mengoperasikan mesin pendukung dalam proses assembly plastic injection.",
-            "Menyusun laporan harian hasil produksi dan efisiensi lini perakitan."
+            "Assembled precision components in accordance with Standard Operating Procedures (SOP), consistently producing 20+ boxes per day with 60+ components per box, supporting 100% achievement of daily production targets.",
+            "Conducted quality inspections (Quality Control) to ensure product compliance with manufacturing standards, identifying and segregating non-conforming items to reduce defect rates and improve overall product quality.",
+            "Coordinated the handover of assembled products to subsequent manufacturing processes, ensuring accuracy, traceability, and alignment with production schedules to maintain line efficiency.",
+            "Prepared daily production and efficiency reports, contributing to performance monitoring, evaluation of assembly line effectiveness, and data-driven operational improvements.",
         ]
     };
 
@@ -94,7 +94,7 @@ const Ptyuju = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <section className="p-2">
-                        <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">Deskripsi Pengalaman</h2>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">Experience Description</h2>
                         <p className="text-slate-600 leading-relaxed text-lg text-justify border-l-4 border-indigo-100 pl-6 italic hover:border-indigo-500 transition-colors duration-500">
                             {workData.description}
                         </p>
@@ -103,7 +103,7 @@ const Ptyuju = () => {
                     {/* RESPONSIBILITY CARD WITH HOVER EFFECT */}
                     <section className="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:shadow-indigo-500/20 hover:shadow-2xl">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full -mr-16 -mt-16 blur-2xl transition-all duration-700 group-hover:bg-indigo-500/30 group-hover:scale-150"></div>
-                        <h2 className="text-2xl font-bold mb-8 relative z-10 transition-colors group-hover:text-indigo-400">Tanggung Jawab Utama</h2>
+                        <h2 className="text-2xl font-bold mb-8 relative z-10 transition-colors group-hover:text-indigo-400">Key Responsibilities</h2>
                         <ul className="space-y-6 relative z-10">
                             {workData.jobdesk.map((task, index) => (
                                 <li key={index} className="flex items-start gap-4 group/item">

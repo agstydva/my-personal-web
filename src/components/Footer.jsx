@@ -4,11 +4,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#working-experience' },
-    { name: 'Education', href: '#education' },
-    { name: 'Organization', href: '#organization' },
+    { name: 'Home', href: '/#home' },
+    { name: 'Skills', href: '/#skills' },
+    { name: 'Experience', href: '/#working-experience' },
+    { name: 'Education', href: '/#education' },
+    { name: 'Organization', href: '/#organization' },
   ];
 
   return (
