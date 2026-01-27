@@ -4,6 +4,7 @@ import Dashboard from '../pages/Dashboard';
 import UnderConstruction from '../pages/UnderConstruction'; 
 import PtYujuDetail from '../pages/project/ptyuju';
 import Aflaiesec from '../pages/volunteer/aflaiesec';
+import StaffAhliCompas from '../pages/volunteer/staffAhliCompas';
 
 const AppRouter = () => {
   return (
@@ -14,7 +15,7 @@ const AppRouter = () => {
       <Route path="/work/ptyuju" element={<PtYujuDetail />} />
 
       {/* Route untuk Volunteer */}
-      <Route path="/volunteer/staffAhliCompas" element={<UnderConstruction />} />
+      <Route path="/volunteer/staffAhliCompas" element={<StaffAhliCompas />} />
       <Route path="/volunteer/acaraFakul" element={<UnderConstruction />} />
       <Route path="/volunteer/moderatorFakul" element={<UnderConstruction />} />
       <Route path="/volunteer/scAcaraAllkomp" element={<UnderConstruction />} />
