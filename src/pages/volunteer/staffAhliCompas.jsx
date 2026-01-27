@@ -27,9 +27,9 @@ const StaffAhliCompas = () => {
         ],
         gallery: [
             { src: "/images/bempilkom2025.jpeg", size: "large", caption: "BEMP Ilmu Komputer UNJ" },
-            { src: "/images/bempilkomp2025_4.jpeg", size: "portrait", caption: "BEMP Ilmu Komputer UNJ" }, 
+            { src: "/images/bempilkomp2025_5.jpeg", size: "portrait", caption: "BEMP Ilmu Komputer UNJ" }, 
             { src: "/images/bempilkomp2025_2.jpeg", size: "standard", caption: "BEMP Ilmu Komputer UNJ" },
-            { src: "/images/bempilkomp2025_3.jpeg", size: "standard", caption: "FIKSASI BEMP ILKOMP 2025" },
+            { src: "/images/bempilkomp2025_4.jpeg", size: "standard", caption: "FIKSASI BEMP ILKOMP 2025" },
         ]
     };
 
