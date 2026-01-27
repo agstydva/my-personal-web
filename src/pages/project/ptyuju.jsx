@@ -30,13 +30,13 @@ const Ptyuju = () => {
 
     return (
         <div className="min-h-screen w-full bg-[#f8fafc] flex flex-col overflow-x-hidden">
-            
+
             <Navbar />
 
             <main className="flex-grow w-full max-w-7xl mx-auto px-6 pt-32 pb-20">
                 
                 {/* BACK NAVIGATION */}
-                <div className="mb-10">
+                {/* <div className="mb-10">
                     <button 
                         onClick={() => navigate(-1)}
                         className="group bg-slate-900 text-white px-6 py-3 rounded-2xl font-bold hover:bg-indigo-600 hover:shadow-[0_10px_20px_rgba(79,70,229,0.4)] transition-all duration-300 active:scale-95 flex items-center gap-2"
@@ -46,7 +46,7 @@ const Ptyuju = () => {
                         </svg>
                         Back to Dashboard
                     </button>
-                </div>
+                </div> */}
 
                 {/* HEADER SECTION */}
                 <header className="mb-12">

@@ -34,7 +34,7 @@ const Navbar = () => {
           
           {/* --- LOGO --- */}
           <div className="flex-shrink-0 cursor-pointer z-50"> 
-            <a href="#home" className="text-2xl font-bold text-white tracking-wide">
+            <a href="/#home" className="text-2xl font-bold text-white tracking-wide">
               Agastya <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Dava</span>
             </a>
           </div>
