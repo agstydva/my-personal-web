@@ -107,7 +107,7 @@ const Aflaiesec = () => {
                     {/* GALLERY */}
                     <div className="lg:col-span-7 space-y-8">
                         <div className="flex items-center gap-4 mb-4">
-                            <h2 className="text-2xl font-bold text-slate-900 uppercase italic tracking-tight">Activities Gallery</h2>
+                            <h2 className="text-2xl font-bold text-slate-900 italic tracking-tight">Activities Gallery</h2>
                             <span className="flex-grow h-[1px] bg-slate-200"></span>
                         </div>
                         <div className="grid grid-cols-2 gap-4">

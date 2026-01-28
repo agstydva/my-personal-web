@@ -5,6 +5,8 @@ import UnderConstruction from '../pages/UnderConstruction';
 import PtYujuDetail from '../pages/project/ptyuju';
 import Aflaiesec from '../pages/volunteer/aflaiesec';
 import StaffAhliCompas from '../pages/volunteer/staffAhliCompas';
+import AcaraFakul from '../pages/volunteer/acaraFakul';
+import ModeratorFakul from '../pages/volunteer/moderatorFakul';
 
 const AppRouter = () => {
   return (
@@ -16,8 +18,8 @@ const AppRouter = () => {
 
       {/* Route untuk Volunteer */}
       <Route path="/volunteer/staffAhliCompas" element={<StaffAhliCompas />} />
-      <Route path="/volunteer/acaraFakul" element={<UnderConstruction />} />
-      <Route path="/volunteer/moderatorFakul" element={<UnderConstruction />} />
+      <Route path="/volunteer/acaraFakul" element={<AcaraFakul />} />
+      <Route path="/volunteer/moderatorFakul" element={<ModeratorFakul />} />
       <Route path="/volunteer/scAcaraAllkomp" element={<UnderConstruction />} />
       <Route path="/volunteer/stubanITERA" element={<UnderConstruction />} />
       <Route path="/volunteer/scAcaraCompare" element={<UnderConstruction />} />
