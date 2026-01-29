@@ -7,6 +7,7 @@ import Aflaiesec from '../pages/volunteer/aflaiesec';
 import StaffAhliCompas from '../pages/volunteer/staffAhliCompas';
 import AcaraFakul from '../pages/volunteer/acaraFakul';
 import ModeratorFakul from '../pages/volunteer/moderatorFakul';
+import MipaExpo from '../pages/volunteer/mipaExpo';
 
 const AppRouter = () => {
   return (
@@ -31,7 +32,7 @@ const AppRouter = () => {
       <Route path="/volunteer/mcDay2" element={<UnderConstruction />} />
       <Route path="/volunteer/mcDay1" element={<UnderConstruction />} />
       <Route path="/volunteer/kabasta" element={<UnderConstruction />} />
-      <Route path="/volunteer/mipaExpo" element={<UnderConstruction />} />
+      <Route path="/volunteer/mipaExpo" element={<MipaExpo />} />
       <Route path="/volunteer/acaraCompare" element={<UnderConstruction />} />
       <Route path="/volunteer/sponsorUIUX" element={<UnderConstruction />} />
       <Route path="/volunteer/staffCompas" element={<UnderConstruction />} />
