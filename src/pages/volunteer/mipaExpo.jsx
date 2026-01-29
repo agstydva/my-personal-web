@@ -18,7 +18,7 @@ const MipaExpo = () => {
         title: "MIPA EXPO FMIPA UNJ 2024",
         logo: "/images/bemffmipa.jpg", // Ganti dengan path logo MIPA Expo lu
         period: "Juli 2024",
-        activityTitle: "Event & Exhibition Management Staff",
+        activityTitle: "Facilitator MIPA EXPO BEMP Ilmu Komputer",
         description: "MIPA EXPO is an exhibition event organized to introduce new students of the Faculty of Mathematics and Natural Sciences (FMIPA) to various student organizations and activity units within the faculty. The expo showcases OPMAWA and FMIPA organizations, such as BEM, LLM, Young Researchers Group, Community Development (Desa Binaan), reptile and plant enthusiast groups, Tank MIPA, and other student communities. Through this event, new students are given the opportunity to explore student activities, understand organizational roles, and discover platforms that support their interests, talents, and academic development within FMIPA.",
         jobdesk: [
             "Presented information to new students regarding the various organizations within the Computer Science program, including the Student Executive Board (BEM) and the Student Legislative (LLM), guiding them on how to get involved based on their interests.",
