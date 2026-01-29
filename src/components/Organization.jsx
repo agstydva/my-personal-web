@@ -157,7 +157,7 @@ const organizationData = [
     },
     { 
         id: 18, 
-        role: 'Event Division Staff Compare 2024', 
+        role: 'Event Division Staff Workshop Compare 2024', 
         organization: 'Workshop COMPARE 2024', 
         period: 'Mei 2024 - Juni 2024', 
         logo: '/images/comparelogo.png', 

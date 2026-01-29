@@ -267,7 +267,7 @@ const Dashboard = () => {
             <main className="mx-auto px-4 py-15 sm:px-6 lg:px-8">
 
                 {/* HERO SECTION */}
-                <section id="home" className="flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 lg:px-8 py-16 gap-12 max-w-7xl mx-auto">
+                <section id="home" className="flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 lg:px-8 py-16 gap-14 max-w-7xl mx-auto">
                     <div className="w-full md:w-3/5 text-center md:text-left order-2 md:order-1">
                         <h1 className="mb-4 font-extrabold text-gray-900 leading-tight"> 
                             <div className="h-15 flex items-center mb-2 overflow-visible justify-center md:justify-start"> 

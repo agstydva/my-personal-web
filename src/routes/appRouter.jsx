@@ -8,6 +8,8 @@ import StaffAhliCompas from '../pages/volunteer/staffAhliCompas';
 import AcaraFakul from '../pages/volunteer/acaraFakul';
 import ModeratorFakul from '../pages/volunteer/moderatorFakul';
 import MipaExpo from '../pages/volunteer/mipaExpo';
+import MipaPreneur from '../pages/volunteer/mipaPreneur';
+import TeacherVolunteer from '../pages/volunteer/teacher';
 
 const AppRouter = () => {
   return (
@@ -24,7 +26,7 @@ const AppRouter = () => {
       <Route path="/volunteer/scAcaraAllkomp" element={<UnderConstruction />} />
       <Route path="/volunteer/stubanITERA" element={<UnderConstruction />} />
       <Route path="/volunteer/scAcaraCompare" element={<UnderConstruction />} />
-      <Route path="/volunteer/mipaPreneur" element={<UnderConstruction />} />
+      <Route path="/volunteer/mipaPreneur" element={<MipaPreneur />} />
       <Route path="/volunteer/stubanElektro" element={<UnderConstruction />} />
       <Route path="/volunteer/wakoorAcara" element={<UnderConstruction />} />
       <Route path="/volunteer/aflaiesec" element={<Aflaiesec />} />
@@ -36,7 +38,7 @@ const AppRouter = () => {
       <Route path="/volunteer/acaraCompare" element={<UnderConstruction />} />
       <Route path="/volunteer/sponsorUIUX" element={<UnderConstruction />} />
       <Route path="/volunteer/staffCompas" element={<UnderConstruction />} />
-      <Route path="/volunteer/teacher" element={<UnderConstruction />} />
+      <Route path="/volunteer/teacher" element={<TeacherVolunteer />} />
 
 
       {/* Route untuk Project Experience */}
