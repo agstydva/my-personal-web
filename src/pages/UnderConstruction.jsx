@@ -20,7 +20,7 @@ const UnderConstruction = () => {
         </h2>
         
         <p className="text-gray-600 mb-8 leading-relaxed">
-          Mohon maaf, halaman ini masih dalam tahap pengembangan oleh <strong>Agastya Dava</strong>. Silakan kembali lagi nanti atau jika ingin melihat bisa di Linkedin!
+          Mohon maaf, halaman ini masih dalam tahap pengembangan oleh <strong>Agastya Dava</strong>. Silakan kembali lagi nanti atau <strong>jika ingin melihat bisa di Linkedin!</strong>
         </p>
 
         {/* Tombol Back */}
