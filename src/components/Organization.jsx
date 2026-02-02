@@ -232,9 +232,15 @@ const OrganizationCard = ({ org }) => (
 const Organization = () => {
   return (
     <section id="organization" className="px-6 sm:px-12 lg:px-24 xl:px-40 py-10">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Organization, Committee, & Volunteer Experience
-        </h2>
+        
+        <div className="flex flex-col items-center justify-center gap-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
+                Organization, Committee, & Volunteer Experience
+            </h2>
+            <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-10 leading-relaxed text-sm sm:text-base text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
         
         {/* PERBAIKAN GRID:
             - grid-cols-1: 1 kolom di HP.

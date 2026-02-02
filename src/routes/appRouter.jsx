@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
 import UnderConstruction from '../pages/UnderConstruction'; 
-import PtYujuDetail from '../pages/project/ptyuju';
+import PtYujuDetail from '../pages/work/ptyuju';
 import Aflaiesec from '../pages/volunteer/aflaiesec';
 import StaffAhliCompas from '../pages/volunteer/staffAhliCompas';
 import AcaraFakul from '../pages/volunteer/acaraFakul';
@@ -10,6 +10,12 @@ import ModeratorFakul from '../pages/volunteer/moderatorFakul';
 import MipaExpo from '../pages/volunteer/mipaExpo';
 import MipaPreneur from '../pages/volunteer/mipaPreneur';
 import TeacherVolunteer from '../pages/volunteer/teacher';
+import CreditCardAnalysis from '../pages/project/creditCardAnalysis'; // Cek apakah ini sudah benar
+import MarketBasketAnalysis from '../pages/project/marketBasket';
+import UserRetentionAnalysis from '../pages/project/userRetention';
+import RetailSalesAnalysis from '../pages/project/retailSales';
+import SupermarketSalesAnalysis from '../pages/project/supermarketSales';
+
 
 const AppRouter = () => {
   return (
@@ -42,6 +48,12 @@ const AppRouter = () => {
 
 
       {/* Route untuk Project Experience */}
+      <Route path="/project/creditCardAnalysis" element={<CreditCardAnalysis />} />
+      <Route path="/project/retailSales" element={<RetailSalesAnalysis />} />
+      <Route path="/project/marketBasket" element={<MarketBasketAnalysis />} />
+      <Route path="/project/supermarketSales" element={<SupermarketSalesAnalysis />} />
+      <Route path="/project/userRetention" element={<UserRetentionAnalysis />} />
+
       <Route path="/project/dtastyum" element={<UnderConstruction />} />
       <Route path="/project/greenbucks" element={<UnderConstruction />} />
       <Route path="/project/sportware" element={<UnderConstruction />} />
@@ -49,8 +61,6 @@ const AppRouter = () => {
       <Route path="/project/simkes" element={<UnderConstruction />} />
       <Route path="/project/agrocoop" element={<UnderConstruction />} />
       <Route path="/project/sentimentAnalysis" element={<UnderConstruction />} />
-      <Route path="/project/userRetention" element={<UnderConstruction />} />
-      <Route path="/project/marketBasket" element={<UnderConstruction />} />
       <Route path="/project/predictionModel" element={<UnderConstruction />} />
       <Route path="/project/clusteringModel" element={<UnderConstruction />} />
       <Route path="/project/tokoku" element={<UnderConstruction />} />

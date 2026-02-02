@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProjectExperience from '../components/ProjectExperience';
 import Organization from '../components/Organization';
+import Sertifikat from '../components/sertifikat';
 
 const skillData = [
     { name: 'HTML', image: '/images/html.png' },
@@ -389,7 +390,16 @@ const Dashboard = () => {
                 <hr className="my-10 border-gray-200" />
 
                 <section id="working-experience" className="py-10">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Working Experience</h2>
+                    
+                    <div className="flex flex-col items-center justify-center gap-3">
+                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
+                         Working Experience
+                      </h2>
+                      <p className="text-slate-500 font-medium max-w-2xl mx-auto mb-8 leading-relaxed text-sm sm:text-base text-center">
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+
                     {workingExperienceData.map(exp => (
                         <WorkingExperienceCard key={exp.id} exp={exp} />
                     ))}
@@ -398,6 +408,9 @@ const Dashboard = () => {
                 <hr className="my-10 border-gray-200" />
                 <ProjectExperience />
             </main>
+
+            {/* <hr className="my-10 border-gray-200" /> */}
+            <Sertifikat />
 
             <section id="education" className="w-full py-24 bg-[#0a0a0a] relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -415,8 +428,10 @@ const Dashboard = () => {
 
             <hr className="my-10 border-gray-200" />
             <Organization />
+
             <hr className="my-10 border-gray-200" />
             <Footer />
+            
         </div>
     );
 };

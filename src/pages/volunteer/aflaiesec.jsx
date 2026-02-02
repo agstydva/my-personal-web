@@ -28,7 +28,7 @@ const Aflaiesec = () => {
             "Collaborated with coaches and participants to discuss actionable ideas and presented group solutions during a presentation session, where my team successfully delivered its ideas."
         ],
         gallery: [
-            { src: "/images/aflaiesec.jpg", size: "large", caption: "Group 1 AFL AIESEC" },
+            { src: "/images/aflaiesec.jpg", size: "large", caption: "AFL AIESEC" },
             { src: "/images/aflaiesec2.jpg", size: "standard", caption: "AIESEC in UNJ" },
             { src: "/images/aflaiesec3.png", size: "standard", caption: "Cross Cultural Session UIxUNJxTrisakti" },
             { src: "/images/aflaiesec4.jpeg", size: "wide", caption: "AIESEC in Trisakti" },

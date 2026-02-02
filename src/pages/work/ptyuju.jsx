@@ -100,7 +100,7 @@ const Ptyuju = () => {
                         </p>
                     </section>
 
-                    {/* RESPONSIBILITY CARD WITH HOVER EFFECT */}
+                    {/* RESPONSIBILITY CARD */}
                     <section className="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:shadow-indigo-500/20 hover:shadow-2xl">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full -mr-16 -mt-16 blur-2xl transition-all duration-700 group-hover:bg-indigo-500/30 group-hover:scale-150"></div>
                         <h2 className="text-2xl font-bold mb-8 relative z-10 transition-colors group-hover:text-indigo-400">Key Responsibilities</h2>

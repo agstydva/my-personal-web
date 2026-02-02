@@ -46,14 +46,14 @@ const projectsData = [
         date: 'Desember 2025 - Januari 2026', 
         category: ['Data Science & Analyst', 'All'],
         image: '/images/market-basket-analysis.png',
-        path: '/project/marketBasketAnalysis'
+        path: '/project/marketBasket'
     },
     { 
         id: 5, 
         title: 'Simkes', 
         roles: 'Project Lead & Web Developer', 
         date: 'Oktober 2025 - Desember 2025', 
-        category: ['Web Development', 'All'],
+        category: ['Web Development', 'All', 'Project Manager'],
         image: '/images/simkes.png',
         path: '/project/simkes'
     },
@@ -64,7 +64,7 @@ const projectsData = [
         date: 'November 2025 - Desember 2025', 
         category: ['Data Science & Analyst', 'All'],
         image: '/images/user-retention-analysis.png',
-        path: '/project/userRetentionAnalysis'
+        path: '/project/userRetention'
     },
     { 
         id: 7, 
@@ -73,7 +73,7 @@ const projectsData = [
         date: 'Oktober 2025 - November 2025', 
         category: ['Data Science & Analyst', 'All'],
         image: '/images/data-analyst1.png',
-        path: '/project/userRetention'
+        path: '/project/retailSales'
     },
     { 
         id: 8, 
@@ -181,9 +181,15 @@ const ProjectExperience = () => {
     <section id="projects" className="py-16 bg-gray-50">
       <div className="max-w-[88%] mx-auto px-4 sm:px-6 lg:px-8">
           
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Project Experience
-          </h2>
+        <div className="flex flex-col items-center justify-center gap-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
+                Project Experience
+            </h2>
+            <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-10 leading-relaxed text-sm sm:text-base text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+          
 
           <div className="flex justify-center mb-12">
             <div className="inline-flex overflow-x-auto gap-2 p-2 bg-zinc-900/95 backdrop-blur-md rounded-full border border-gray-800 shadow-2xl max-w-full no-scrollbar ring-1 ring-white/5">
