@@ -9,6 +9,7 @@ const certificates = [
     { id: 6, img: "/images/responsive-web-design.png", title: "Responsive Web Design" },
     { id: 7, img: "/images/internship.png", title: "Internship Certificate" },
     { id: 8, img: "/images/sda.png", title: "Algorithms and Programming" },
+    { id: 9, img: "/images/mandarin.png", title: "Introduction to Mandarin Language" },
 ];
 
 const Sertifikat = () => {

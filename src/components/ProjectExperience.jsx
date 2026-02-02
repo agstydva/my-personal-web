@@ -186,7 +186,7 @@ const ProjectExperience = () => {
                 Project Experience
             </h2>
             <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-10 leading-relaxed text-sm sm:text-base text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                An overview of academic and personal projects focused on applying concepts, solving problems, and delivering practical outcomes.
             </p>
         </div>
           
