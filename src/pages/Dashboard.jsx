@@ -395,7 +395,7 @@ const Dashboard = () => {
                       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
                          Working Experience
                       </h2>
-                      <p className="text-slate-500 font-medium max-w-2xl mx-auto mb-8 leading-relaxed text-sm sm:text-base text-center">
+                      <p className="text-slate-500 font-medium max-w-4xl mx-auto mb-8 leading-relaxed text-sm sm:text-base text-center">
                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                       </p>
                     </div>

@@ -5,8 +5,10 @@ const certificates = [
     { id: 2, img: "/images/python-scientific.png", title: "Scientific Computing Python" },
     { id: 3, img: "/images/sql-dicoding.png", title: "Structured Query Language (SQL)" },
     { id: 4, img: "/images/data-analyst.png", title: "Data Analysis Fundamental" },
-    { id: 5, img: "/images/responsive-web-design.png", title: "Responsive Web Design" },
-    { id: 6, img: "/images/internship.png", title: "Internship Certificate" },
+    { id: 5, img: "/images/uiuxdesign.png", title: "UI/UX Design" },
+    { id: 6, img: "/images/responsive-web-design.png", title: "Responsive Web Design" },
+    { id: 7, img: "/images/internship.png", title: "Internship Certificate" },
+    { id: 8, img: "/images/sda.png", title: "Algorithms and Programming" },
 ];
 
 const Sertifikat = () => {
