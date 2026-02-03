@@ -129,6 +129,15 @@ const projectsData = [
         image: '/images/sportware.png',
         path: '/project/sportware'
     },
+    { 
+        id: 14, 
+        title: 'User Segmentation Analysis', 
+        roles: 'Data Analyst', 
+        date: 'Januari 2026 - Februari 2026', 
+        category: ['All', 'Data Science & Analyst'],
+        image: '/images/user-segmentation.png',
+        path: '/project/userSegmentation'
+    },
     
     
 ];
