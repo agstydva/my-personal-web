@@ -405,7 +405,7 @@ const Dashboard = () => {
                          Working Experience
                       </h2>
                       <p className="text-slate-500 font-medium max-w-3xl mx-auto mb-12 leading-relaxed text-sm sm:text-base text-center">
-                         A summary of internship and work experiences that contributed to the development of practical skills, professionalism, and teamwork.
+                         Summary of internship and work experiences that contributed to the development of practical skills, professionalism, and teamwork.
                       </p>
                     </div>
 
