@@ -81,7 +81,7 @@ const projectsData = [
         roles: 'Project Lead & Mobile App', 
         date: 'Desember 2025 - Januari 2026', 
         category: ['Mobile App', 'All', 'Project Manager'],
-        image: '/images/NobaRek.png',
+        image: '/images/NobaRek2.png',
         path: '/project/NobaRek'
     },
     { 
