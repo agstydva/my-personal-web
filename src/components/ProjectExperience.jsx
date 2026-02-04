@@ -131,13 +131,23 @@ const projectsData = [
     },
     { 
         id: 14, 
+        title: 'Covid 19 Indonesia Analysis Dashboard', 
+        roles: 'Data Analyst', 
+        date: 'Oktober 2024 - November 2024', 
+        category: ['All', 'Data Science & Analyst'],
+        image: '/images/covid19drp.png',
+        path: '/project/covid19Indonesia'
+    },
+    { 
+        id: 15, 
         title: 'User Segmentation Analysis', 
         roles: 'Data Analyst', 
-        date: 'Januari 2026 - Februari 2026', 
+        date: 'Januari 2024 - Februari 2026', 
         category: ['All', 'Data Science & Analyst'],
         image: '/images/user-segmentation.png',
         path: '/project/userSegmentation'
     },
+    
     
     
 ];
