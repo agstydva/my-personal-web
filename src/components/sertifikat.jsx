@@ -10,6 +10,7 @@ const certificates = [
     { id: 7, img: "/images/internship.png", title: "Internship Certificate" },
     { id: 8, img: "/images/sda.png", title: "Algorithms and Programming" },
     { id: 9, img: "/images/mandarin.png", title: "Introduction to Mandarin Language" },
+    { id: 10, img: "/images/toeic.jpg", title: "TOEIC English Test" },
 ];
 
 const Sertifikat = () => {
