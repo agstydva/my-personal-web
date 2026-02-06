@@ -289,7 +289,7 @@ const Dashboard = () => {
                         </h1>
                         
                         <p className="mb-6 text-lg leading-relaxed text-gray-600 mt-6">
-                            A Computer Science student at <b>Universitas Negeri Jakarta</b> with strong interests in Data Analysis, Business Analysis, and Web Development, driven by a high motivation for continuous learning and self improvement, and passionate about applying technical, analytical, and collaborative problem solving skills to deliver impactful real world solutions.
+                            A Computer Science student at <b>Universitas Negeri Jakarta</b> with strong interests in Data Analysis, Data Visualization, Business Analysis, and Web Development, driven by a high motivation for continuous learning and self improvement, and passionate about applying technical, analytical, and collaborative problem solving skills to deliver impactful real world solutions.
                         </p>
                         
                         <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
