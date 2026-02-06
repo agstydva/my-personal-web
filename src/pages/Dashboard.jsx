@@ -357,7 +357,7 @@ const Dashboard = () => {
                             Skills
                         </h2>
                         <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-12 leading-relaxed text-sm sm:text-base text-center">
-                            Tools I've Placed My Hands On.
+                            Tools I Frequently Use.
                         </p>
                     </div>
                     
