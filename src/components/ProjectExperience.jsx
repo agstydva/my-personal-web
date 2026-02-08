@@ -142,7 +142,7 @@ const projectsData = [
         id: 15, 
         title: 'User Segmentation Analysis', 
         roles: 'Data Analyst', 
-        date: 'Januari 2024 - Februari 2026', 
+        date: 'Januari 2026 - Februari 2026', 
         category: ['All', 'Data Science & Analyst'],
         image: '/images/user-segmentation.png',
         path: '/project/userSegmentation'
