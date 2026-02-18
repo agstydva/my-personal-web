@@ -76,6 +76,15 @@ const organizationData = [
     },
     { 
         id: 9, 
+        role: 'Event Division Staff Ilmu Komputer Gathering 2024', 
+        organization: 'Ilkomp Gathering 2024', 
+        period: 'November 2024 - Desember 2024',
+        logo: '/images/unjlogo.png',
+        bgImage: '/images/ilgat.png',
+        path: '/volunteer/wakoorAcara'
+    },
+    { 
+        id: 10, 
         role: 'Vice Coordinator Event Division PKKMB Ilmu Komputer 2024', 
         organization: 'PKKMB Ilmu Komputer UNJ 2024', 
         period: 'Juni 2024 - September 2024',
@@ -84,7 +93,7 @@ const organizationData = [
         path: '/volunteer/wakoorAcara'
     },
     { 
-        id: 10, 
+        id: 11, 
         role: 'Delegates of AIESEC Future Leaders 2024', 
         organization: 'AIESEC in UNJ', 
         period: 'April 2024 - Agustus 2024',
@@ -93,7 +102,7 @@ const organizationData = [
         path: '/volunteer/aflaiesec'
     },
     { 
-        id: 11, 
+        id: 12, 
         role: 'Sponsorship Division Staff Decode 2024', 
         organization: 'Workshop Decode 2024', 
         period: 'Agustus 2024 - September 2024', 
@@ -102,7 +111,7 @@ const organizationData = [
         path: '/volunteer/sponsorDecode'
     },
     { 
-        id: 12, 
+        id: 13, 
         role: 'Master of Ceremonies PKKMB Ilmu Komputer 2024 Day 2', 
         organization: 'PKKMB Ilmu Komputer UNJ 2024', 
         period: 'Agustus 2024', 
@@ -111,7 +120,7 @@ const organizationData = [
         path: '/volunteer/mcDay2'
     },
     { 
-        id: 13, 
+        id: 14, 
         role: 'Master of Ceremonies PKKMB Ilmu Komputer 2024 Day 1', 
         organization: 'PKKMB Ilmu Komputer UNJ 2024', 
         period: 'Agustus 2024', 
@@ -120,7 +129,7 @@ const organizationData = [
         path: '/volunteer/mcDay1'
     },
     { 
-        id: 14, 
+        id: 15, 
         role: 'Publication & Design Division Staff Kabasta x Kabar Ilkomp 2024', 
         organization: 'BEMP Statistika UNJ', 
         period: 'September 2024 - Oktober 2024', 
@@ -129,7 +138,7 @@ const organizationData = [
         path: '/volunteer/kabasta'
     },
     { 
-        id: 15, 
+        id: 16, 
         role: 'MIPA EXPO 2024', 
         organization: 'BEM FMIPA UNJ', 
         period: 'Juli 2024', 
@@ -138,7 +147,7 @@ const organizationData = [
         path: '/volunteer/mipaExpo'
     },
     { 
-        id: 16, 
+        id: 17, 
         role: 'Staff Departement Computer Academic & Science', 
         organization: 'BEMP Ilmu Komputer', 
         period: 'Maret 2024 - Maret 2025', 
@@ -147,7 +156,7 @@ const organizationData = [
         path: '/volunteer/staffCompas'
     },
     { 
-        id: 17, 
+        id: 18, 
         role: 'Sponsorship Division Staff Workshop UI/UX Design 2024', 
         organization: 'Workshop UI/UX Design 2024', 
         period: 'Juni 2024 - Juli 2024', 
@@ -156,7 +165,7 @@ const organizationData = [
         path: '/volunteer/sponsorUIUX'
     },
     { 
-        id: 18, 
+        id: 19, 
         role: 'Event Division Staff Workshop Compare 2024', 
         organization: 'Workshop COMPARE 2024', 
         period: 'Mei 2024 - Juni 2024', 
@@ -165,7 +174,7 @@ const organizationData = [
         path: '/volunteer/acaraCompare'
     },
     { 
-        id: 19, 
+        id: 20, 
         role: 'Vocational High School Teacher Volunteer', 
         organization: 'SMKN 44 JAKARTA', 
         period: 'November 2023', 
