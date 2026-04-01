@@ -25,7 +25,7 @@ const skillData = [
     { name: 'Figma', image: '/images/figma.png' },
     { name: 'Draw.io', image: '/images/drawio.png' },
     { name: 'Looker Studio', image: '/images/looker-studio-logo.png' },
-    { name: 'Laravel', image: '/images/laravel.png' },
+    // { name: 'Laravel', image: '/images/laravel.png' },
     { name: 'Microsoft Office', image: '/images/office.png' },
     { name: 'Next Js', image: '/images/nextjs.png' },
     { name: 'Dart', image: '/images/dart.png' },
