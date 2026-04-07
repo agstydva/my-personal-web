@@ -25,7 +25,7 @@ const skillData = [
     { name: 'Figma', image: '/images/figma.png' },
     { name: 'Draw.io', image: '/images/drawio.png' },
     { name: 'Looker Studio', image: '/images/looker-studio-logo.png' },
-    // { name: 'Laravel', image: '/images/laravel.png' },
+    { name: 'Laravel', image: '/images/laravel.png' },
     { name: 'Microsoft Office', image: '/images/office.png' },
     { name: 'Next Js', image: '/images/nextjs.png' },
     { name: 'Dart', image: '/images/dart.png' },
@@ -99,10 +99,20 @@ const EducationCard = ({ institution, degree, address, websiteUrl, imageSrc }) =
 
 const workingExperienceData = [
     {
+        id: 2,
+        company: 'PT. Biro Klasifikasi Indonesia (Persero)',
+        role: 'HC & Information Technology Intern',
+        period: 'April 2026 - Present',
+        description: 'Interned at PT Biro Klasifikasi Indonesia (Persero), an Indonesian state-owned company providing classification, inspection, testing, and certification services for maritime, offshore, and industrial sectors. Gained experience in Information Technology, with exposure to data management and data governance to support efficient and reliable operations.',
+        imageSrc: '/images/bki_cover.jpg', 
+        logoSrc: '/images/bki_logo.jpg',
+        path: '/work/bki' 
+    },
+    {
         id: 1,
         company: 'PT. Yuju Indonesia',
         role: 'Assembly Engineer & Quality Control',
-        period: 'Juli 2020 - Januari 2021',
+        period: 'July 2020 - January 2021',
         description: 'Interned at PT Yuju Indonesia, a plastic injection molding company in Cikarang, within the Assembly and Quality Control Department during 10th-11th grade of Vocational High School. Gained hands on experience in production processes, quality assurance, and operational efficiency.',
         imageSrc: '/images/ptyuju.jpg', 
         logoSrc: '/images/logo_ptyuju.png',
@@ -111,10 +121,8 @@ const workingExperienceData = [
 ];
 
 const WorkingExperienceCard = ({ exp }) => (
-    <div className="group bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 w-full max-w-5xl mx-auto transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-300">
+    <div className="group bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 w-full max-w-5xl mx-auto mb-10 last:mb-0 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-300">
         <div className="flex flex-col lg:flex-row">
-
-            {/* Image Section */}
             <div className="w-full lg:w-1/2 h-48 lg:h-auto flex-shrink-0 overflow-hidden relative">
                 <img 
                     src={exp.imageSrc} 
@@ -125,7 +133,6 @@ const WorkingExperienceCard = ({ exp }) => (
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             
-            {/* Content Section */}
             <div className="w-full lg:w-1/2 p-5 md:p-6 flex flex-col justify-between relative">
                 <div>
                     <div className="flex items-center space-x-3 mb-2">
