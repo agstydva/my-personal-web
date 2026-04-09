@@ -104,7 +104,7 @@ const workingExperienceData = [
         role: 'HC & Information Technology Intern',
         period: 'April 2026 - Present',
         description: 'Interned at PT Biro Klasifikasi Indonesia (Persero), an Indonesian state-owned company providing classification, inspection, testing, and certification services for maritime, offshore, and industrial sectors. Gained experience in Information Technology, with exposure to data management and data governance to support efficient and reliable operations.',
-        imageSrc: '/images/bki_cover.jpg', 
+        imageSrc: '/images/bki2.png', 
         logoSrc: '/images/bki_logo.jpg',
         path: '/work/bki' 
     },
