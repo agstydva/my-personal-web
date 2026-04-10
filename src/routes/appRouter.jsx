@@ -23,6 +23,7 @@ import UserRetentionAnalysis from '../pages/project/userRetention';
 import RetailSalesAnalysis from '../pages/project/retailSales';
 import SupermarketSalesAnalysis from '../pages/project/supermarketSales';
 import Dtastyum from '../pages/project/dtastyum';
+import Eatzy from '../pages/project/eatzy';
 
 
 
@@ -67,7 +68,7 @@ const AppRouter = () => {
       <Route path="/project/dtastyum" element={<Dtastyum />} />
       <Route path="/project/greenbucks" element={<UnderConstruction />} />
       <Route path="/project/sportware" element={<UnderConstruction />} />
-      <Route path="/project/eatzy" element={<UnderConstruction />} />
+      <Route path="/project/eatzy" element={<Eatzy />} />
       <Route path="/project/simkes" element={<UnderConstruction />} />
       <Route path="/project/agrocoop" element={<UnderConstruction />} />
       <Route path="/project/sentimentAnalysis" element={<UnderConstruction />} />
