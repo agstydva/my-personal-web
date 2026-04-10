@@ -14,10 +14,9 @@ const RetailSalesAnalysis = () => {
         period: "Oktober 2025 - Desember 2025",
         description: "Project ini bertujuan untuk menganalisis performa penjualan historis pada sektor retail guna mengidentifikasi tren musiman, produk unggulan, dan efektivitas strategi penetapan harga. Analisis ini memberikan landasan data untuk perencanaan inventaris dan target penjualan di periode mendatang.",
         tools: [
-            { name: "Python", logo: "/images/python.png" }, 
-            { name: "Looker", logo: "/images/looker.png" },
-            { name: "Pandas", logo: "/images/pandas.png" },
-            { name: "SQL", logo: "/images/sql.png" }
+            { name: "Spreadsheet", logo: "/images/sheets-logo.png" }, 
+            { name: "Looker", logo: "/images/looker-studio-logo.png"},
+            { name: "Kaggle", logo: "/images/kaggle-logo.png"}
         ],
         links: {
             github: "https://github.com/AgastyaDava",
@@ -25,17 +24,27 @@ const RetailSalesAnalysis = () => {
         },
         content: [
             {
-                image: "/images/retail-eda.png",
+                image: "/images/retailSales1.png",
                 title: "Sales Trend & Seasonality Analysis",
                 explanation: "Saya melakukan analisis deret waktu (time-series) untuk memetakan fluktuasi penjualan harian dan bulanan. Tahap ini berhasil mengidentifikasi lonjakan signifikan pada akhir pekan dan periode libur nasional yang memerlukan manajemen stok lebih intensif."
             },
             {
-                image: "/images/retail-product.png",
+                image: "/images/retailSales2.png",
                 title: "Product Performance Matrix",
                 explanation: "Melalui segmentasi produk, saya mengategorikan item berdasarkan volume penjualan dan profitabilitas. Hasilnya menunjukkan distribusi produk 'Star' yang menyumbang persentase margin terbesar bagi perusahaan."
             },
             {
-                image: "/images/retail-dashboard.png",
+                image: "/images/retailSales3.png",
+                title: "Retail Executive Dashboard",
+                explanation: "Tahap akhir mencakup pengembangan dashboard interaktif di Looker Studio yang merangkum metriks utama (Revenue, MoM Growth, Avg Transaction Value) untuk memudahkan stakeholder mengambil keputusan strategis secara cepat."
+            },
+            {
+                image: "/images/retailSales4.png",
+                title: "Product Performance Matrix",
+                explanation: "Melalui segmentasi produk, saya mengategorikan item berdasarkan volume penjualan dan profitabilitas. Hasilnya menunjukkan distribusi produk 'Star' yang menyumbang persentase margin terbesar bagi perusahaan."
+            },
+            {
+                image: "/images/retailSales5.png",
                 title: "Retail Executive Dashboard",
                 explanation: "Tahap akhir mencakup pengembangan dashboard interaktif di Looker Studio yang merangkum metriks utama (Revenue, MoM Growth, Avg Transaction Value) untuk memudahkan stakeholder mengambil keputusan strategis secara cepat."
             }
@@ -101,33 +110,55 @@ const RetailSalesAnalysis = () => {
                     </div>
                 </header>
 
-                {/* CONTENT AREA */}
-                <div className="space-y-32">
-                    <section className="max-w-8xl">
-                        <h2 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3 italic uppercase tracking-widest">
+                {/* TWO-COLUMN INTRO SECTION */}
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center mb-32">
+                    {/* LEFT: Main Preview Image (3/5) */}
+                    <div className="lg:col-span-3 relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                        <img 
+                            src="/images/retailSalesMain.png" 
+                            alt="Retail Sales Dashboard Preview" 
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            onError={(e) => {e.target.src="https://via.placeholder.com/800x500?text=Retail+Dashboard+Preview"}}
+                        />
+                        <div className="absolute inset-0 bg-emerald-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+
+                    {/* RIGHT: Context & Methodology (2/5) */}
+                    <div className="lg:col-span-2 space-y-6">
+                        <h2 className="text-xl font-bold text-slate-900 flex items-center gap-3 italic uppercase tracking-widest">
                             <span className="w-1.5 h-6 bg-emerald-500 rounded-full"></span>
                             Context & Methodology
                         </h2>
-                        <p className="text-slate-600 text-lg leading-relaxed text-justify border-l-4 border-emerald-50 pl-8 pr-8 bg-white py-6 rounded-r-3xl shadow-sm">
-                            {projectData.description}
-                        </p>
-                    </section>
+                        <div className="relative">
+                            <p className="text-slate-600 text-lg leading-relaxed text-justify border-l-4 border-emerald-100 pl-6 py-2">
+                                {projectData.description}
+                            </p>
+                            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-emerald-50 rounded-full -z-10 opacity-50"></div>
+                        </div>
+                    </div>
+                </div>
 
-                    {/* IMAGE CONTENT LIST */}
+                {/* DEEP DIVE CONTENT LIST (ZIG-ZAG) */}
+                <div className="space-y-40">
+                    <h2 className="text-3xl font-black text-slate-900 text-center mb-20 tracking-tighter">
+                        Detailed Analysis Breakdowns
+                    </h2>
                     {projectData.content.map((item, index) => (
-                        <article key={index} className="space-y-10 group">
-                            <div className="bg-white p-3 rounded-[2.5rem] shadow-2xl border border-slate-50 overflow-hidden transition-all duration-700 hover:shadow-emerald-500/10 hover:-translate-y-2">
-                                <img src={item.image} alt={item.title} className="w-full h-auto rounded-[2rem] object-cover transition-transform duration-700 group-hover:scale-[1.02]" />
+                        <article key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center group`}>
+                            {/* Image Part */}
+                            <div className="w-full lg:w-3/5 bg-white p-2 rounded-2xl shadow-xl border border-slate-50 overflow-hidden transition-all duration-700 hover:shadow-emerald-500/10">
+                                <img src={item.image} alt={item.title} className="w-full h-auto rounded-xl object-cover transition-transform duration-700 group-hover:scale-[1.02]" />
                             </div>
                             
-                            <div className="max-w-6xl">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <span className="text-emerald-500 font-mono text-xl font-black italic">0{index + 1}</span>
+                            {/* Text Part */}
+                            <div className="w-full lg:w-2/5 space-y-6">
+                                <div className="flex items-center gap-4">
+                                    <span className="text-emerald-500 font-mono text-2xl font-black italic">0{index + 1}</span>
                                     <h3 className="text-2xl font-bold text-slate-900 tracking-tight uppercase group-hover:text-emerald-600 transition-colors">
                                         {item.title}
                                     </h3>
                                 </div>
-                                <p className="text-slate-600 text-lg leading-relaxed text-justify pl-12 border-l-2 border-emerald-100 group-hover:border-emerald-500 transition-all duration-500">
+                                <p className="text-slate-600 text-lg leading-relaxed text-justify pl-8 border-l-2 border-emerald-100 group-hover:border-emerald-500 transition-all duration-500">
                                     {item.explanation}
                                 </p>
                             </div>
@@ -137,7 +168,7 @@ const RetailSalesAnalysis = () => {
             </main>
 
             <Footer />
-
+            
         </div>
     );
 };

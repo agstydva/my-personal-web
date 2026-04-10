@@ -14,10 +14,9 @@ const SupermarketSalesAnalysis = () => {
         period: "Oktober 2025 - Desember 2025",
         description: "Project ini bertujuan untuk menganalisis data penjualan supermarket di berbagai cabang guna mengevaluasi performa operasional. Analisis mencakup tren pendapatan harian, distribusi profit antar kategori produk, serta korelasi antara rating layanan dengan loyalitas pelanggan untuk memberikan insight bagi manajemen dalam pengambilan keputusan strategis.",
         tools: [
-            { name: "Python", logo: "/images/python.png" }, 
-            { name: "Looker", logo: "/images/looker.png" },
-            { name: "Pandas", logo: "/images/pandas.png" },
-            { name: "SQL", logo: "/images/sql.png" }
+            { name: "Spreadsheet", logo: "/images/sheets-logo.png" }, 
+            { name: "Power Bi", logo: "/images/power-bi.png" },
+            { name: "Kaggle", logo: "/images/kaggle-logo.png" }
         ],
         links: {
             github: "https://github.com/AgastyaDava",
@@ -25,17 +24,27 @@ const SupermarketSalesAnalysis = () => {
         },
         content: [
             {
-                image: "/images/supermarket-eda.png",
+                image: "/images/supermarket1.png",
                 title: "Descriptive & Branch Performance Analysis",
                 explanation: "Tahap awal difokuskan pada perbandingan performa antar cabang supermarket. Saya mengidentifikasi cabang dengan volume transaksi tertinggi dan menganalisis metode pembayaran yang paling disukai oleh pelanggan untuk mengoptimalkan operasional kasir."
             },
             {
-                image: "/images/supermarket-product.png",
+                image: "/images/supermarket2.png",
                 title: "Product Line & Margin Insights",
                 explanation: "Melalui visualisasi data, saya membedah kontribusi laba kotor (gross income) dari setiap lini produk. Hasilnya menunjukkan lini produk mana yang memiliki margin keuntungan terbesar meskipun volume penjualannya mungkin tidak setinggi kategori kebutuhan pokok."
             },
             {
-                image: "/images/supermarket-customer.png",
+                image: "/images/supermarket3.png",
+                title: "Customer Satisfaction & Rating Analysis",
+                explanation: "Saya menganalisis distribusi rating yang diberikan pelanggan berdasarkan jenis member dan gender. Insight ini membantu tim manajemen memahami faktor-faktor yang memengaruhi kepuasan pelanggan di setiap cabang untuk meningkatkan standar layanan."
+            },
+            {
+                image: "/images/supermarket4.png",
+                title: "Product Line & Margin Insights",
+                explanation: "Melalui visualisasi data, saya membedah kontribusi laba kotor (gross income) dari setiap lini produk. Hasilnya menunjukkan lini produk mana yang memiliki margin keuntungan terbesar meskipun volume penjualannya mungkin tidak setinggi kategori kebutuhan pokok."
+            },
+            {
+                image: "/images/supermarket5.png",
                 title: "Customer Satisfaction & Rating Analysis",
                 explanation: "Saya menganalisis distribusi rating yang diberikan pelanggan berdasarkan jenis member dan gender. Insight ini membantu tim manajemen memahami faktor-faktor yang memengaruhi kepuasan pelanggan di setiap cabang untuk meningkatkan standar layanan."
             }
@@ -68,9 +77,7 @@ const SupermarketSalesAnalysis = () => {
                         </div>
                     </div>
 
-                    {/* BARIS TOOLS & BUTTONS */}
                     <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-12 py-2 border-y border-slate-100">
-                        
                         <div className="flex flex-wrap gap-10">
                             {projectData.tools.map((tool, index) => (
                                 <div key={index} className="flex flex-col items-center gap-3 group">
@@ -89,7 +96,6 @@ const SupermarketSalesAnalysis = () => {
                             ))}
                         </div>
 
-                        {/* ACTION BUTTONS */}
                         <div className="flex gap-4 w-full md:w-auto">
                             <a href={projectData.links.github} target="_blank" rel="noreferrer" 
                                className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-[#0d1117] text-white px-8 py-3 rounded-xl font-bold hover:bg-emerald-600 transition-all active:scale-95 text-sm shadow-md">
@@ -105,33 +111,53 @@ const SupermarketSalesAnalysis = () => {
                     </div>
                 </header>
 
-                {/* CONTENT AREA */}
-                <div className="space-y-32">
-                    <section className="max-w-8xl">
-                        <h2 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3 italic uppercase tracking-widest">
+                {/* TWO-COLUMN INTRO SECTION */}
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center mb-32">
+                    {/* Menggunakan rounded-3xl agar lebih halus */}
+                    <div className="lg:col-span-3 relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                        <img 
+                            src="/images/supermarketdashboard.png" 
+                            alt="Supermarket Sales Dashboard Preview" 
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            onError={(e) => {e.target.src="https://via.placeholder.com/800x500?text=Supermarket+Dashboard"}}
+                        />
+                        <div className="absolute inset-0 bg-emerald-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+
+                    <div className="lg:col-span-2 space-y-6">
+                        <h2 className="text-xl font-bold text-slate-900 flex items-center gap-3 italic uppercase tracking-widest">
                             <span className="w-1.5 h-6 bg-emerald-500 rounded-full"></span>
                             Context & Methodology
                         </h2>
-                        <p className="text-slate-600 text-lg leading-relaxed text-justify border-l-4 border-emerald-50 pl-8 pr-8 bg-white py-6 rounded-r-3xl shadow-sm">
-                            {projectData.description}
-                        </p>
-                    </section>
+                        <div className="relative">
+                            <p className="text-slate-600 text-lg leading-relaxed text-justify border-l-4 border-emerald-100 pl-6 py-2">
+                                {projectData.description}
+                            </p>
+                            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-emerald-50 rounded-full -z-10 opacity-50"></div>
+                        </div>
+                    </div>
+                </div>
 
-                    {/* IMAGE CONTENT LIST */}
+                {/* DEEP DIVE CONTENT LIST */}
+                <div className="space-y-40">
+                    <h2 className="text-3xl font-black text-slate-900 text-center mb-20 tracking-tighter">
+                        Detailed Analysis Breakdowns
+                    </h2>
                     {projectData.content.map((item, index) => (
-                        <article key={index} className="space-y-10 group">
-                            <div className="bg-white p-3 rounded-[2.5rem] shadow-2xl border border-slate-50 overflow-hidden transition-all duration-700 hover:shadow-emerald-500/10 hover:-translate-y-2">
-                                <img src={item.image} alt={item.title} className="w-full h-auto rounded-[2rem] object-cover transition-transform duration-700 group-hover:scale-[1.02]" />
+                        <article key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center group`}>
+                            {/* Menggunakan rounded-2xl dan rounded-xl untuk detail agar proporsional */}
+                            <div className="w-full lg:w-3/5 bg-white p-2 rounded-2xl shadow-xl border border-slate-50 overflow-hidden transition-all duration-700 hover:shadow-emerald-500/10">
+                                <img src={item.image} alt={item.title} className="w-full h-auto rounded-xl object-cover transition-transform duration-700 group-hover:scale-[1.02]" />
                             </div>
                             
-                            <div className="max-w-6xl">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <span className="text-emerald-500 font-mono text-xl font-black italic">0{index + 1}</span>
+                            <div className="w-full lg:w-2/5 space-y-6">
+                                <div className="flex items-center gap-4">
+                                    <span className="text-emerald-500 font-mono text-2xl font-black italic">0{index + 1}</span>
                                     <h3 className="text-2xl font-bold text-slate-900 tracking-tight uppercase group-hover:text-emerald-600 transition-colors">
                                         {item.title}
                                     </h3>
                                 </div>
-                                <p className="text-slate-600 text-lg leading-relaxed text-justify pl-12 border-l-2 border-emerald-100 group-hover:border-emerald-500 transition-all duration-500">
+                                <p className="text-slate-600 text-lg leading-relaxed text-justify pl-8 border-l-2 border-emerald-100 group-hover:border-emerald-500 transition-all duration-500">
                                     {item.explanation}
                                 </p>
                             </div>
