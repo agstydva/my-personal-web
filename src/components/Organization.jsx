@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const organizationData = [
     { 
         id: 1, 
-        role: 'Expert Staff Departement Computer Academic & Science', 
+        role: 'Head Staff Departement Computer Academic & Science', 
         organization: 'BEMP Ilmu Komputer UNJ', 
         period: 'Maret 2025 - Maret 2026',
         logo: '/images/bempilkom.png', 

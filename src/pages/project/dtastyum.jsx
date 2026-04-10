@@ -14,10 +14,12 @@ const Dtastyum = () => {
         period: "November 2025 - Desember 2025",
         description: "Dtastyum adalah platform web berbasis kuliner yang dirancang untuk memberikan pengalaman mengeksplorasi resep makanan secara interaktif. Proyek ini dibangun untuk mengasah kemampuan saya dalam mengintegrasikan frontend yang responsif dengan fungsionalitas pencarian data resep secara dinamis.",
         tools: [
-            { name: "React.js", logo: "/images/react.png" }, 
-            { name: "Tailwind CSS", logo: "/images/tailwind.png" },
-            { name: "JavaScript", logo: "/images/js-logo.png" },
-            { name: "Vite", logo: "/images/vite-logo.png" }
+            { name: "HTML", logo: "/images/html.png" }, 
+            { name: "CSS", logo: "/images/css.png" },
+            { name: "JavaScript", logo: "/images/js.png"},
+            { name: "PHP", logo: "/images/php.png" },
+            { name: "MySQL", logo: "/images/mysql.png" }, 
+            { name: "XAMP", logo: "/images/xampp-logo.png" },
         ],
         links: {
             github: "https://github.com/AgastyaDava",
