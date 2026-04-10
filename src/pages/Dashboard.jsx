@@ -219,6 +219,13 @@ const Dashboard = () => {
             bgColor: 'bg-white', 
             altText: 'GitHub Logo' 
         },
+        { 
+            name: 'Kaggle',
+            url: 'https://www.kaggle.com/agastyadavanurrahman',
+            image: '/images/kaggle-logo.png',
+            bgColor: 'bg-white', 
+            altText: 'Kaggle Logo' 
+        },
     ];
 
     return (
