@@ -2,7 +2,12 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
 import UnderConstruction from '../pages/UnderConstruction'; 
+
+// Import halaman detail untuk Work Experience
 import PtYujuDetail from '../pages/work/ptyuju';
+import Bki from '../pages/work/bki';
+
+// Import halaman detail untuk Volunteer Experience
 import Aflaiesec from '../pages/volunteer/aflaiesec';
 import StaffAhliCompas from '../pages/volunteer/staffAhliCompas';
 import AcaraFakul from '../pages/volunteer/acaraFakul';
@@ -10,11 +15,14 @@ import ModeratorFakul from '../pages/volunteer/moderatorFakul';
 import MipaExpo from '../pages/volunteer/mipaExpo';
 import MipaPreneur from '../pages/volunteer/mipaPreneur';
 import TeacherVolunteer from '../pages/volunteer/teacher';
-import CreditCardAnalysis from '../pages/project/creditCardAnalysis'; // Cek apakah ini sudah benar
+
+// Import halaman detail untuk Project Experience
+import CreditCardAnalysis from '../pages/project/creditCardAnalysis'; 
 import MarketBasketAnalysis from '../pages/project/marketBasket';
 import UserRetentionAnalysis from '../pages/project/userRetention';
 import RetailSalesAnalysis from '../pages/project/retailSales';
 import SupermarketSalesAnalysis from '../pages/project/supermarketSales';
+
 
 
 const AppRouter = () => {
@@ -24,6 +32,7 @@ const AppRouter = () => {
       
       {/* Route untuk Work */}
       <Route path="/work/ptyuju" element={<PtYujuDetail />} />
+      <Route path="/work/bki" element={<Bki />} />
 
       {/* Route untuk Volunteer */}
       <Route path="/volunteer/staffAhliCompas" element={<StaffAhliCompas />} />
@@ -48,7 +57,7 @@ const AppRouter = () => {
 
 
       {/* Route untuk Project Experience */}
-      <Route path="/project/creditCardAnalysis" element={<UnderConstruction />} />
+      <Route path="/project/creditCardAnalysis" element={<CreditCardAnalysis />} />
       <Route path="/project/retailSales" element={<UnderConstruction />} />
       <Route path="/project/marketBasket" element={<UnderConstruction />} />
       <Route path="/project/supermarketSales" element={<UnderConstruction />} />

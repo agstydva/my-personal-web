@@ -12,12 +12,11 @@ const CreditCardAnalysis = () => {
     const projectData = {
         title: "Credit Card Customer Analysis Report",
         period: "Desember 2025 - Januari 2026",
-        description: "Project ini berfokus pada analisis data transaksi kartu kredit untuk mendeteksi pola churn dan segmentasi profil risiko pelanggan menggunakan Python dan Looker Studio.",
+        description: "This project was developed as a comprehensive portfolio initiative to sharpen my technical proficiency in data visualization and financial storytelling. By analyzing a dataset of over 5,000 customers with a $22.3M transaction volume[cite: 8, 10], I successfully derived critical insights into customer segmentation and credit utilization. Through this analysis, I identified the 'Businessman' segment as the key revenue driver [cite: 96, 113] and flagged a 27.5% utilization ratio[cite: 14], serving as a proof of concept for how I can leverage interactive dashboards to optimize revenue streams and mitigate credit risks effectively.",
         tools: [
-            { name: "Python", logo: "/images/python.png" }, 
-            { name: "Looker", logo: "/images/looker.png" },
-            { name: "Pandas", logo: "/images/pandas.png" },
-            { name: "SQL", logo: "/images/sql.png" }
+            { name: "Spreadsheet", logo: "/images/sheets-logo.png" }, 
+            { name: "Looker Studio", logo: "/images/looker-icon.png" },
+            { name: "Kaggle", logo: "/images/kaggle-logo.png" }
         ],
         links: {
             github: "https://github.com/AgastyaDava",
@@ -25,19 +24,34 @@ const CreditCardAnalysis = () => {
         },
         content: [
             {
-                image: "/images/cc-eda.png",
-                title: "Exploratory Data Analysis (EDA)",
-                explanation: "Tahap awal melibatkan pembersihan data dan visualisasi distribusi fitur. Saya menemukan bahwa pelanggan dengan masa tenor rendah cenderung memiliki tingkat churn 15% lebih tinggi dibandingkan pelanggan loyal."
+                image: "/images/analyst1.png",
+                title: "Costumer Analysis by State Overview",
+                explanation: "Dashboard utama ini menyajikan KPI kritis perusahaan, mencakup total 5.054 nasabah dengan volume transaksi akumulatif sebesar $22,31M[cite: 8, 10]. Analisis ini memberikan gambaran instan mengenai kesehatan finansial, di mana rata-rata pendapatan bunga (Interest Earned) mencapai $3,89M [cite: 12] dan rasio utilisasi kredit berada di angka sehat 27,5%[cite: 14]."
             },
             {
-                image: "/images/cc-modeling.png",
-                title: "Predictive Modeling with Random Forest",
-                explanation: "Saya membangun model klasifikasi untuk memprediksi potensi churn. Model ini mencapai akurasi 88% dalam mengidentifikasi nasabah yang berisiko tinggi menutup kartu kredit mereka."
+                image: "/images/analyst2.png",
+                title: "Revenue Generator by Segment",
+                explanation: "Analisis performa berdasarkan profesi menunjukkan bahwa segmen 'Businessman' merupakan kontributor utama terhadap volume transaksi[cite: 96, 113]. Meskipun segmen 'Self-employed' memiliki biaya akuisisi (Cost Acquisition) yang kompetitif [cite: 46], segmen 'Businessman' secara konsisten menunjukkan aktivitas transaksi tertinggi[cite: 28, 96]."
             },
             {
-                image: "/images/cc-model.png",
-                title: "Predictive Modeling with Random",
-                explanation: "Saya membangun model klasifikasi untuk memprediksi potensi churn. Model ini mencapai akurasi 88% dalam mengidentifikasi nasabah yang berisiko tinggi menutup kartu kredit mereka."
+                image: "/images/analyst3.png",
+                title: "Customer Risk & Delinquency Profile",
+                explanation: "Melalui pemetaan profil risiko, ditemukan 317 akun dalam status delinquent (tunggakan)[cite: 13]. Visualisasi heatmap per negara bagian [cite: 162] membantu mengidentifikasi wilayah geografis dengan tingkat gagal bayar tertinggi, memungkinkan intervensi yang lebih tertarget[cite: 161, 163]."
+            },
+            {
+                image: "/images/analyst4.png",
+                title: "Demographic & Behavioral Analysis",
+                explanation: "Berdasarkan status perkawinan, kelompok 'Married' mendominasi basis nasabah[cite: 5, 80]. Analisis perilaku belanja menunjukkan bahwa kategori 'Bills', 'Entertainment', dan 'Fuel' adalah tiga pengeluaran terbesar pelanggan[cite: 86, 88], memberikan wawasan berharga untuk perancangan program loyalitas."
+            },
+            {
+                image: "/images/analyst5.png",
+                title: "Customer Risk & Delinquency Profile",
+                explanation: "Melalui pemetaan profil risiko, ditemukan 317 akun dalam status delinquent (tunggakan)[cite: 13]. Visualisasi heatmap per negara bagian [cite: 162] membantu mengidentifikasi wilayah geografis dengan tingkat gagal bayar tertinggi, memungkinkan intervensi yang lebih tertarget[cite: 161, 163]."
+            },
+            {
+                image: "/images/analyst6.png",
+                title: "Demographic & Behavioral Analysis",
+                explanation: "Berdasarkan status perkawinan, kelompok 'Married' mendominasi basis nasabah[cite: 5, 80]. Analisis perilaku belanja menunjukkan bahwa kategori 'Bills', 'Entertainment', dan 'Fuel' adalah tiga pengeluaran terbesar pelanggan[cite: 86, 88], memberikan wawasan berharga untuk perancangan program loyalitas."
             }
         ]
     };
@@ -68,9 +82,7 @@ const CreditCardAnalysis = () => {
                         </div>
                     </div>
 
-                    {/* BARIS TOOLS & BUTTONS */}
                     <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-12 py-2 border-y border-slate-100">
-                        
                         <div className="flex flex-wrap gap-10">
                             {projectData.tools.map((tool, index) => (
                                 <div key={index} className="flex flex-col items-center gap-3 group">
@@ -89,7 +101,6 @@ const CreditCardAnalysis = () => {
                             ))}
                         </div>
 
-                        {/* ACTION BUTTONS */}
                         <div className="flex gap-4 w-full md:w-auto">
                             <a href={projectData.links.github} target="_blank" rel="noreferrer" 
                                className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-[#0d1117] text-white px-8 py-3 rounded-xl font-bold hover:bg-emerald-600 transition-all active:scale-95 text-sm shadow-md">
@@ -105,33 +116,55 @@ const CreditCardAnalysis = () => {
                     </div>
                 </header>
 
-                {/* CONTENT AREA */}
-                <div className="space-y-32">
-                    <section className="max-w-8xl">
-                        <h2 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3 italic uppercase tracking-widest">
+                {/* TWO-COLUMN INTRO SECTION */}
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center mb-32">
+                    {/* LEFT: Image Preview (Take 3/5 of space) */}
+                    <div className="lg:col-span-3 relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group">
+                        <img 
+                            src="/images/creditcardreport.png" 
+                            alt="Full Credit Card Analysis Dashboard" 
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-emerald-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+
+                    {/* RIGHT: Context & Methodology (Take 2/5 of space) */}
+                    <div className="lg:col-span-2 space-y-6">
+                        <h2 className="text-xl font-bold text-slate-900 flex items-center gap-3 italic uppercase tracking-widest">
                             <span className="w-1.5 h-6 bg-emerald-500 rounded-full"></span>
                             Context & Methodology
                         </h2>
-                        <p className="text-slate-600 text-lg leading-relaxed text-justify border-l-4 border-emerald-50 pl-8 pr-8 bg-white py-6 rounded-r-3xl shadow-sm">
-                            {projectData.description}
-                        </p>
-                    </section>
+                        <div className="relative">
+                            <p className="text-slate-600 text-lg leading-relaxed text-justify border-l-4 border-emerald-100 pl-6 py-2">
+                                {projectData.description}
+                            </p>
+                            {/* Subtle background element */}
+                            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-emerald-50 rounded-full -z-10 opacity-50"></div>
+                        </div>
+                    </div>
+                </div>
 
-                    {/* IMAGE CONTENT LIST */}
+                {/* DEEP DIVE CONTENT LIST */}
+                <div className="space-y-40">
+                    <h2 className="text-3xl font-black text-slate-900 text-center mb-20 tracking-tighter">
+                        Detailed Analysis Breakdowns
+                    </h2>
                     {projectData.content.map((item, index) => (
-                        <article key={index} className="space-y-10 group">
-                            <div className="bg-white p-3 rounded-[2.5rem] shadow-2xl border border-slate-50 overflow-hidden transition-all duration-700 hover:shadow-emerald-500/10 hover:-translate-y-2">
+                        <article key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center group`}>
+                            {/* Image Part */}
+                            <div className="w-full lg:w-3/5 bg-white p-2 rounded-[2.5rem] shadow-xl border border-slate-50 overflow-hidden transition-all duration-700 hover:shadow-emerald-500/10">
                                 <img src={item.image} alt={item.title} className="w-full h-auto rounded-[2rem] object-cover transition-transform duration-700 group-hover:scale-[1.02]" />
                             </div>
                             
-                            <div className="max-w-6xl">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <span className="text-emerald-500 font-mono text-xl font-black italic">0{index + 1}</span>
+                            {/* Text Part */}
+                            <div className="w-full lg:w-2/5 space-y-6">
+                                <div className="flex items-center gap-4">
+                                    <span className="text-emerald-500 font-mono text-2xl font-black italic">0{index + 1}</span>
                                     <h3 className="text-2xl font-bold text-slate-900 tracking-tight uppercase group-hover:text-emerald-600 transition-colors">
                                         {item.title}
                                     </h3>
                                 </div>
-                                <p className="text-slate-600 text-lg leading-relaxed text-justify pl-12 border-l-2 border-emerald-100 group-hover:border-emerald-500 transition-all duration-500">
+                                <p className="text-slate-600 text-lg leading-relaxed text-justify pl-8 border-l-2 border-emerald-100 group-hover:border-emerald-500 transition-all duration-500">
                                     {item.explanation}
                                 </p>
                             </div>
