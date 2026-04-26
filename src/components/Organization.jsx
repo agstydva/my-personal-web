@@ -130,7 +130,7 @@ const organizationData = [
     },
     { 
         id: 15, 
-        role: 'Publication & Design Division Staff Kabasta x Kabar Ilkomp 2024', 
+        role: 'Public Relations & Design Division Staff Kabasta x Kabar Ilkomp 2024', 
         organization: 'BEMP Statistika UNJ', 
         period: 'September 2024 - Oktober 2024', 
         logo: '/images/logo-bempstat.png', 
