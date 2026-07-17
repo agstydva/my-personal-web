@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ScrollReveal from './ScrollReveal';
 
 const projectCategories = [
   'All',
@@ -200,40 +201,46 @@ const ProjectExperience = () => {
     <section id="projects" className="py-16 bg-gray-50">
       <div className="max-w-[88%] mx-auto px-4 sm:px-6 lg:px-8">
           
-        <div className="flex flex-col items-center justify-center gap-3">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
-                Project Experience
-            </h2>
-            <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-10 leading-relaxed text-sm sm:text-base text-center">
-                An overview of academic and personal projects focused on applying concepts, solving problems, and delivering practical outcomes.
-            </p>
-        </div>
+        <ScrollReveal animation="fade-up" duration={800}>
+          <div className="flex flex-col items-center justify-center gap-3">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
+                  Project Experience
+              </h2>
+              <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-10 leading-relaxed text-sm sm:text-base text-center">
+                  An overview of academic and personal projects focused on applying concepts, solving problems, and delivering practical outcomes.
+              </p>
+          </div>
+        </ScrollReveal>
           
 
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex overflow-x-auto gap-2 p-2 bg-zinc-900/95 backdrop-blur-md rounded-full border border-gray-800 shadow-2xl max-w-full no-scrollbar ring-1 ring-white/5">
-                {projectCategories.map(category => (
-                  <button
-                    key={category}
-                    onClick={() => setActiveCategory(category)}
-                    className={`
-                      px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 whitespace-nowrap
-                      ${
-                        activeCategory === category
-                          ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/30 transform scale-105' 
-                          : 'text-gray-400 hover:text-white hover:bg-white/10' 
-                      }
-                    `}
-                  >
-                    {category}
-                  </button>
-                ))}
+          <ScrollReveal animation="fade-up" duration={850} delay={150}>
+            <div className="flex justify-center mb-12">
+              <div className="inline-flex overflow-x-auto gap-2 p-2 bg-zinc-900/95 backdrop-blur-md rounded-full border border-gray-800 shadow-2xl max-w-full no-scrollbar ring-1 ring-white/5">
+                  {projectCategories.map(category => (
+                    <button
+                      key={category}
+                      onClick={() => setActiveCategory(category)}
+                      className={`
+                        px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 whitespace-nowrap
+                        ${
+                          activeCategory === category
+                            ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/30 transform scale-105' 
+                            : 'text-gray-400 hover:text-white hover:bg-white/10' 
+                        }
+                      `}
+                    >
+                      {category}
+                    </button>
+                  ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 xl:gap-8">
-            {filteredProjects.map(project => (
-              <ProjectCard key={project.id} project={project} />
+            {filteredProjects.map((project, index) => (
+              <ScrollReveal key={project.id} animation="fade-up" delay={(index % 4) * 150} duration={1000}>
+                <ProjectCard project={project} />
+              </ScrollReveal>
             ))}
             
             {filteredProjects.length === 0 && (

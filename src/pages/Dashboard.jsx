@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import ProjectExperience from '../components/ProjectExperience';
 import Organization from '../components/Organization';
 import Sertifikat from '../components/sertifikat';
+import ScrollReveal from '../components/ScrollReveal';
 
 const skillData = [
     { name: 'HTML', image: '/images/html.png' },
@@ -367,44 +368,43 @@ const Dashboard = () => {
                 <section id="skills" className="py-10 px-4 md:px-10 lg:px-20 xl:px-40">
                     {/* <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">Skills</h2> */}
 
-                    <div className="flex flex-col items-center justify-center gap-3">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
-                            Skills
-                        </h2>
-                        <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-12 leading-relaxed text-sm sm:text-base text-center">
-                            Tools I Frequently Use.
-                        </p>
-                    </div>
+                    <ScrollReveal animation="fade-up" duration={800}>
+                        <div className="flex flex-col items-center justify-center gap-3">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
+                                Skills
+                            </h2>
+                            <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-12 leading-relaxed text-sm sm:text-base text-center">
+                                Tools I Frequently Use.
+                            </p>
+                        </div>
+                    </ScrollReveal>
                     
                     <div className="flex justify-center">
-                        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-10 gap-x-4 gap-y-8 justify-items-center w-full max-w-7xl">
+                        <div className="flex flex-wrap justify-center gap-x-8 gap-y-10 w-full xl:max-w-[1100px]">
                             {skillData.map((skill, index) => {
-                                const totalItems = skillData.length;
-                                const itemsPerRow = 10; 
-                                const lastRowItems = totalItems % itemsPerRow;
-                                const isLastRow = index >= totalItems - lastRowItems;
-
                                 return (
-                                    <div 
+                                    <ScrollReveal 
                                         key={index} 
-                                        className="group flex flex-col items-center cursor-pointer transition-all duration-300"
-                                        style={isLastRow && window.innerWidth >= 1280 ? { 
-                                            gridColumnStart: index === totalItems - lastRowItems ? (itemsPerRow - lastRowItems) / 2 + 1 : 'auto' 
-                                        } : {}}
+                                        animation="zoom-in"
+                                        delay={(index % 10) * 50}
+                                        duration={650}
+                                        className="group"
                                     >
-                                        <div className="mb-3 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-white border border-transparent shadow-md transition-all duration-300 ease-out 
-                                                        group-hover:-translate-y-2 group-hover:shadow-[0_8px_30px_rgb(79,70,229,0.2)] group-hover:border-indigo-200 group-hover:bg-indigo-50/30">
-                                            <img 
-                                                src={skill.image} 
-                                                alt={skill.name} 
-                                                className="h-8 w-8 sm:h-10 sm:w-10 object-contain transition-transform duration-300 group-hover:scale-110" 
-                                                onError={(e) => {e.target.style.display='none'}} 
-                                            />
+                                        <div className="flex flex-col items-center cursor-pointer transition-all duration-300 w-16 sm:w-20">
+                                            <div className="mb-3 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-white border border-transparent shadow-md transition-all duration-300 ease-out 
+                                                            group-hover:-translate-y-2 group-hover:shadow-[0_8px_30px_rgb(79,70,229,0.2)] group-hover:border-indigo-200 group-hover:bg-indigo-50/30">
+                                                <img 
+                                                    src={skill.image} 
+                                                    alt={skill.name} 
+                                                    className="h-8 w-8 sm:h-10 sm:w-10 object-contain transition-transform duration-300 group-hover:scale-110" 
+                                                    onError={(e) => {e.target.style.display='none'}} 
+                                                />
+                                            </div>
+                                            <span className="text-xs sm:text-sm font-medium text-gray-600 transition-colors duration-300 group-hover:text-indigo-600 group-hover:font-semibold text-center px-1">
+                                                {skill.name}
+                                            </span>
                                         </div>
-                                        <span className="text-xs sm:text-sm font-medium text-gray-600 transition-colors duration-300 group-hover:text-indigo-600 group-hover:font-semibold text-center px-1">
-                                            {skill.name}
-                                        </span>
-                                    </div>
+                                    </ScrollReveal>
                                 );
                             })}
                         </div>
@@ -415,17 +415,21 @@ const Dashboard = () => {
 
                 <section id="working-experience" className="py-10">
                     
-                    <div className="flex flex-col items-center justify-center gap-3">
-                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
-                         Working Experience
-                      </h2>
-                      <p className="text-slate-500 font-medium max-w-3xl mx-auto mb-12 leading-relaxed text-sm sm:text-base text-center">
-                         Summary of internship and work experiences that contributed to the development of practical skills, professionalism, and teamwork.
-                      </p>
-                    </div>
+                    <ScrollReveal animation="fade-up" duration={800}>
+                        <div className="flex flex-col items-center justify-center gap-3">
+                          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
+                             Working Experience
+                          </h2>
+                          <p className="text-slate-500 font-medium max-w-3xl mx-auto mb-12 leading-relaxed text-sm sm:text-base text-center">
+                             Summary of internship and work experiences that contributed to the development of practical skills, professionalism, and teamwork.
+                          </p>
+                        </div>
+                    </ScrollReveal>
 
-                    {workingExperienceData.map(exp => (
-                        <WorkingExperienceCard key={exp.id} exp={exp} />
+                    {workingExperienceData.map((exp, index) => (
+                        <ScrollReveal key={exp.id} animation="fade-up" delay={index * 200} duration={1000} className="w-full">
+                            <WorkingExperienceCard exp={exp} />
+                        </ScrollReveal>
                     ))}
                 </section>
 
@@ -443,9 +447,13 @@ const Dashboard = () => {
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 flex flex-col items-center">
-                    <h2 className="text-4xl font-bold text-white mb-16 text-center">Education</h2>
+                    <ScrollReveal animation="fade-up" duration={800}>
+                        <h2 className="text-4xl font-bold text-white mb-16 text-center">Education</h2>
+                    </ScrollReveal>
                     {educationData.map((edu, index) => (
-                        <EducationCard key={index} institution={edu.institution} degree={edu.degree} address={edu.address} websiteUrl={edu.websiteUrl} imageSrc={edu.imageSrc} />
+                        <ScrollReveal key={index} animation="fade-up" delay={index * 200} duration={1000} className="w-full flex justify-center">
+                            <EducationCard institution={edu.institution} degree={edu.degree} address={edu.address} websiteUrl={edu.websiteUrl} imageSrc={edu.imageSrc} />
+                        </ScrollReveal>
                     ))}
                 </div>
             </section>

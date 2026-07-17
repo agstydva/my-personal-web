@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ScrollReveal from './ScrollReveal';
 
 const organizationData = [
     { 
@@ -242,14 +243,16 @@ const Organization = () => {
   return (
     <section id="organization" className="px-6 sm:px-12 lg:px-24 xl:px-40 py-10">
         
-        <div className="flex flex-col items-center justify-center gap-3">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
-                Organization, Committee, & Volunteer Experience
-            </h2>
-            <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-10 leading-relaxed text-sm sm:text-base text-center">
-                Summary of organizational, committee, and volunteer experiences focused on leadership growth and personal and professional development.
-            </p>
-        </div>
+        <ScrollReveal animation="fade-up" duration={800}>
+            <div className="flex flex-col items-center justify-center gap-3">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
+                    Organization, Committee, & Volunteer Experience
+                </h2>
+                <p className="text-slate-500 font-medium max-w-6xl mx-auto mb-10 leading-relaxed text-sm sm:text-base text-center">
+                    Summary of organizational, committee, and volunteer experiences focused on leadership growth and personal and professional development.
+                </p>
+            </div>
+        </ScrollReveal>
         
         {/* PERBAIKAN GRID:
             - grid-cols-1: 1 kolom di HP.
@@ -258,8 +261,10 @@ const Organization = () => {
             - xl:grid-cols-4: 4 kolom di layar besar (sesuai kode awal Anda).
         */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
-            {organizationData.map(org => (
-                <OrganizationCard key={org.id} org={org} />
+            {organizationData.map((org, index) => (
+                <ScrollReveal key={org.id} animation="fade-up" delay={(index % 4) * 150} duration={1000}>
+                    <OrganizationCard org={org} />
+                </ScrollReveal>
             ))}
         </div>
     </section>
