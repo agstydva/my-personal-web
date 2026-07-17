@@ -122,7 +122,7 @@ const workingExperienceData = [
 ];
 
 const WorkingExperienceCard = ({ exp }) => (
-    <div className="group bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 w-full max-w-5xl mx-auto mb-10 last:mb-0 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-300">
+    <div className="group bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 w-full max-w-5xl mx-auto transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-300">
         <div className="flex flex-col lg:flex-row">
             <div className="w-full lg:w-1/2 h-48 lg:h-auto flex-shrink-0 overflow-hidden relative">
                 <img 
@@ -427,7 +427,7 @@ const Dashboard = () => {
                     </ScrollReveal>
 
                     {workingExperienceData.map((exp, index) => (
-                        <ScrollReveal key={exp.id} animation="fade-up" delay={index * 200} duration={1000} className="w-full">
+                        <ScrollReveal key={exp.id} animation="fade-up" delay={index * 200} duration={1000} className="w-full mb-16 last:mb-0">
                             <WorkingExperienceCard exp={exp} />
                         </ScrollReveal>
                     ))}
