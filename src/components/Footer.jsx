@@ -95,6 +95,20 @@ const Footer = () => {
                 </div>
                 <span className="text-sm">+62 877 7443 6125</span>
               </a>
+
+              <a 
+                href="https://www.linkedin.com/in/agastya-dava-nurrahman?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKtJa0Sj3R4ajMT9cXdkFBA%3D%3D" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-gray-400 hover:text-white transition-all group"
+              >
+                <div className="h-10 w-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-indigo-600 transition-all duration-300">
+                  <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <span className="text-sm">Agastya Dava Nurrahman</span>
+              </a>
             </div>
           </div>
         </div>
