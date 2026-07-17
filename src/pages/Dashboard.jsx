@@ -34,6 +34,8 @@ const skillData = [
     { name: 'Power Bi', image: '/images/power-bi.png' },
     { name: 'Jetpack Compose', image: '/images/jetpack compose icon_RGB.png' },
     { name: 'Notion', image: '/images/notion.png' },
+    { name: 'PostgreSQL', image: '/images/postgresql.png' },
+    { name: 'CapCut', image: '/images/capcut.png' },
 ];
 
 const educationData = [
