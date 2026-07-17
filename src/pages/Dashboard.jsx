@@ -427,7 +427,7 @@ const Dashboard = () => {
                     </ScrollReveal>
 
                     {workingExperienceData.map((exp, index) => (
-                        <ScrollReveal key={exp.id} animation="fade-up" delay={index * 200} duration={1000} className="w-full mb-16 last:mb-0">
+                        <ScrollReveal key={exp.id} animation="fade-up" delay={index * 200} duration={1000} className="w-full mb-8 last:mb-0">
                             <WorkingExperienceCard exp={exp} />
                         </ScrollReveal>
                     ))}
