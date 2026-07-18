@@ -160,9 +160,9 @@ const projectsData = [
   {
     id: 17,
     title: 'WorkWell - Digital Wellbeing & Productivity',
-    roles: 'Fullstack Web Developer',
+    roles: 'Project Lead & Fullstack Web Developer',
     date: 'Mei 2026 - Juli 2026',
-    category: ['All', 'Web Development'],
+    category: ['All', 'Web Development', 'Project Manager'],
     image: '/images/workwell.png',
     path: '/project/workwell'
   },
