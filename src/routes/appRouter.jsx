@@ -25,6 +25,7 @@ import SupermarketSalesAnalysis from '../pages/project/supermarketSales';
 import Dtastyum from '../pages/project/dtastyum';
 import Eatzy from '../pages/project/eatzy';
 import BreastCancerPrediction from '../pages/project/breastCancerPrediction';
+import WorkWellDetail from '../pages/project/workwell';
 
 
 
@@ -77,6 +78,7 @@ const AppRouter = () => {
       <Route path="/project/clusteringModel" element={<UnderConstruction />} />
       <Route path="/project/tokoku" element={<UnderConstruction />} />
       <Route path="/project/breastCancerPrediction" element={<BreastCancerPrediction />} />
+      <Route path="/project/workwell" element={<WorkWellDetail />} />
       
 
       {/* Tangkap semua link error */}

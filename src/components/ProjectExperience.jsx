@@ -157,6 +157,15 @@ const projectsData = [
     image: '/images/breast-cancer-prediction.png',
     path: '/project/breastCancerPrediction'
   },
+  {
+    id: 17,
+    title: 'WorkWell - Digital Wellbeing & Productivity',
+    roles: 'Fullstack Web Developer',
+    date: 'Mei 2026 - Juli 2026',
+    category: ['All', 'Web Development'],
+    image: '/images/workwell.png',
+    path: '/project/workwell'
+  },
 ];
 
 const ProjectCard = ({ project }) => (
