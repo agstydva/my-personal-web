@@ -61,24 +61,24 @@ const AppRouter = () => {
 
 
       {/* Route untuk Project Experience */}
-      <Route path="/project/creditCardAnalysis" element={<CreditCardAnalysis />} />
-      <Route path="/project/retailSales" element={<RetailSalesAnalysis />} />
-      <Route path="/project/marketBasket" element={<MarketBasketAnalysis />} />
-      <Route path="/project/supermarketSales" element={<SupermarketSalesAnalysis />} />
-      <Route path="/project/userRetention" element={<UserRetentionAnalysis />} />
+      <Route path="/project/creditCardAnalysis" element={<UnderConstruction />} />
+      <Route path="/project/retailSales" element={<UnderConstruction />} />
+      <Route path="/project/marketBasket" element={<UnderConstruction />} />
+      <Route path="/project/supermarketSales" element={<UnderConstruction />} />
+      <Route path="/project/userRetention" element={<UnderConstruction />} />
 
-      <Route path="/project/dtastyum" element={<Dtastyum />} />
+      <Route path="/project/dtastyum" element={<UnderConstruction />} />
       <Route path="/project/greenbucks" element={<UnderConstruction />} />
       <Route path="/project/sportware" element={<UnderConstruction />} />
-      <Route path="/project/eatzy" element={<Eatzy />} />
+      <Route path="/project/eatzy" element={<UnderConstruction />} />
       <Route path="/project/simkes" element={<UnderConstruction />} />
       <Route path="/project/agrocoop" element={<UnderConstruction />} />
       <Route path="/project/sentimentAnalysis" element={<UnderConstruction />} />
       <Route path="/project/predictionModel" element={<UnderConstruction />} />
       <Route path="/project/clusteringModel" element={<UnderConstruction />} />
       <Route path="/project/tokoku" element={<UnderConstruction />} />
-      <Route path="/project/breastCancerPrediction" element={<BreastCancerPrediction />} />
-      <Route path="/project/workwell" element={<WorkWellDetail />} />
+      <Route path="/project/breastCancerPrediction" element={<UnderConstruction />} />
+      <Route path="/project/workwell" element={<UnderConstruction />} />
       
 
       <Route path="/under-construction" element={<UnderConstruction />} />
