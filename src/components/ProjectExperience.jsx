@@ -166,6 +166,15 @@ const projectsData = [
     image: '/images/workwell.png',
     path: '/project/workwell'
   },
+  {
+    id: 18,
+    title: 'STEM SDGs 3 & 4 Project – Interactive Documentation Website',
+    roles: 'Web Developer',
+    date: 'April 2026 - Juli 2026',
+    category: ['Web Development', 'All'],
+    image: '/images/stem-sdgs.png',
+    path: '/project/stem-sdgs'
+  },
 ];
 
 const ProjectCard = ({ project }) => (
