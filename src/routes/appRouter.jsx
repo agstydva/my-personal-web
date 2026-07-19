@@ -81,6 +81,7 @@ const AppRouter = () => {
       <Route path="/project/workwell" element={<WorkWellDetail />} />
       
 
+      <Route path="/under-construction" element={<UnderConstruction />} />
       {/* Tangkap semua link error */}
       <Route path="*" element={<UnderConstruction />} />
     </Routes>

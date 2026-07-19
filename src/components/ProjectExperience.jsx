@@ -195,7 +195,7 @@ const ProjectCard = ({ project }) => (
       </p>
 
       <Link
-        to={project.path}
+        to="/under-construction"
         /* hover button */
         className="w-full mt-auto bg-black text-white font-semibold py-2.5 rounded shadow-md hover:bg-indigo-800 hover:shadow-indigo-200 hover:-translate-y-1 transition-all duration-300 text-sm block text-center"
       >
