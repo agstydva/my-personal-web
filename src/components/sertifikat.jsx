@@ -11,6 +11,7 @@ const certificates = [
     { id: 8, img: "/images/sda.png", title: "Algorithms and Programming" },
     { id: 9, img: "/images/mandarin.png", title: "Introduction to Mandarin Language" },
     { id: 10, img: "/images/toeic.jpg", title: "TOEIC English Test" },
+    { id: 11, img: "/images/compas-achievement.jpg", title: "COMPAS Achievement" },
 ];
 
 const Sertifikat = () => {
