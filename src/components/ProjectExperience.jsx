@@ -151,7 +151,7 @@ const projectsData = [
   {
     id: 16,
     title: 'Breast Cancer Recurrence Prediction',
-    roles: 'Machine Learning',
+    roles: 'Project Lead & Machine Learning',
     date: 'Juni 2026 - Juli 2026',
     category: ['All', 'Data Science & Analyst', 'Machine Learning', 'Project Manager'],
     image: '/images/breast-cancer-prediction.png',
@@ -174,6 +174,15 @@ const projectsData = [
     category: ['Web Development', 'All'],
     image: '/images/stem-sdgs.png',
     path: '/project/stem-sdgs'
+  },
+  {
+    id: 19,
+    title: 'LaporWarga',
+    roles: 'Fullstack Web Developer',
+    date: 'Mei 2026 - Juni 2026',
+    category: ['Web Development', 'All'],
+    image: '/images/laporwarga.png',
+    path: '/project/laporwarga'
   },
 ];
 

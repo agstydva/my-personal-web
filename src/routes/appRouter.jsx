@@ -80,6 +80,7 @@ const AppRouter = () => {
       <Route path="/project/breastCancerPrediction" element={<UnderConstruction />} />
       <Route path="/project/workwell" element={<UnderConstruction />} />
       <Route path="/project/stem-sdgs" element={<UnderConstruction />} />
+      <Route path="/project/laporwarga" element={<UnderConstruction />} />
       
 
       <Route path="/under-construction" element={<UnderConstruction />} />
