@@ -49,7 +49,7 @@ const educationData = [
     {
         institution: 'SMK Mitra Industri MM2100',
         degree: 'Vocational High School Student, Industrial Electrical Engineering',
-        address: 'Kawasan Industri MM2100, Jl. Kalimantan Blok DD 1-1, Cikarang Barat, Bekasi',
+        address: 'Kawasan Industri MM2100, Jl. Kalimantan Blok DD 1-1, Cikarang Barat, Jawa Barat',
         websiteUrl: 'https://smkind-mm2100.sch.id/',
         imageSrc: '/images/mitraindustri.jpeg'
     },
