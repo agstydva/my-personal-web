@@ -184,6 +184,15 @@ const projectsData = [
     image: '/images/laporwarga.png',
     path: '/project/laporwarga'
   },
+  {
+    id: 20,
+    title: 'Cineverse - Movie Web',
+    roles: 'Fullstack Web Developer',
+    date: 'Juli 2026 - Present',
+    category: ['Web Development', 'All'],
+    image: '/images/cineverse.png',
+    path: '/project/cineverse'
+  },
 ];
 
 const ProjectCard = ({ project }) => (
