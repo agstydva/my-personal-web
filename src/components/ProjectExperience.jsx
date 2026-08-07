@@ -188,7 +188,7 @@ const projectsData = [
     id: 20,
     title: 'Cineverse - Movie Web',
     roles: 'Fullstack Web Developer',
-    date: 'Juli 2026 - Present',
+    date: 'Juli 2026 - Agustus 2026',
     category: ['Web Development', 'All'],
     image: '/images/cineverse.png',
     path: '/project/cineverse'
