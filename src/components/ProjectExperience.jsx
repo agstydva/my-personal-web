@@ -107,7 +107,7 @@ const projectsData = [
     id: 11,
     title: 'Eatzy',
     roles: 'Project Lead & Entrepreneur',
-    date: 'September 2025 - Present',
+    date: 'September 2025 - Februari 2026',
     category: ['All', 'Project Manager', 'Web Development'],
     image: '/images/eatzy.png',
     path: '/project/eatzy'
