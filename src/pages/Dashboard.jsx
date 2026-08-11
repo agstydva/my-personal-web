@@ -105,7 +105,7 @@ const workingExperienceData = [
         id: 2,
         company: 'PT Biro Klasifikasi Indonesia (Persero)',
         role: 'IT Data Management',
-        period: 'April 2026 - Present',
+        period: 'April 2026 - August 2026',
         description: 'Interned at PT Biro Klasifikasi Indonesia (Persero), an Indonesian state-owned company providing classification, inspection, testing, and certification services for maritime, offshore, and industrial sectors. Gained experience in Information Technology, with exposure to data management and data governance to support efficient and reliable operations.',
         imageSrc: '/images/bki2.png',
         logoSrc: '/images/bki_logo.jpg',
