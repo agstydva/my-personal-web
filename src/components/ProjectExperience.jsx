@@ -19,7 +19,7 @@ const projectsData = [
     roles: 'Project Lead & Fullstack Web Developer',
     date: 'Oktober 2024 - Desember 2024',
     category: ['Web Development', 'All', 'Project Manager'],
-    techStack: ['Laravel', 'Blade', 'Bootstrap', 'MySQL'],
+    techStack: ['PHP', 'JavaScript', 'Bootstrap', 'MySQL'],
     image: '/images/dtastyum.png',
     path: '/project/dtastyum'
   },
@@ -29,7 +29,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'November 2025 - Desember 2025',
     category: ['Data Science & Analyst', 'All'],
-    techStack: ['Python', 'Pandas', 'Power BI', 'SQL'],
+    techStack: ['Python', 'Pandas', 'Power BI'],
     image: '/images/data-analyst2.png',
     path: '/project/creditCardAnalysis'
   },
@@ -39,7 +39,7 @@ const projectsData = [
     roles: 'Project Lead & Flutter Developer',
     date: 'November 2024 - Desember 2024',
     category: ['Mobile App', 'All', 'Project Manager'],
-    techStack: ['Flutter', 'Dart', 'Firebase'],
+    techStack: ['Flutter', 'Dart', 'Android Studio'],
     image: '/images/GreenBucks.png',
     path: '/project/greenbucks'
   },
@@ -59,7 +59,7 @@ const projectsData = [
     roles: 'Project Lead & Web Developer',
     date: 'Oktober 2025 - Desember 2025',
     category: ['Web Development', 'All', 'Project Manager'],
-    techStack: ['PHP', 'Laravel', 'Tailwind', 'MySQL'],
+    techStack: ['React Js', 'Mongo DB', 'Tailwind', 'Node Js'],
     image: '/images/simkes.png',
     path: '/project/simkes'
   },
@@ -89,7 +89,7 @@ const projectsData = [
     roles: 'Project Lead & Mobile App',
     date: 'Desember 2025 - Januari 2026',
     category: ['Mobile App', 'All', 'Project Manager'],
-    techStack: ['Kotlin', 'Android Studio', 'Firebase'],
+    techStack: ['Kotlin', 'Android Studio', 'Jetpack Compose'],
     image: '/images/NobaRek2.png',
     path: '/project/NobaRek'
   },
@@ -119,7 +119,7 @@ const projectsData = [
     roles: 'Project Lead & Entrepreneur',
     date: 'September 2025 - Februari 2026',
     category: ['All', 'Project Manager', 'Web Development'],
-    techStack: ['React Js', 'Tailwind', 'Laravel', 'MySQL'],
+    techStack: ['Next Js', 'Tailwind', 'JavaScript'],
     image: '/images/eatzy.png',
     path: '/project/eatzy'
   },
@@ -139,7 +139,7 @@ const projectsData = [
     roles: 'Project Lead & Fullstack Web Developer',
     date: 'April 2025 - Juli 2025',
     category: ['Web Development', 'All', 'Project Manager'],
-    techStack: ['Laravel', 'Blade', 'Tailwind', 'MySQL'],
+    techStack: ['PHP', 'JavaScript', 'Bootstrap', 'MySQL'],
     image: '/images/sportware.png',
     path: '/project/sportware'
   },
@@ -189,7 +189,7 @@ const projectsData = [
     roles: 'Web Developer',
     date: 'April 2026 - Juli 2026',
     category: ['Web Development', 'All'],
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    techStack: ['React Js', 'Next Js', 'Tailwind', 'Node.js'],
     image: '/images/stem-sdgs.png',
     path: '/project/stem-sdgs'
   },
@@ -209,7 +209,7 @@ const projectsData = [
     roles: 'Fullstack Web Developer',
     date: 'Juli 2026 - Agustus 2026',
     category: ['Web Development', 'All'],
-    techStack: ['React Js', 'Tailwind', 'TMDB API'],
+    techStack: ['Laravel', 'Blade', 'Tailwind', 'MySQL'],
     image: '/images/cineverse.png',
     path: '/project/cineverse'
   },
