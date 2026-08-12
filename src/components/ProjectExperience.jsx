@@ -19,6 +19,7 @@ const projectsData = [
     roles: 'Project Lead & Fullstack Web Developer',
     date: 'Oktober 2024 - Desember 2024',
     category: ['Web Development', 'All', 'Project Manager'],
+    techStack: ['Laravel', 'Blade', 'Bootstrap', 'MySQL'],
     image: '/images/dtastyum.png',
     path: '/project/dtastyum'
   },
@@ -28,6 +29,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'November 2025 - Desember 2025',
     category: ['Data Science & Analyst', 'All'],
+    techStack: ['Python', 'Pandas', 'Power BI', 'SQL'],
     image: '/images/data-analyst2.png',
     path: '/project/creditCardAnalysis'
   },
@@ -37,6 +39,7 @@ const projectsData = [
     roles: 'Project Lead & Flutter Developer',
     date: 'November 2024 - Desember 2024',
     category: ['Mobile App', 'All', 'Project Manager'],
+    techStack: ['Flutter', 'Dart', 'Firebase'],
     image: '/images/GreenBucks.png',
     path: '/project/greenbucks'
   },
@@ -46,6 +49,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Desember 2025 - Januari 2026',
     category: ['Data Science & Analyst', 'All'],
+    techStack: ['Python', 'Apriori Algorithm', 'Looker Studio'],
     image: '/images/market-basket-analysis.png',
     path: '/project/marketBasket'
   },
@@ -55,6 +59,7 @@ const projectsData = [
     roles: 'Project Lead & Web Developer',
     date: 'Oktober 2025 - Desember 2025',
     category: ['Web Development', 'All', 'Project Manager'],
+    techStack: ['PHP', 'Laravel', 'Tailwind', 'MySQL'],
     image: '/images/simkes.png',
     path: '/project/simkes'
   },
@@ -64,6 +69,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'November 2025 - Desember 2025',
     category: ['Data Science & Analyst', 'All'],
+    techStack: ['Python', 'SQL', 'Looker Studio'],
     image: '/images/user-retention-analysis.png',
     path: '/project/userRetention'
   },
@@ -73,6 +79,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Oktober 2025 - November 2025',
     category: ['Data Science & Analyst', 'All'],
+    techStack: ['Power BI', 'SQL', 'Excel'],
     image: '/images/data-analyst1.png',
     path: '/project/retailSales'
   },
@@ -82,6 +89,7 @@ const projectsData = [
     roles: 'Project Lead & Mobile App',
     date: 'Desember 2025 - Januari 2026',
     category: ['Mobile App', 'All', 'Project Manager'],
+    techStack: ['Kotlin', 'Android Studio', 'Firebase'],
     image: '/images/NobaRek2.png',
     path: '/project/NobaRek'
   },
@@ -91,6 +99,7 @@ const projectsData = [
     roles: 'UI/UX Design',
     date: 'November 2023',
     category: ['UI/UX Design', 'All'],
+    techStack: ['Figma', 'Wireframing', 'Prototyping'],
     image: '/images/cheaper.png',
     path: '/project/cheaper'
   },
@@ -100,6 +109,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Juli 2025 - Agustus 2025',
     category: ['Data Science & Analyst', 'All'],
+    techStack: ['Python', 'Looker Studio', 'Pandas'],
     image: '/images/data-analyst3.png',
     path: '/project/supermarketSales'
   },
@@ -109,6 +119,7 @@ const projectsData = [
     roles: 'Project Lead & Entrepreneur',
     date: 'September 2025 - Februari 2026',
     category: ['All', 'Project Manager', 'Web Development'],
+    techStack: ['React Js', 'Tailwind', 'Laravel', 'MySQL'],
     image: '/images/eatzy.png',
     path: '/project/eatzy'
   },
@@ -118,6 +129,7 @@ const projectsData = [
     roles: 'UI/UX Design',
     date: 'Oktober 2024 - November 2024',
     category: ['UI/UX Design', 'All'],
+    techStack: ['Figma', 'Design System', 'UI/UX'],
     image: '/images/panenfresh.png',
     path: '/project/panenfresh'
   },
@@ -127,6 +139,7 @@ const projectsData = [
     roles: 'Project Lead & Fullstack Web Developer',
     date: 'April 2025 - Juli 2025',
     category: ['Web Development', 'All', 'Project Manager'],
+    techStack: ['Laravel', 'Blade', 'Tailwind', 'MySQL'],
     image: '/images/sportware.png',
     path: '/project/sportware'
   },
@@ -136,6 +149,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Oktober 2024 - November 2024',
     category: ['All', 'Data Science & Analyst'],
+    techStack: ['Python', 'Google Colab', 'Looker Studio'],
     image: '/images/covid19drp.png',
     path: '/project/covid19Indonesia'
   },
@@ -145,6 +159,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Januari 2026 - Februari 2026',
     category: ['All', 'Data Science & Analyst'],
+    techStack: ['Python', 'K-Means', 'Scikit-Learn'],
     image: '/images/user-segmentation.png',
     path: '/project/userSegmentation'
   },
@@ -154,6 +169,7 @@ const projectsData = [
     roles: 'Project Lead & Machine Learning',
     date: 'Juni 2026 - Juli 2026',
     category: ['All', 'Data Science & Analyst', 'Machine Learning', 'Project Manager'],
+    techStack: ['Python', 'Scikit-Learn', 'Streamlit'],
     image: '/images/breast-cancer-prediction.png',
     path: '/project/breastCancerPrediction'
   },
@@ -163,6 +179,7 @@ const projectsData = [
     roles: 'Project Lead & Fullstack Web Developer',
     date: 'Mei 2026 - Juli 2026',
     category: ['All', 'Web Development', 'Project Manager'],
+    techStack: ['React Js', 'Next Js', 'Tailwind', 'Node.js'],
     image: '/images/workwell.png',
     path: '/project/workwell'
   },
@@ -172,6 +189,7 @@ const projectsData = [
     roles: 'Web Developer',
     date: 'April 2026 - Juli 2026',
     category: ['Web Development', 'All'],
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     image: '/images/stem-sdgs.png',
     path: '/project/stem-sdgs'
   },
@@ -181,6 +199,7 @@ const projectsData = [
     roles: 'Fullstack Web Developer',
     date: 'Mei 2026 - Juni 2026',
     category: ['Web Development', 'All'],
+    techStack: ['Laravel', 'Blade', 'Tailwind', 'MySQL'],
     image: '/images/laporwarga.png',
     path: '/project/laporwarga'
   },
@@ -190,6 +209,7 @@ const projectsData = [
     roles: 'Fullstack Web Developer',
     date: 'Juli 2026 - Agustus 2026',
     category: ['Web Development', 'All'],
+    techStack: ['React Js', 'Tailwind', 'TMDB API'],
     image: '/images/cineverse.png',
     path: '/project/cineverse'
   },
@@ -216,6 +236,20 @@ const ProjectCard = ({ project }) => (
       <h3 className="text-xl font-bold text-gray-900 mb-1 line-clamp-1 group-hover:text-indigo-600 transition-colors duration-300">{project.title}</h3>
       <p className="text-sm font-semibold text-indigo-600 mb-1 line-clamp-1">{project.roles}</p>
       <p className="text-xs text-gray-500 mb-3">{project.date}</p>
+
+      {/* Tech Stack Badges */}
+      {project.techStack && project.techStack.length > 0 && (
+        <div className="flex flex-wrap gap-1.5 mb-3">
+          {project.techStack.map((tech, i) => (
+            <span
+              key={i}
+              className="text-[11px] font-medium bg-slate-100 text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 px-2 py-0.5 rounded-md transition-colors"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
 
       <p className="text-sm text-gray-600 mb-4 line-clamp-3 flex-grow">
         {project.title} was developed to fulfill university course requirements and continuously upgrade technical skills, demonstrating practical expertise in its specific domain.
