@@ -298,7 +298,7 @@ const ProjectExperience = () => {
                   key={category}
                   onClick={() => setActiveCategory(category)}
                   className={`
-                        px-3.5 sm:px-5 py-2 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap
+                        px-3 sm:px-4 py-1.5 rounded-full font-medium text-[11px] sm:text-xs transition-all duration-300 whitespace-nowrap
                         ${activeCategory === category
                       ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/30 transform scale-105'
                       : 'text-gray-400 hover:text-white hover:bg-white/10'
