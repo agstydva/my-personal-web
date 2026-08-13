@@ -9,7 +9,8 @@ const projectCategories = [
   'Project Manager',
   'UI/UX Design',
   'Mobile App',
-  'Machine Learning'
+  'Machine Learning',
+  'Robotics'
 ];
 
 const projectsData = [
@@ -291,13 +292,13 @@ const ProjectExperience = () => {
 
         <ScrollReveal animation="fade-up" duration={850} delay={150}>
           <div className="flex justify-center mb-12">
-            <div className="inline-flex overflow-x-auto gap-2 p-2 bg-zinc-900/95 backdrop-blur-md rounded-full border border-gray-800 shadow-2xl max-w-full no-scrollbar ring-1 ring-white/5">
+            <div className="inline-flex overflow-x-auto gap-1.5 sm:gap-2 p-1.5 sm:p-2 bg-zinc-900/95 backdrop-blur-md rounded-full border border-gray-800 shadow-2xl max-w-full no-scrollbar ring-1 ring-white/5">
               {projectCategories.map(category => (
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
                   className={`
-                        px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 whitespace-nowrap
+                        px-3.5 sm:px-5 py-2 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap
                         ${activeCategory === category
                       ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/30 transform scale-105'
                       : 'text-gray-400 hover:text-white hover:bg-white/10'
