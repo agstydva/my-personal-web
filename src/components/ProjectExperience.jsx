@@ -29,7 +29,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'November 2025 - Desember 2025',
     category: ['Data Science & Analyst', 'All'],
-    techStack: ['Python', 'Pandas', 'Power BI'],
+    techStack: ['Excel', 'Data Visualization', 'Looker Studio'],
     image: '/images/data-analyst2.png',
     path: '/project/creditCardAnalysis'
   },
@@ -59,7 +59,7 @@ const projectsData = [
     roles: 'Project Lead & Web Developer',
     date: 'Oktober 2025 - Desember 2025',
     category: ['Web Development', 'All', 'Project Manager'],
-    techStack: ['React Js', 'Mongo DB', 'Tailwind', 'Node Js'],
+    techStack: ['React Js', 'MongoDB', 'Tailwind', 'Node Js'],
     image: '/images/simkes.png',
     path: '/project/simkes'
   },
@@ -69,7 +69,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'November 2025 - Desember 2025',
     category: ['Data Science & Analyst', 'All'],
-    techStack: ['Python', 'SQL', 'Looker Studio'],
+    techStack: ['Python', 'Excel'],
     image: '/images/user-retention-analysis.png',
     path: '/project/userRetention'
   },
@@ -79,7 +79,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Oktober 2025 - November 2025',
     category: ['Data Science & Analyst', 'All'],
-    techStack: ['Power BI', 'SQL', 'Excel'],
+    techStack: ['Looker Studio', 'Data Visualization', 'Excel'],
     image: '/images/data-analyst1.png',
     path: '/project/retailSales'
   },
@@ -99,7 +99,7 @@ const projectsData = [
     roles: 'UI/UX Design',
     date: 'November 2023',
     category: ['UI/UX Design', 'All'],
-    techStack: ['Figma', 'Wireframing', 'Prototyping'],
+    techStack: ['Figma', 'Wireframing', 'Prototyping', 'App Design'],
     image: '/images/cheaper.png',
     path: '/project/cheaper'
   },
@@ -109,7 +109,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Juli 2025 - Agustus 2025',
     category: ['Data Science & Analyst', 'All'],
-    techStack: ['Python', 'Looker Studio', 'Pandas'],
+    techStack: ['Excel', 'Power Bi', 'Data Visualization'],
     image: '/images/data-analyst3.png',
     path: '/project/supermarketSales'
   },
@@ -149,7 +149,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Oktober 2024 - November 2024',
     category: ['All', 'Data Science & Analyst'],
-    techStack: ['Python', 'Google Colab', 'Looker Studio'],
+    techStack: ['Excel', 'Data Visualization'],
     image: '/images/covid19drp.png',
     path: '/project/covid19Indonesia'
   },
