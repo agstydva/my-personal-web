@@ -22,7 +22,8 @@ const projectsData = [
     category: ['Web Development', 'All', 'Project Manager'],
     techStack: ['PHP', 'JavaScript', 'Bootstrap', 'MySQL'],
     image: '/images/dtastyum.png',
-    path: '/project/dtastyum'
+    path: '/project/dtastyum',
+    description: 'Platform web berbasis kuliner yang mengintegrasikan frontend responsif dengan pencarian resep makanan secara interaktif dan dinamis.'
   },
   {
     id: 2,
@@ -32,7 +33,8 @@ const projectsData = [
     category: ['Data Science & Analyst', 'All'],
     techStack: ['Excel', 'Data Visualization', 'Looker Studio'],
     image: '/images/data-analyst2.png',
-    path: '/project/creditCardAnalysis'
+    path: '/project/creditCardAnalysis',
+    description: 'Laporan analisis data transaksi kartu kredit dan segmentasi nasabah untuk mengidentifikasi pola pengeluaran serta rasio utilisasi kredit.'
   },
   {
     id: 3,
@@ -42,7 +44,8 @@ const projectsData = [
     category: ['Mobile App', 'All', 'Project Manager'],
     techStack: ['Flutter', 'Dart', 'Android Studio'],
     image: '/images/GreenBucks.png',
-    path: '/project/greenbucks'
+    path: '/project/greenbucks',
+    description: 'Aplikasi mobile pengelolaan keuangan personal dan habit ramah lingkungan yang membantu pengguna mencatat transaksi serta mengadopsi gaya hidup berkelanjutan.'
   },
   {
     id: 4,
@@ -52,7 +55,8 @@ const projectsData = [
     category: ['Data Science & Analyst', 'All'],
     techStack: ['Python', 'Apriori Algorithm', 'Looker Studio'],
     image: '/images/market-basket-analysis.png',
-    path: '/project/marketBasket'
+    path: '/project/marketBasket',
+    description: 'Analisis himpunan asosiasi transaksi ritel menggunakan algoritma Apriori untuk menemukan pola kombinasi produk dan rekomendasi strategi cross-selling.'
   },
   {
     id: 5,
@@ -62,7 +66,8 @@ const projectsData = [
     category: ['Web Development', 'All', 'Project Manager'],
     techStack: ['React Js', 'MongoDB', 'Tailwind', 'Node Js'],
     image: '/images/simkes.png',
-    path: '/project/simkes'
+    path: '/project/simkes',
+    description: 'Sistem Informasi Manajemen Kesehatan berbasis web untuk efisiensi pengelolaan rekam medis, jadwal pelayanan, dan manajemen data pasien.'
   },
   {
     id: 6,
@@ -72,7 +77,8 @@ const projectsData = [
     category: ['Data Science & Analyst', 'All'],
     techStack: ['Python', 'Excel'],
     image: '/images/user-retention-analysis.png',
-    path: '/project/userRetention'
+    path: '/project/userRetention',
+    description: 'Analisis kohort dan retensi pengguna untuk mengukur tingkat keaktifan pengguna (MAU/DAU) serta mengidentifikasi faktor utama pemicu churn.'
   },
   {
     id: 7,
@@ -82,7 +88,8 @@ const projectsData = [
     category: ['Data Science & Analyst', 'All'],
     techStack: ['Looker Studio', 'Data Visualization', 'Excel'],
     image: '/images/data-analyst1.png',
-    path: '/project/retailSales'
+    path: '/project/retailSales',
+    description: 'Dashboard visualisasi interaktif performa penjualan ritel untuk memantau tren pendapatan, kontribusi produk, dan wilayah bisnis utama.'
   },
   {
     id: 8,
@@ -92,7 +99,8 @@ const projectsData = [
     category: ['Mobile App', 'All', 'Project Manager'],
     techStack: ['Kotlin', 'Android Studio', 'Jetpack Compose'],
     image: '/images/NobaRek2.png',
-    path: '/project/NobaRek'
+    path: '/project/NobaRek',
+    description: 'Aplikasi mobile rekomendasi film dan fitur nonton bareng (nobar) interaktif yang dibangun menggunakan Kotlin dan Jetpack Compose.'
   },
   {
     id: 9,
@@ -102,7 +110,8 @@ const projectsData = [
     category: ['UI/UX Design', 'All'],
     techStack: ['Figma', 'Wireframing', 'Prototyping', 'App Design'],
     image: '/images/cheaper.png',
-    path: '/project/cheaper'
+    path: '/project/cheaper',
+    description: 'Desain antarmuka dan prototipe aplikasi pembanding harga belanjaan yang dirancang untuk membantu pengguna menemukan penawaran hemat terbaik.'
   },
   {
     id: 10,
@@ -112,7 +121,8 @@ const projectsData = [
     category: ['Data Science & Analyst', 'All'],
     techStack: ['Excel', 'Power Bi', 'Data Visualization'],
     image: '/images/data-analyst3.png',
-    path: '/project/supermarketSales'
+    path: '/project/supermarketSales',
+    description: 'Dashboard analitik bisnis supermarket untuk mengevaluasi kinerja lini produk, metode pembayaran pelanggan, serta tingkat kepuasan konsumen.'
   },
   {
     id: 11,
@@ -122,7 +132,8 @@ const projectsData = [
     category: ['All', 'Project Manager', 'Web Development'],
     techStack: ['Next Js', 'Tailwind', 'JavaScript'],
     image: '/images/eatzy.png',
-    path: '/project/eatzy'
+    path: '/project/eatzy',
+    description: 'Platform web usaha kuliner dan platform pemasaran interaktif yang dirancang untuk mendukung operasional serta pengembangan bisnis produk makanan.'
   },
   {
     id: 12,
@@ -132,7 +143,8 @@ const projectsData = [
     category: ['UI/UX Design', 'All'],
     techStack: ['Figma', 'Design System', 'UI/UX'],
     image: '/images/panenfresh.png',
-    path: '/project/panenfresh'
+    path: '/project/panenfresh',
+    description: 'Desain sistem dan UI/UX aplikasi e-commerce bahan pangan segar dengan alur transaksi yang ramah pengguna dan visual yang konsisten.'
   },
   {
     id: 13,
@@ -142,7 +154,8 @@ const projectsData = [
     category: ['Web Development', 'All', 'Project Manager'],
     techStack: ['PHP', 'JavaScript', 'Bootstrap', 'MySQL'],
     image: '/images/sportware.png',
-    path: '/project/sportware'
+    path: '/project/sportware',
+    description: 'Website e-commerce toko perlengkapan olahraga modern yang dilengkapi katalog produk dinamis, keranjang belanja, dan manajemen transaksi online.'
   },
   {
     id: 14,
@@ -152,7 +165,8 @@ const projectsData = [
     category: ['All', 'Data Science & Analyst'],
     techStack: ['Excel', 'Data Visualization'],
     image: '/images/covid19drp.png',
-    path: '/project/covid19Indonesia'
+    path: '/project/covid19Indonesia',
+    description: 'Dashboard visualisasi data perkembangan kasus Covid-19 di Indonesia untuk memantau tren sebaran wilayah, kurva kesembuhan, dan tingkat risiko.'
   },
   {
     id: 15,
@@ -162,7 +176,8 @@ const projectsData = [
     category: ['All', 'Data Science & Analyst'],
     techStack: ['Python', 'K-Means', 'Scikit-Learn'],
     image: '/images/user-segmentation.png',
-    path: '/project/userSegmentation'
+    path: '/project/userSegmentation',
+    description: 'Segmentasi pelanggan menggunakan algoritma clustering K-Means untuk mengelompokkan profil pengguna berdasarkan karakteristik dan perilaku.'
   },
   {
     id: 16,
@@ -172,7 +187,8 @@ const projectsData = [
     category: ['All', 'Data Science & Analyst', 'Machine Learning', 'Project Manager'],
     techStack: ['Python', 'Scikit-Learn', 'Streamlit'],
     image: '/images/breast-cancer-prediction.png',
-    path: '/project/breastCancerPrediction'
+    path: '/project/breastCancerPrediction',
+    description: 'Pipeline machine learning end-to-end untuk memprediksi risiko kekambuhan kanker payudara berdasarkan evaluasi fitur-fitur data klinis pasien.'
   },
   {
     id: 17,
@@ -182,7 +198,8 @@ const projectsData = [
     category: ['All', 'Web Development', 'Project Manager'],
     techStack: ['React Js', 'Next Js', 'Tailwind', 'Node.js'],
     image: '/images/workwell.png',
-    path: '/project/workwell'
+    path: '/project/workwell',
+    description: 'Aplikasi web kesehatan digital dan produktivitas pekerja yang menyediakan fitur pelacak kebiasaan sehat, pengingat rehat, dan pemantauan beban kerja.'
   },
   {
     id: 18,
@@ -192,7 +209,8 @@ const projectsData = [
     category: ['Web Development', 'All'],
     techStack: ['React Js', 'Next Js', 'Tailwind', 'Node.js'],
     image: '/images/stem-sdgs.png',
-    path: '/project/stem-sdgs'
+    path: '/project/stem-sdgs',
+    description: 'Website dokumentasi interaktif untuk proyek STEM yang mendukung perwujudan SDGs Tujuan 3 (Kesehatan) dan Tujuan 4 (Pendidikan Berkualitas).'
   },
   {
     id: 19,
@@ -202,7 +220,8 @@ const projectsData = [
     category: ['Web Development', 'All'],
     techStack: ['Laravel', 'Blade', 'Tailwind', 'MySQL'],
     image: '/images/laporwarga.png',
-    path: '/project/laporwarga'
+    path: '/project/laporwarga',
+    description: 'Platform web pengaduan dan aspirasi warga secara digital untuk memfasilitasi pelaporan fasilitas publik dan lingkungan pemukiman.'
   },
   {
     id: 20,
@@ -212,7 +231,8 @@ const projectsData = [
     category: ['Web Development', 'All'],
     techStack: ['Laravel', 'Blade', 'Tailwind', 'MySQL'],
     image: '/images/cineverse.png',
-    path: '/project/cineverse'
+    path: '/project/cineverse',
+    description: 'Website eksplorasi dan rekomendasi film interaktif yang menyajikan informasi detail film, ulasan, serta rating secara lengkap.'
   },
 ];
 
@@ -253,7 +273,7 @@ const ProjectCard = ({ project }) => (
       )}
 
       <p className="text-sm text-gray-600 mb-4 line-clamp-3 flex-grow">
-        {project.title} was developed to fulfill university course requirements and continuously upgrade technical skills, demonstrating practical expertise in its specific domain.
+        {project.description}
       </p>
 
       <Link
