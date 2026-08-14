@@ -23,7 +23,7 @@ const projectsData = [
     techStack: ['PHP', 'JavaScript', 'Bootstrap', 'MySQL'],
     image: '/images/dtastyum.png',
     path: '/project/dtastyum',
-    description: 'Platform web berbasis kuliner yang mengintegrasikan frontend responsif dengan pencarian resep makanan secara interaktif dan dinamis.'
+    description: 'A culinary web platform integrating a responsive frontend with interactive and dynamic food recipe search functionality.'
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const projectsData = [
     techStack: ['Excel', 'Data Visualization', 'Looker Studio'],
     image: '/images/data-analyst2.png',
     path: '/project/creditCardAnalysis',
-    description: 'Laporan analisis data transaksi kartu kredit dan segmentasi nasabah untuk mengidentifikasi pola pengeluaran serta rasio utilisasi kredit.'
+    description: 'A credit card transaction data analysis report and customer segmentation identifying spending patterns and credit utilization ratios.'
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const projectsData = [
     techStack: ['Flutter', 'Dart', 'Android Studio'],
     image: '/images/GreenBucks.png',
     path: '/project/greenbucks',
-    description: 'Aplikasi mobile pengelolaan keuangan personal dan habit ramah lingkungan yang membantu pengguna mencatat transaksi serta mengadopsi gaya hidup berkelanjutan.'
+    description: 'A mobile app for personal finance management and eco-friendly habit tracking, helping users log transactions and adopt a sustainable lifestyle.'
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ const projectsData = [
     techStack: ['Python', 'Apriori Algorithm', 'Looker Studio'],
     image: '/images/market-basket-analysis.png',
     path: '/project/marketBasket',
-    description: 'Analisis himpunan asosiasi transaksi ritel menggunakan algoritma Apriori untuk menemukan pola kombinasi produk dan rekomendasi strategi cross-selling.'
+    description: 'An association rule analysis of retail transactions using the Apriori algorithm to discover product combination patterns and cross-selling strategies.'
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const projectsData = [
     techStack: ['React Js', 'MongoDB', 'Tailwind', 'Node Js'],
     image: '/images/simkes.png',
     path: '/project/simkes',
-    description: 'Sistem Informasi Manajemen Kesehatan berbasis web untuk efisiensi pengelolaan rekam medis, jadwal pelayanan, dan manajemen data pasien.'
+    description: 'A web-based Health Management Information System built to streamline electronic medical records, service scheduling, and patient data management.'
   },
   {
     id: 6,
@@ -78,7 +78,7 @@ const projectsData = [
     techStack: ['Python', 'Excel'],
     image: '/images/user-retention-analysis.png',
     path: '/project/userRetention',
-    description: 'Analisis kohort dan retensi pengguna untuk mengukur tingkat keaktifan pengguna (MAU/DAU) serta mengidentifikasi faktor utama pemicu churn.'
+    description: 'A cohort and user retention analysis measuring monthly/daily active user engagement (MAU/DAU) and identifying key churn drivers.'
   },
   {
     id: 7,
@@ -89,7 +89,7 @@ const projectsData = [
     techStack: ['Looker Studio', 'Data Visualization', 'Excel'],
     image: '/images/data-analyst1.png',
     path: '/project/retailSales',
-    description: 'Dashboard visualisasi interaktif performa penjualan ritel untuk memantau tren pendapatan, kontribusi produk, dan wilayah bisnis utama.'
+    description: 'An interactive data visualization dashboard tracking retail sales performance, revenue trends, product contributions, and key business regions.'
   },
   {
     id: 8,
@@ -100,7 +100,7 @@ const projectsData = [
     techStack: ['Kotlin', 'Android Studio', 'Jetpack Compose'],
     image: '/images/NobaRek2.png',
     path: '/project/NobaRek',
-    description: 'Aplikasi mobile rekomendasi film dan fitur nonton bareng (nobar) interaktif yang dibangun menggunakan Kotlin dan Jetpack Compose.'
+    description: 'A modern Android mobile app for movie recommendations and interactive watch party features built using Kotlin and Jetpack Compose.'
   },
   {
     id: 9,
@@ -111,7 +111,7 @@ const projectsData = [
     techStack: ['Figma', 'Wireframing', 'Prototyping', 'App Design'],
     image: '/images/cheaper.png',
     path: '/project/cheaper',
-    description: 'Desain antarmuka dan prototipe aplikasi pembanding harga belanjaan yang dirancang untuk membantu pengguna menemukan penawaran hemat terbaik.'
+    description: 'A price comparison UI/UX design and app prototype crafted to help users discover the best budget deals across shopping platforms.'
   },
   {
     id: 10,
@@ -122,7 +122,7 @@ const projectsData = [
     techStack: ['Excel', 'Power Bi', 'Data Visualization'],
     image: '/images/data-analyst3.png',
     path: '/project/supermarketSales',
-    description: 'Dashboard analitik bisnis supermarket untuk mengevaluasi kinerja lini produk, metode pembayaran pelanggan, serta tingkat kepuasan konsumen.'
+    description: 'A business analytics dashboard evaluating supermarket product line performance, customer payment methods, and satisfaction ratings.'
   },
   {
     id: 11,
@@ -133,7 +133,7 @@ const projectsData = [
     techStack: ['Next Js', 'Tailwind', 'JavaScript'],
     image: '/images/eatzy.png',
     path: '/project/eatzy',
-    description: 'Platform web usaha kuliner dan platform pemasaran interaktif yang dirancang untuk mendukung operasional serta pengembangan bisnis produk makanan.'
+    description: 'A culinary business web platform and marketing initiative designed to support food business operations and growth.'
   },
   {
     id: 12,
@@ -144,7 +144,7 @@ const projectsData = [
     techStack: ['Figma', 'Design System', 'UI/UX'],
     image: '/images/panenfresh.png',
     path: '/project/panenfresh',
-    description: 'Desain sistem dan UI/UX aplikasi e-commerce bahan pangan segar dengan alur transaksi yang ramah pengguna dan visual yang konsisten.'
+    description: 'A fresh grocery e-commerce UI/UX design and design system featuring intuitive checkout flows and consistent visual design.'
   },
   {
     id: 13,
@@ -155,7 +155,7 @@ const projectsData = [
     techStack: ['PHP', 'JavaScript', 'Bootstrap', 'MySQL'],
     image: '/images/sportware.png',
     path: '/project/sportware',
-    description: 'Website e-commerce toko perlengkapan olahraga modern yang dilengkapi katalog produk dinamis, keranjang belanja, dan manajemen transaksi online.'
+    description: 'A modern sports equipment e-commerce web platform featuring dynamic product catalogs, shopping cart management, and online transactions.'
   },
   {
     id: 14,
@@ -166,7 +166,7 @@ const projectsData = [
     techStack: ['Excel', 'Data Visualization'],
     image: '/images/covid19drp.png',
     path: '/project/covid19Indonesia',
-    description: 'Dashboard visualisasi data perkembangan kasus Covid-19 di Indonesia untuk memantau tren sebaran wilayah, kurva kesembuhan, dan tingkat risiko.'
+    description: 'A data visualization dashboard tracking Covid-19 case trends across regions in Indonesia, recovery curves, and risk metrics.'
   },
   {
     id: 15,
@@ -177,7 +177,7 @@ const projectsData = [
     techStack: ['Python', 'K-Means', 'Scikit-Learn'],
     image: '/images/user-segmentation.png',
     path: '/project/userSegmentation',
-    description: 'Segmentasi pelanggan menggunakan algoritma clustering K-Means untuk mengelompokkan profil pengguna berdasarkan karakteristik dan perilaku.'
+    description: 'A customer segmentation analysis utilizing K-Means clustering to group user profiles based on demographic and behavioral data.'
   },
   {
     id: 16,
@@ -188,7 +188,7 @@ const projectsData = [
     techStack: ['Python', 'Scikit-Learn', 'Streamlit'],
     image: '/images/breast-cancer-prediction.png',
     path: '/project/breastCancerPrediction',
-    description: 'Pipeline machine learning end-to-end untuk memprediksi risiko kekambuhan kanker payudara berdasarkan evaluasi fitur-fitur data klinis pasien.'
+    description: 'An end-to-end machine learning pipeline predicting breast cancer recurrence risk based on clinical patient features and model evaluation.'
   },
   {
     id: 17,
@@ -199,7 +199,7 @@ const projectsData = [
     techStack: ['React Js', 'Next Js', 'Tailwind', 'Node.js'],
     image: '/images/workwell.png',
     path: '/project/workwell',
-    description: 'Aplikasi web kesehatan digital dan produktivitas pekerja yang menyediakan fitur pelacak kebiasaan sehat, pengingat rehat, dan pemantauan beban kerja.'
+    description: 'A digital wellbeing and productivity web app featuring habit tracking, break reminders, and workload monitoring for employee wellness.'
   },
   {
     id: 18,
@@ -210,7 +210,7 @@ const projectsData = [
     techStack: ['React Js', 'Next Js', 'Tailwind', 'Node.js'],
     image: '/images/stem-sdgs.png',
     path: '/project/stem-sdgs',
-    description: 'Website dokumentasi interaktif untuk proyek STEM yang mendukung perwujudan SDGs Tujuan 3 (Kesehatan) dan Tujuan 4 (Pendidikan Berkualitas).'
+    description: 'An interactive documentation website for STEM projects supporting UN SDGs Goal 3 (Good Health) and Goal 4 (Quality Education).'
   },
   {
     id: 19,
@@ -221,7 +221,7 @@ const projectsData = [
     techStack: ['Laravel', 'Blade', 'Tailwind', 'MySQL'],
     image: '/images/laporwarga.png',
     path: '/project/laporwarga',
-    description: 'Platform web pengaduan dan aspirasi warga secara digital untuk memfasilitasi pelaporan fasilitas publik dan lingkungan pemukiman.'
+    description: 'A digital citizen reporting web platform enabling residents to submit complaints and feedback regarding public infrastructure and community issues.'
   },
   {
     id: 20,
@@ -232,7 +232,7 @@ const projectsData = [
     techStack: ['Laravel', 'Blade', 'Tailwind', 'MySQL'],
     image: '/images/cineverse.png',
     path: '/project/cineverse',
-    description: 'Website eksplorasi dan rekomendasi film interaktif yang menyajikan informasi detail film, ulasan, serta rating secara lengkap.'
+    description: 'An interactive movie discovery and recommendation web platform displaying detailed movie information, user reviews, and ratings.'
   },
 ];
 
