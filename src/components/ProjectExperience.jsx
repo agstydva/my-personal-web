@@ -344,7 +344,7 @@ const ProjectExperience = () => {
               <svg className="w-16 h-16 mb-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <p className="text-lg font-medium">Belum ada proyek di kategori "{activeCategory}"</p>
+              <p className="text-lg font-medium">No projects available in the "{activeCategory}" category</p>
             </div>
           )}
         </div>
