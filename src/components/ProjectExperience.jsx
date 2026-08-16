@@ -53,7 +53,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Desember 2025 - Januari 2026',
     category: ['Data Science & Analyst', 'All'],
-    techStack: ['Python', 'Apriori Algorithm', 'Looker Studio'],
+    techStack: ['Python', 'Apriori Algorithm', 'Colab'],
     image: '/images/market-basket-analysis.png',
     path: '/project/marketBasket',
     description: 'An association rule analysis of retail transactions using the Apriori algorithm to discover product combination patterns and cross-selling strategies.'
@@ -75,7 +75,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'November 2025 - Desember 2025',
     category: ['Data Science & Analyst', 'All'],
-    techStack: ['Python', 'Excel'],
+    techStack: ['Python', 'Excel', 'Colab'],
     image: '/images/user-retention-analysis.png',
     path: '/project/userRetention',
     description: 'A cohort and user retention analysis measuring monthly/daily active user engagement (MAU/DAU) and identifying key churn drivers.'
@@ -163,7 +163,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Oktober 2024 - November 2024',
     category: ['All', 'Data Science & Analyst'],
-    techStack: ['Excel', 'Data Visualization'],
+    techStack: ['Excel', 'Data Visualization', 'Pivot Table'],
     image: '/images/covid19drp.png',
     path: '/project/covid19Indonesia',
     description: 'A data visualization dashboard tracking Covid-19 case trends across regions in Indonesia, recovery curves, and risk metrics.'
@@ -174,7 +174,7 @@ const projectsData = [
     roles: 'Data Analyst',
     date: 'Januari 2026 - Februari 2026',
     category: ['All', 'Data Science & Analyst'],
-    techStack: ['Python', 'K-Means', 'Scikit-Learn'],
+    techStack: ['Python', 'K-Means', 'Scikit-Learn', 'Colab'],
     image: '/images/user-segmentation.png',
     path: '/project/userSegmentation',
     description: 'A customer segmentation analysis utilizing K-Means clustering to group user profiles based on demographic and behavioral data.'
@@ -185,7 +185,7 @@ const projectsData = [
     roles: 'Project Lead & Machine Learning',
     date: 'Juni 2026 - Juli 2026',
     category: ['All', 'Data Science & Analyst', 'Machine Learning', 'Project Manager'],
-    techStack: ['Python', 'Scikit-Learn', 'Streamlit'],
+    techStack: ['Python', 'Scikit-Learn', 'Streamlit', 'Colab'],
     image: '/images/breast-cancer-prediction.png',
     path: '/project/breastCancerPrediction',
     description: 'An end-to-end machine learning pipeline predicting breast cancer recurrence risk based on clinical patient features and model evaluation.'
@@ -196,7 +196,7 @@ const projectsData = [
     roles: 'Project Lead & Fullstack Web Developer',
     date: 'Mei 2026 - Juli 2026',
     category: ['All', 'Web Development', 'Project Manager'],
-    techStack: ['React Js', 'Next Js', 'Tailwind', 'Node.js'],
+    techStack: ['React Js', 'Next Js', 'Tailwind', 'Node.js', 'Supbase'],
     image: '/images/workwell.png',
     path: '/project/workwell',
     description: 'A digital wellbeing and productivity web app featuring habit tracking, break reminders, and workload monitoring for employee wellness.'
