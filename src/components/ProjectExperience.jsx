@@ -227,7 +227,7 @@ const projectsData = [
     id: 20,
     title: 'Cineverse - Movie Web',
     roles: 'Fullstack Web Developer',
-    date: 'Juli 2026 - Agustus 2026',
+    date: 'Juni 2026 - Agustus 2026',
     category: ['Web Development', 'All'],
     techStack: ['Laravel', 'Blade', 'Tailwind', 'MySQL'],
     image: '/images/cineverse.png',
