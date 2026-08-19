@@ -194,7 +194,7 @@ const projectsData = [
     id: 17,
     title: 'WorkWell - Digital Wellbeing & Productivity',
     roles: 'Project Lead & Fullstack Web Developer',
-    date: 'Mei 2026 - Juli 2026',
+    date: 'April 2026 - Juli 2026',
     category: ['All', 'Web Development', 'Project Manager'],
     techStack: ['React Js', 'Next Js', 'Tailwind', 'Node.js', 'Supabase'],
     image: '/images/workwell.png',
