@@ -97,7 +97,7 @@ const projectsData = [
     roles: 'Project Lead & Mobile App',
     date: 'Desember 2025 - Januari 2026',
     category: ['Mobile App', 'All', 'Project Manager'],
-    techStack: ['Kotlin', 'Android Studio', 'Jetpack Compose'],
+    techStack: ['Kotlin', 'Android Studio', 'Jetpack Compose', 'sqlite'],
     image: '/images/NobaRek2.png',
     path: '/project/NobaRek',
     description: 'A modern Android mobile app for movie recommendations and interactive watch party features built using Kotlin and Jetpack Compose.'
