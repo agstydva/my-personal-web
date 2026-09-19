@@ -16,9 +16,9 @@ const StaffAhliCompas = () => {
 
     const orgData = {
         title: "BEMP Ilmu Komputer UNJ",
-        logo: "/images/bempilkom.png", 
+        logo: "/images/bempilkom.png",
         period: "Maret 2025 - Present",
-        activityTitle: "Expert Staff Departement Computer Academic & Science",
+        activityTitle: "Head Staff Departement Computer Academic & Science",
         description: "BEMP Ilmu Komputer UNJ (Badan Eksekutif Mahasiswa Program Studi Ilmu Komputer, Universitas Negeri Jakarta) is the official student executive organization that represents and coordinates student activities within the Computer Science program. It serves as a platform for developing leadership, organizational, and communication skills through academic, professional, and social initiatives, while also acting as a bridge between students, faculty, and the institution to support student development and a collaborative academic environment.",
         jobdesk: [
             "Guided and mentored junior staff in executing departmental programs, ensuring they understood their responsibilities and contributedeffectively to initiativessuch as GEMASTIK, COMPARE, and DECODE.",
@@ -27,7 +27,7 @@ const StaffAhliCompas = () => {
         ],
         gallery: [
             { src: "/images/bempilkom2025.jpeg", size: "large", caption: "BEMP Ilmu Komputer UNJ 2025-2026" },
-            { src: "/images/bempilkomp2025_5.jpeg", size: "portrait", caption: "Departement COMPAS 2025" }, 
+            { src: "/images/bempilkomp2025_5.jpeg", size: "portrait", caption: "Departement COMPAS 2025" },
             { src: "/images/bempilkomp2025_2.jpeg", size: "standard", caption: "BEMP Ilmu Komputer UNJ" },
             { src: "/images/bempilkomp2025_4.jpeg", size: "standard", caption: "BEMP Ilmu Komputer UNJ" },
         ]
@@ -38,7 +38,7 @@ const StaffAhliCompas = () => {
             <Navbar />
 
             <main className="flex-grow w-full max-w-7xl mx-auto px-6 pt-32 pb-20">
-                
+
                 {/* BACK NAVIGATION */}
                 {/* <div className="mb-10">
                     <button 
@@ -94,28 +94,28 @@ const StaffAhliCompas = () => {
                 </section>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                    
+
                     {/* GALLERY */}
                     <div className="lg:col-span-7">
                         <div className="flex items-center gap-4 mb-8">
                             <h2 className="text-2xl font-bold text-slate-900 uppercase tracking-tight">Organization Gallery</h2>
                             <span className="flex-grow h-[1px] bg-slate-200"></span>
                         </div>
-                        
+
                         <div className="grid grid-cols-2 gap-4 auto-rows-[200px]">
                             {orgData.gallery.map((img, index) => {
-                                const gridClasses = 
+                                const gridClasses =
                                     img.size === "large" ? "col-span-2 row-span-2" :
-                                    img.size === "portrait" ? "col-span-1 row-span-2" :
-                                    "col-span-1 row-span-1";
+                                        img.size === "portrait" ? "col-span-1 row-span-2" :
+                                            "col-span-1 row-span-1";
 
                                 return (
                                     <div key={index} className={`${gridClasses} group relative rounded-[2.5rem] overflow-hidden shadow-lg border-4 border-white transition-all duration-700 hover:shadow-emerald-500/20 hover:-translate-y-2`}>
-                                        <img 
-                                            src={img.src} 
-                                            alt="Gallery" 
+                                        <img
+                                            src={img.src}
+                                            alt="Gallery"
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                            onError={(e) => {e.target.src="https://via.placeholder.com/800x600/ECFDF5/059669?text=Compas+Moment"}}
+                                            onError={(e) => { e.target.src = "https://via.placeholder.com/800x600/ECFDF5/059669?text=Compas+Moment" }}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex items-end">
                                             <p className="text-white text-xs font-bold uppercase tracking-widest">{img.caption}</p>
@@ -133,7 +133,7 @@ const StaffAhliCompas = () => {
                             <h2 className="text-2xl font-bold mb-8 relative z-10 transition-colors group-hover:text-emerald-400">
                                 Key Responsibilities
                             </h2>
-                            
+
                             <ul className="space-y-6 relative z-10">
                                 {orgData.jobdesk.map((task, index) => (
                                     <li key={index} className="flex items-start gap-4 group/item">
