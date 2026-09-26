@@ -16,7 +16,7 @@ const skillData = [
     { name: 'Tailwind', image: '/images/tailwindcss.png' },
     { name: 'Kotlin', image: '/images/kotlin.png' },
     { name: 'MySQL', image: '/images/mysql.png' },
-    { name: 'MongoDB', image: '/images/mongodb.png' },
+    // { name: 'MongoDB', image: '/images/mongodb.png' },
     { name: 'VsCode', image: '/images/vscode.webp' },
     { name: 'Canva', image: '/images/canva.png' },
     { name: 'React Js', image: '/images/react.png' },
