@@ -115,6 +115,17 @@ const projectsData = [
   },
   {
     id: 10,
+    title: 'PT BKI - Data Project 1',
+    roles: 'Data Analyst Intern',
+    date: 'April 2026 – Present',
+    category: ['Data Science & Analyst', 'All'],
+    techStack: ['SQL', 'Python', 'Excel', 'Data Governance'],
+    image: '/images/data_bki1.png',
+    path: '/project/bkiProject1',
+    description: 'Proyek analisis data dan tata kelola data (Data Governance) selama magang di PT Biro Klasifikasi Indonesia (Persero). (Template / Siap diisi)'
+  },
+  {
+    id: 11,
     title: 'Supermarket Sales Analysis Dashboard',
     roles: 'Data Analyst',
     date: 'Juli 2025 - Agustus 2025',
@@ -125,7 +136,7 @@ const projectsData = [
     description: 'A business analytics dashboard evaluating supermarket product line performance, customer payment methods, and satisfaction ratings.'
   },
   {
-    id: 11,
+    id: 12,
     title: 'Eatzy',
     roles: 'Project Lead & Entrepreneur',
     date: 'September 2025 - Februari 2026',
@@ -136,7 +147,7 @@ const projectsData = [
     description: 'A culinary business web platform and marketing initiative designed to support food business operations and growth.'
   },
   {
-    id: 12,
+    id: 13,
     title: 'Panen Fresh',
     roles: 'UI/UX Design',
     date: 'Oktober 2024 - November 2024',
@@ -147,7 +158,7 @@ const projectsData = [
     description: 'A fresh grocery e-commerce UI/UX design and design system featuring intuitive checkout flows and consistent visual design.'
   },
   {
-    id: 13,
+    id: 14,
     title: 'Sportware',
     roles: 'Project Lead & Fullstack Web Developer',
     date: 'April 2025 - Juli 2025',
@@ -158,7 +169,7 @@ const projectsData = [
     description: 'A modern sports equipment e-commerce web platform featuring dynamic product catalogs, shopping cart management, and online transactions.'
   },
   {
-    id: 14,
+    id: 15,
     title: 'Covid 19 Indonesia Analysis Dashboard',
     roles: 'Data Analyst',
     date: 'Oktober 2024 - November 2024',
@@ -169,7 +180,7 @@ const projectsData = [
     description: 'A data visualization dashboard tracking Covid-19 case trends across regions in Indonesia, recovery curves, and risk metrics.'
   },
   {
-    id: 15,
+    id: 16,
     title: 'User Segmentation Analysis',
     roles: 'Data Analyst',
     date: 'Januari 2026 - Februari 2026',
@@ -180,7 +191,7 @@ const projectsData = [
     description: 'A customer segmentation analysis utilizing K-Means clustering to group user profiles based on demographic and behavioral data.'
   },
   {
-    id: 16,
+    id: 17,
     title: 'Breast Cancer Recurrence Prediction',
     roles: 'Project Lead & Machine Learning',
     date: 'Juni 2026 - Juli 2026',
@@ -191,7 +202,18 @@ const projectsData = [
     description: 'An end-to-end machine learning pipeline predicting breast cancer recurrence risk based on clinical patient features and model evaluation.'
   },
   {
-    id: 17,
+    id: 18,
+    title: 'PT BKI - Data Project 2',
+    roles: 'Data Analyst Intern',
+    date: 'April 2026 – Present',
+    category: ['Data Science & Analyst', 'All'],
+    techStack: ['Python', 'Data Profiling', 'SQL', 'Dashboard'],
+    image: '/images/data_bki2.png',
+    path: '/project/bkiProject2',
+    description: 'Proyek profiling data, pembersihan data, dan visualisasi metrik internal selama magang di PT Biro Klasifikasi Indonesia (Persero). (Template / Siap diisi)'
+  },
+  {
+    id: 19,
     title: 'WorkWell - Digital Wellbeing & Productivity',
     roles: 'Project Lead & Fullstack Web Developer',
     date: 'April 2026 - Juli 2026',
@@ -202,7 +224,7 @@ const projectsData = [
     description: 'A digital wellbeing and productivity web app featuring habit tracking, break reminders, and workload monitoring for employee wellness.'
   },
   {
-    id: 18,
+    id: 20,
     title: 'STEM SDGs 3 & 4 Project Documentation Website',
     roles: 'Web Developer',
     date: 'April 2026 - Juli 2026',
@@ -213,7 +235,7 @@ const projectsData = [
     description: 'An interactive documentation website for STEM projects supporting UN SDGs Goal 3 (Good Health) and Goal 4 (Quality Education).'
   },
   {
-    id: 19,
+    id: 21,
     title: 'LaporWarga',
     roles: 'Fullstack Web Developer',
     date: 'Mei 2026 - Juni 2026',
@@ -224,7 +246,7 @@ const projectsData = [
     description: 'A digital citizen reporting web platform enabling residents to submit complaints and feedback regarding public infrastructure and community issues.'
   },
   {
-    id: 20,
+    id: 22,
     title: 'Cineverse - Movie Web',
     roles: 'Fullstack Web Developer',
     date: 'Juni 2026 - Agustus 2026',
@@ -235,35 +257,13 @@ const projectsData = [
     description: 'An interactive movie discovery and recommendation web platform displaying detailed movie information, user reviews, and ratings.'
   },
   {
-    id: 21,
-    title: 'PT BKI - Data Project 1',
-    roles: 'Data Analyst Intern',
-    date: 'April 2026 – Present',
-    category: ['Data Science & Analyst', 'All'],
-    techStack: ['SQL', 'Python', 'Excel', 'Data Governance'],
-    image: '/images/bki-1.jpg',
-    path: '/project/bkiProject1',
-    description: 'Proyek analisis data dan tata kelola data (Data Governance) selama magang di PT Biro Klasifikasi Indonesia (Persero). (Template / Siap diisi)'
-  },
-  {
-    id: 22,
-    title: 'PT BKI - Data Project 2',
-    roles: 'Data Analyst Intern',
-    date: 'April 2026 – Present',
-    category: ['Data Science & Analyst', 'All'],
-    techStack: ['Python', 'Data Profiling', 'SQL', 'Dashboard'],
-    image: '/images/bki-2.jpg',
-    path: '/project/bkiProject2',
-    description: 'Proyek profiling data, pembersihan data, dan visualisasi metrik internal selama magang di PT Biro Klasifikasi Indonesia (Persero). (Template / Siap diisi)'
-  },
-  {
     id: 23,
     title: 'PT BKI - Data Project 3',
     roles: 'Data Analyst Intern',
     date: 'April 2026 – Present',
     category: ['Data Science & Analyst', 'All'],
     techStack: ['Looker Studio', 'Power BI', 'SQL', 'Data Visualization'],
-    image: '/images/bki-3.jpg',
+    image: '/images/data_bki3.png',
     path: '/project/bkiProject3',
     description: 'Proyek dashboard reporting dan visualisasi analitik data operasional selama magang di PT Biro Klasifikasi Indonesia (Persero). (Template / Siap diisi)'
   },
