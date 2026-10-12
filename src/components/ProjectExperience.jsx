@@ -115,7 +115,7 @@ const projectsData = [
   },
   {
     id: 10,
-    title: 'PT BKI - Data Project 1',
+    title: 'Corporate Certification Analytics: BKI Vessel Classification Registry & Fleet Capacity Analysis',
     roles: 'Data Analyst Intern',
     date: 'April 2026 – Present',
     category: ['Data Science & Analyst', 'All'],
@@ -203,7 +203,7 @@ const projectsData = [
   },
   {
     id: 18,
-    title: 'PT BKI - Data Project 2',
+    title: 'Field Surveyor Resource & Workload Allocation Optimization: Executive Information System',
     roles: 'Data Analyst Intern',
     date: 'April 2026 – Present',
     category: ['Data Science & Analyst', 'All'],
@@ -258,7 +258,7 @@ const projectsData = [
   },
   {
     id: 23,
-    title: 'PT BKI - Data Project 3',
+    title: 'Customer Experience Analytics: Surveyor Performance Evaluation & Operational Complaint Mitigation',
     roles: 'Data Analyst Intern',
     date: 'April 2026 – Present',
     category: ['Data Science & Analyst', 'All'],
