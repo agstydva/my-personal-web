@@ -26,6 +26,9 @@ import Dtastyum from '../pages/project/dtastyum';
 import Eatzy from '../pages/project/eatzy';
 import BreastCancerPrediction from '../pages/project/breastCancerPrediction';
 import WorkWellDetail from '../pages/project/workwell';
+import BkiProject1 from '../pages/project/bkiProject1';
+import BkiProject2 from '../pages/project/bkiProject2';
+import BkiProject3 from '../pages/project/bkiProject3';
 
 
 
@@ -82,6 +85,10 @@ const AppRouter = () => {
       <Route path="/project/stem-sdgs" element={<UnderConstruction />} />
       <Route path="/project/laporwarga" element={<UnderConstruction />} />
       
+      {/* Route untuk PT BKI Data Analyst Projects */}
+      <Route path="/project/bkiProject1" element={<BkiProject1 />} />
+      <Route path="/project/bkiProject2" element={<BkiProject2 />} />
+      <Route path="/project/bkiProject3" element={<BkiProject3 />} />
 
       <Route path="/under-construction" element={<UnderConstruction />} />
       {/* Tangkap semua link error */}

@@ -76,7 +76,7 @@ const projectsData = [
     date: 'November 2025 - Desember 2025',
     category: ['Data Science & Analyst', 'All'],
     techStack: ['Python', 'Excel', 'Colab'],
-    image: '/images/user-retention-analysis.png',
+    image: '/images/user-retention-analysis1.png',
     path: '/project/userRetention',
     description: 'A cohort and user retention analysis measuring monthly/daily active user engagement (MAU/DAU) and identifying key churn drivers.'
   },
@@ -234,6 +234,39 @@ const projectsData = [
     path: '/project/cineverse',
     description: 'An interactive movie discovery and recommendation web platform displaying detailed movie information, user reviews, and ratings.'
   },
+  {
+    id: 21,
+    title: 'PT BKI - Data Project 1',
+    roles: 'Data Analyst Intern',
+    date: 'April 2026 – Present',
+    category: ['Data Science & Analyst', 'All'],
+    techStack: ['SQL', 'Python', 'Excel', 'Data Governance'],
+    image: '/images/bki-1.jpg',
+    path: '/project/bkiProject1',
+    description: 'Proyek analisis data dan tata kelola data (Data Governance) selama magang di PT Biro Klasifikasi Indonesia (Persero). (Template / Siap diisi)'
+  },
+  {
+    id: 22,
+    title: 'PT BKI - Data Project 2',
+    roles: 'Data Analyst Intern',
+    date: 'April 2026 – Present',
+    category: ['Data Science & Analyst', 'All'],
+    techStack: ['Python', 'Data Profiling', 'SQL', 'Dashboard'],
+    image: '/images/bki-2.jpg',
+    path: '/project/bkiProject2',
+    description: 'Proyek profiling data, pembersihan data, dan visualisasi metrik internal selama magang di PT Biro Klasifikasi Indonesia (Persero). (Template / Siap diisi)'
+  },
+  {
+    id: 23,
+    title: 'PT BKI - Data Project 3',
+    roles: 'Data Analyst Intern',
+    date: 'April 2026 – Present',
+    category: ['Data Science & Analyst', 'All'],
+    techStack: ['Looker Studio', 'Power BI', 'SQL', 'Data Visualization'],
+    image: '/images/bki-3.jpg',
+    path: '/project/bkiProject3',
+    description: 'Proyek dashboard reporting dan visualisasi analitik data operasional selama magang di PT Biro Klasifikasi Indonesia (Persero). (Template / Siap diisi)'
+  },
 ];
 
 const ProjectCard = ({ project }) => (
@@ -277,7 +310,7 @@ const ProjectCard = ({ project }) => (
       </p>
 
       <Link
-        to="/under-construction"
+        to={project.path || "/under-construction"}
         /* hover button */
         className="w-full mt-auto bg-black text-white font-semibold py-2.5 rounded shadow-md hover:bg-indigo-800 hover:shadow-indigo-200 hover:-translate-y-1 transition-all duration-300 text-sm block text-center"
       >
