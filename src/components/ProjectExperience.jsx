@@ -116,7 +116,7 @@ const projectsData = [
   {
     id: 10,
     title: 'Corporate Certification Analytics: BKI Vessel Classification Registry & Fleet Capacity Analysis',
-    roles: 'Data Analyst Intern',
+    roles: 'Data Analyst',
     date: 'April 2026 – Present',
     category: ['Data Science & Analyst', 'All'],
     techStack: ['SQL', 'Python', 'Excel', 'Data Governance'],
@@ -204,7 +204,7 @@ const projectsData = [
   {
     id: 18,
     title: 'Field Surveyor Resource & Workload Allocation Optimization: Executive Information System',
-    roles: 'Data Analyst Intern',
+    roles: 'Data Analyst',
     date: 'April 2026 – Present',
     category: ['Data Science & Analyst', 'All'],
     techStack: ['Python', 'Data Profiling', 'SQL', 'Dashboard'],
@@ -259,7 +259,7 @@ const projectsData = [
   {
     id: 23,
     title: 'Customer Experience Analytics: Surveyor Performance Evaluation & Operational Complaint Mitigation',
-    roles: 'Data Analyst Intern',
+    roles: 'Data Analyst',
     date: 'April 2026 – Present',
     category: ['Data Science & Analyst', 'All'],
     techStack: ['Looker Studio', 'Power BI', 'SQL', 'Data Visualization'],
